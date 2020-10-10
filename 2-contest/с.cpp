@@ -1,3 +1,16 @@
+/*
+Дан неориентированный граф. Найдите минимальный разрез между вершинами 11 и 𝑛n.
+
+Входные данные
+На первой строке входного файла содержится 𝑛n (1≤𝑛≤1001≤n≤100) — число вершин в графе и 𝑚m (0≤𝑚≤4000≤m≤400) — количество ребер. 
+На следующих 𝑚m строках входного файла содержится описание ребер. 
+Ребро описывается номерами вершин, которые оно соединяет, и его пропускной способностью (положительное целое число, не превосходящее 1000000010000000), при этом никакие две вершины не соединяются более чем одним ребром.
+
+Выходные данные
+На первой строке выходного файла должны содержаться количество ребер в минимальном разрезе и их суммарная пропускная способность. На следующей строке выведите возрастающую последовательность номеров ребер (ребра нумеруются в том порядке, в каком они были заданы во входном файле).
+*/
+
+
 #include <cstdio>
 #include <climits>
 #include <vector>
@@ -16,8 +29,7 @@
     #define LOGS(data, ...) ;
     #define ON_DEBUG(...) ;
 #endif
- 
- 
+
 struct Edge {
     Edge();
     Edge(int from, int to, long long capacity, long long flow);
@@ -41,6 +53,9 @@ public:
  
     // finds max flow with Edmonds Karp algo
     long long maxFlowEdmondsKarp(int startingVert, int goal);
+
+    // searches for min cut in a graph between two edges
+    std::vector<int> minCut(int startingVert, int goal);
  
     // shows all edges of graph
     friend std::ostream& operator<<(std::ostream& out, const Graph& g);
@@ -84,6 +99,7 @@ private:
 };
  
 int main() {
+    LOGS("INFO >>> starting in DEBUG mode")
     int nVertice = 0, nEdges;
     scanf("%d %d", &nVertice, &nEdges);
  
@@ -98,8 +114,15 @@ int main() {
     }
  
     LOGS("INFO >>> graph is ready\n")
- 
-    printf("%lld\n", G.maxFlowEdmondsKarp(0, nVertice - 1));
+
+    long long maxFlow = G.maxFlowEdmondsKarp(0, nVertice - 1);
+    auto minCutEdges = G.minCut(0, nVertice - 1);
+
+    printf("%lu %lld\n", minCutEdges.size(), maxFlow);
+
+    for (auto edgeID : minCutEdges) {
+        printf("%d ", edgeID + 1);
+    }
 }
  
 Edge::Edge(int from, 
@@ -202,10 +225,25 @@ exit:
         return false;
     }
 }
+
+std::vector<int> Graph::minCut(int startingVert, int goal) {
+    //maxFlowEdmondsKarp(startingVert, goal);
+    
+    fillArray(used, nVertice, false);
+    findShortPath(startingVert, goal);
+
+    std::vector<int> answer;
+    for (int edgeID = 0; edgeID < edges.size(); ++edgeID) {
+        if (used[edges[edgeID].from] and !used[edges[edgeID].to]) {
+            answer.push_back((edgeID | 1) / 2);
+        }
+    }
+
+    return answer;
+}
  
 bool Graph::edgeNotFull(int edgeID) {
     return edges[edgeID].capacity > edges[edgeID].flow;
-    // return edges[edgeID].capacity > edges[edgeID].flow;
 }
  
 template<typename T>
@@ -219,13 +257,13 @@ void Graph::NewEdge(const Edge& newEdge) {
     int edgeID = 0;
     if ((edgeID = findEdge(newEdge.from, newEdge.to)) != -1) {
         edges[edgeID].capacity += newEdge.capacity;
-        //edges[edgeID ^ 1].capacity += newEdge.capacity;
+        edges[edgeID ^ 1].capacity += newEdge.capacity;
     }
     else {
         edges.push_back(newEdge);
-        //edges.push_back(Edge{newEdge.to, newEdge.from, newEdge.capacity, 0});
-        whichEdges[newEdge.from].push_back(edges.size() - 1);
-        //whichEdges[newEdge.to].push_back(edges.size() - 1);
+        edges.push_back(Edge{newEdge.to, newEdge.from, newEdge.capacity, 0});
+        whichEdges[newEdge.from].push_back(edges.size() - 2);
+        whichEdges[newEdge.to].push_back(edges.size() - 1);
     }
 }
  
@@ -257,7 +295,7 @@ void Graph::updateFlow(int startingVert, int goal) {
     while (curVert != startingVert) {
         int edgeID = findEdge(ancestors[curVert], curVert); // can preserve from prev
         edges[edgeID].flow += minCapacity;
-        //edges[edgeID ^ 1].flow -= minCapacity;
+        edges[edgeID ^ 1].flow -= minCapacity;
         curVert = ancestors[curVert];
     }
  
@@ -267,11 +305,13 @@ void Graph::updateFlow(int startingVert, int goal) {
 }
  
 int Graph::findEdge(int from, int to) {
-    for (auto edgeID : whichEdges[from]) {
-        if (edges[edgeID].to == to) {
-            return edgeID;
+    if (!whichEdges[from].empty()) {
+        for (auto edgeID : whichEdges[from]) {
+            LOGS("INFO >>> found edgeID is %d\n", edgeID)
+            if (edges[edgeID].to == to) {
+                return edgeID;
+            }
         }
     }
- 
     return -1;
 }
