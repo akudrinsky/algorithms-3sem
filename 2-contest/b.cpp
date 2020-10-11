@@ -48,8 +48,9 @@ $$$i$$$-го сотрудника отдела и имеет следующий 
 #include <ostream>
 #include <iostream>
 #include <cstring>
+#include <string>
  
-#define DEBUG
+//#define DEBUG
  
 #ifdef DEBUG
     #define ON_DEBUG(...) __VA_ARGS__
@@ -91,7 +92,7 @@ public:
     bool isValid(int SourceUID, int DrainUID);
 
     // makes photo of a graph with graphviz
-    void photo(const char* pictName, int SourceUID, int DrainUID);
+    void photo(std::string pictName, int SourceUID, int DrainUID);
 
     // searches for min cut in a graph between two edges
     std::vector<int> minCut(int startingVert, int goal);
@@ -168,7 +169,7 @@ int main() {
     borders<int> peopleVerts = {drainUID + 1, drainUID + nPeople + 1};
     borders<int> teesVerts = {drainUID + nPeople + 1, drainUID + nPeople + nTees + 1};
 
-    LOGS("%d people with indexes [%d, %d), %d tees with indexes [%d, %d)", nPeople, peopleVerts.min, peopleVerts.max, nTees, teesVerts.min, teesVerts.max)
+    LOGS("INFO >>> %d people with indexes [%d, %d), %d tees with indexes [%d, %d)\n", nPeople, peopleVerts.min, peopleVerts.max, nTees, teesVerts.min, teesVerts.max)
 
     long long teaNum = 0;
     int* teaStore = new int[nTees];
@@ -176,6 +177,7 @@ int main() {
         scanf("%d", teaStore + i);
         teaNum += teaStore[i];
     }
+    LOGS("INFO >>> in al we have %lld packets of tea\n", teaNum)
 
     std::vector<int>* loves = new std::vector<int>[nPeople];
     for (int person = 0; person < nPeople; ++person) {
@@ -191,6 +193,8 @@ int main() {
     borders<long long> binSearch = {0, teaNum / nPeople + 1};
 
     while (binSearch.min < binSearch.max - 1) {
+        LOGS("INFO >>> binsearch with bounds [%lld, %lld), checking %lld\n", binSearch.min, binSearch.max, (binSearch.min + binSearch.max) / 2)
+
         Graph G(nPeople + nTees + 2);
         long long toCheck = (binSearch.min + binSearch.max) / 2;
 
@@ -216,9 +220,7 @@ int main() {
         }
 
         ON_DEBUG(
-            if (binSearch.min < binSearch.max - 1) {
-                G.photo("ex.png", sourceID, drainUID);
-            }
+            G.photo("ex" + std::to_string(toCheck) + ".png", sourceID, drainUID);
         )
     }
 
@@ -296,7 +298,7 @@ bool Graph::isValid(int SourceUID, int DrainUID) {
     return true;
 }
 
-void Graph::photo(const char* pictName, int SourceUID, int DrainUID) {
+void Graph::photo(std::string pictName, int SourceUID, int DrainUID) {
     FILE* pFile = fopen ("tree_graph.dot", "w");
     fprintf (pFile, "digraph G{\n\tedge[color=\"chartreuse4\",fontcolor=\"blue\",fontsize=12];\n\tnode[shape=\"rectangle\",fontsize=15];\n");
     fprintf(pFile, "\nnode[group=a];\n");
@@ -319,10 +321,9 @@ void Graph::photo(const char* pictName, int SourceUID, int DrainUID) {
     }
     fputc('\n', pFile);
 
-    for (auto edge : edges) {
-        if (edge.capacity > 0 and edge.flow >= 0) {
-            fprintf (pFile, "\t%d -> %d [label=\" %lld/%lld \"]\n", edge.from, edge.to, edge.flow, edge.capacity);
-        }
+    for (int i = 0; i < edges.size(); i += 2) {
+        auto& edge = edges[i];
+        fprintf (pFile, "\t%d -> %d [label=\" %lld/%lld \"]\n", edge.from, edge.to, edge.flow, edge.capacity);
     }
 
     fputc('}', pFile);
@@ -332,7 +333,7 @@ void Graph::photo(const char* pictName, int SourceUID, int DrainUID) {
     char command[max_cmd_size] = "dot tree_graph.dot -T ";
     strcat (command, "png");
     strcat (command, " -o ");
-    strcat (command, pictName);
+    strcat (command, pictName.c_str());
     system (command);
 
     system("rm tree_graph.dot");
@@ -355,6 +356,12 @@ bool Graph::findShortPath(int startingVertice, int goal) {
         vertToBFS.pop();
  
         for (auto edgeID : whichEdges[vert]) {
+            /*
+            if (edgeID % 2 == 1 and edges[edgeID].flow == 0) {
+                continue;
+            } // directed graph
+            */
+
             if (edgeNotFull(edgeID)) {
                 int to = edges[edgeID].to;
                 if (!used[to]) {
@@ -401,7 +408,39 @@ std::vector<int> Graph::minCut(int startingVert, int goal) {
 }
  
 bool Graph::edgeNotFull(int edgeID) {
+    LOGS("INFO >>> checking %d'th edge from %d to %d with %lld/%lld\n", edgeID, edges[edgeID].from, edges[edgeID].to, edges[edgeID].flow, edges[edgeID].capacity)
+    long long flow = edges[edgeID].flow;
+    long long capacity = edges[edgeID].capacity;
+
+    if (edgeID % 2 == 1 and flow == 0) {
+        LOGS("\tnot ok\n")
+        return false;
+    }
+
+    if (flow == 0) {
+        LOGS("\tok\n")
+        return true;
+    }
+    else {
+        ON_DEBUG(
+            if (flow < capacity) {
+                LOGS("\tok\n")
+            }
+            else {
+                LOGS("\tnot ok\n")
+            }
+        )
+        return flow < capacity;
+    }
+
     return edges[edgeID].capacity > edges[edgeID].flow;
+
+    if (edgeID % 2 == 0) {
+        return edges[edgeID].capacity > edges[edgeID].flow;
+    }
+    else {
+        return edges[edgeID].capacity > -edges[edgeID].flow;
+    }
 }
  
 template<typename T>
@@ -448,7 +487,12 @@ void Graph::updateFlow(int startingVert, int goal) {
     while (curVert != startingVert) {
         LOGS("INFO >>> by edge %d -> %d", ancestors[curVert], curVert)
         int edgeID = findEdge(ancestors[curVert], curVert);
-        minCapacity = std::min(minCapacity, edges[edgeID].availableCap());
+        if (edgeID % 2 == 0) {
+            minCapacity = std::min(minCapacity, edges[edgeID].availableCap());
+        }
+        else {
+            minCapacity = std::min(minCapacity, -edges[edgeID].flow);
+        } // directed graph
         curVert = ancestors[curVert];
     }
  
