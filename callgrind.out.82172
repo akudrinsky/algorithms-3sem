@@ -1,0 +1,13069 @@
+# callgrind format
+version: 1
+creator: callgrind-3.16.1
+pid: 82172
+cmd:  ./my
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 1563587
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 7085575
+
+
+ob=(3) /usr/lib/system/libdyld.dylib
+fl=(3) ???
+fn=(604) _dyld_func_lookup
+0 45
+cob=(1) /usr/lib/dyld
+cfi=(1) ???
+cfn=(606) _dyld_func_lookup
+calls=9 0 
+0 15770
+
+fn=(752) dyld_get_sdk_version
+0 68
+cfn=(754) getVersionLoadCommandInfo(mach_header const*, unsigned int*, unsigned int*, unsigned int*)
+calls=4 0 
+0 904
+0 64
+
+fn=(758) LockHelper::LockHelper()
+0 16
+cfn=(748) dyld3::_dyld_fork_child()
+calls=4 0 
+0 2653
+0 12
+
+fn=(822) tlv_load_notification
+0 779
+
+fn=(818) tlv_initializer
+0 5
+cfn=(748)
+calls=1 0 
+0 2373
+0 3
+cfn=(756) _dyld_register_func_for_add_image
+calls=1 0 
+0 2263
+
+fn=(1512) _dyld_is_memory_immutable
+0 15
+cfn=(604)
+calls=1 0 
+0 2317
+0 7
+cob=(1)
+cfi=(1)
+cfn=(1514) _dyld_is_memory_immutable
+calls=1 0 
+0 615
+
+fn=(746) dyld_get_program_sdk_version
+0 24
+cfn=(748)
+calls=4 0 
+0 2949
+0 12
+cfn=(752)
+calls=4 0 
+0 1036
+
+fn=(756)
+0 30
+cfn=(758)
+calls=3 0 
+0 2605
+0 12
+cfn=(604)
+calls=1 0 
+0 164
+0 3
+cob=(1)
+cfi=(1)
+cfn=(766) _dyld_register_func_for_add_image
+calls=1 0 
+0 1393
+0 4
+cob=(1)
+cfi=(1)
+cfn=(766)
+calls=2 0 
+0 29431
+0 6
+cfn=(774) LockHelper::~LockHelper()
+calls=3 0 
+0 2736
+0 12
+
+fn=(1416) dyld_image_path_containing_address
+0 443
+cfn=(604)
+calls=1 0 
+0 1864
+0 6
+cob=(1)
+cfi=(1)
+cfn=(1418) dyld_image_path_containing_address
+calls=1 0 
+0 60
+0 195
+cob=(1)
+cfi=(1)
+cfn=(1418)
+calls=39 0 
+0 10920
+
+fn=(602) _dyld_fast_stub_entry(void*, long)
+0 1686
+cfn=(604)
+calls=1 0 
+0 1862
+0 7
+cob=(1)
+cfi=(1)
+cfn=(608) dyld::fastBindLazySymbol(ImageLoader**, unsigned long)
+calls=1 0 
+0 42295
+0 1116
+cob=(1)
+cfi=(1)
+cfn=(608)
+calls=186 0 
+0 2059905
+
+fn=(920) dyld_process_is_restricted
+0 11
+cfn=(604)
+calls=1 0 
+0 2014
+0 3
+cob=(1)
+cfi=(1)
+cfn=(922) dyld::processIsRestricted()
+calls=1 0 
+0 5
+
+fn=(600) dyld_stub_binder
+0 13005
+cfn=(602)
+calls=29 0 
+0 782405
+0 522
+
+fn=(601) dyld_stub_binder'2
+0 70784
+cfn=(602)
+calls=158 0 
+0 1324466
+0 2844
+
+fn=(806) _dyld_get_image_slide
+0 25
+cfn=(604)
+calls=1 0 
+0 1180
+0 6
+cob=(1)
+cfi=(1)
+cfn=(808) _dyld_get_image_slide
+calls=1 0 
+0 123
+0 5
+cob=(1)
+cfi=(1)
+cfn=(808)
+calls=1 0 
+0 123
+
+fn=(880) _dyld_objc_notify_register
+0 14
+cfn=(758)
+calls=1 0 
+0 76
+0 6
+cfn=(604)
+calls=1 0 
+0 2446
+0 5
+cob=(1)
+cfi=(1)
+cfn=(882) _dyld_objc_notify_register
+calls=1 0 
+0 1270377
+0 2
+cfn=(774)
+calls=1 0 
+0 117
+0 6
+
+fn=(1496) _dyld_get_shared_cache_range
+0 14
+cfn=(604)
+calls=1 0 
+0 2593
+0 6
+cob=(1)
+cfi=(1)
+cfn=(1498) _dyld_get_shared_cache_range
+calls=1 0 
+0 18
+
+fn=(814) _dyld_initializer
+0 11
+cfn=(604)
+calls=1 0 
+0 1375
+0 5
+cob=(1)
+cfi=(1)
+cfn=(816) registerThreadHelpers(dyld::LibSystemHelpers const*)
+calls=1 0 
+0 6
+0 1
+cfn=(818)
+calls=1 0 
+0 4644
+0 4
+
+fn=(940) names_match(char const*, char const*)
+0 24
+cfn=(748)
+calls=2 0 
+0 2919
+0 12
+cfn=(748)
+calls=2 0 
+0 3500
+0 14
+cfn=(748)
+calls=2 0 
+0 3547
+0 8
+cfn=(748)
+calls=2 0 
+0 2132
+0 12
+cfn=(748)
+calls=2 0 
+0 80
+0 28
+cfn=(748)
+calls=1 0 
+0 24
+0 11
+cfn=(748)
+calls=1 0 
+0 65
+0 3
+
+fn=(754)
+0 904
+
+fn=(938) NSVersionOfLinkTimeLibrary
+0 16
+cfn=(748)
+calls=1 0 
+0 6
+0 109
+cfn=(940)
+calls=2 0 
+0 12379
+0 79
+
+fn=(748)
+0 5
+cob=(7) /usr/lib/system/libsystem_c.dylib
+cfi=(7) ???
+cfn=(750) _NSGetMachExecuteHeader
+calls=4 0 
+0 20
+0 5
+cob=(5) /usr/lib/system/libsystem_pthread.dylib
+cfi=(5) ???
+cfn=(760) pthread_mutex_lock
+calls=3 0 
+0 204
+0 2
+cob=(6) /usr/lib/system/libsystem_platform.dylib
+cfi=(6) ???
+cfn=(862) _platform_strcmp
+calls=1 0 
+0 14
+0 2
+cob=(7)
+cfi=(7)
+cfn=(850) strlen
+calls=1 0 
+0 18
+0 6
+cob=(6)
+cfi=(6)
+cfn=(790) _platform_strncmp
+calls=5 0 
+0 202
+0 2
+cob=(7)
+cfi=(7)
+cfn=(942) strrchr
+calls=1 0 
+0 168
+0 21
+cfn=(601)
+calls=7 0 
+0 19565
+0 14
+
+fn=(774)
+0 28
+cob=(5)
+cfi=(5)
+cfn=(776) pthread_mutex_unlock
+calls=3 0 
+0 330
+0 3
+cfn=(601)
+calls=1 0 
+0 2490
+0 2
+
+ob=(9) /usr/lib/system/libkeymgr.dylib
+fl=(9) ???
+fn=(812) __keymgr_initializer
+0 4
+
+ob=(16) /usr/lib/system/libsystem_blocks.dylib
+fl=(16) ???
+fn=(1316) _Block_use_RR2
+0 7
+
+ob=(5)
+fl=(5)
+fn=(700) _pthread_main_thread_init
+0 16
+cfn=(678) _pthread_fork_child_postinit
+calls=1 0 
+0 3653
+0 3
+cfn=(678)
+calls=1 0 
+0 3138
+0 19
+cfn=(706) _pthread_set_self
+calls=1 0 
+0 5944
+0 8
+
+fn=(712) _pthread_bsdthread_init
+0 7
+cfn=(678)
+calls=1 0 
+0 2235
+0 16
+cfn=(678)
+calls=1 0 
+0 2655
+0 18
+cfn=(720) _pthread_set_main_qos
+calls=1 0 
+0 2
+0 7
+
+fn=(764) _pthread_mutex_check_init_slow
+0 528
+
+fn=(1590) pthread_cond_broadcast
+0 452
+cfn=(1592) _pthread_cond_check_init_slow
+calls=2 0 
+0 118
+0 1316
+
+fn=(722) _pthread_key_global_init
+0 7
+cfn=(678)
+calls=1 0 
+0 1918
+0 7
+cfn=(678)
+calls=1 0 
+0 1855
+0 8
+
+fn=(778) _pthread_mutex_unlock_slow
+0 1819
+
+fn=(890) pthread_rwlock_wrlock
+0 3303
+cfn=(892) _pthread_rwlock_lock_slow
+calls=2 0 
+0 321
+
+fn=(892)
+0 30
+cfn=(894) _pthread_rwlock_check_init_slow
+calls=2 0 
+0 125
+0 166
+
+fn=(782) pthread_key_init_np
+0 130
+cfn=(678)
+calls=10 0 
+0 2842
+0 107
+cfn=(678)
+calls=9 0 
+0 63
+0 2
+cfn=(678)
+calls=1 0 
+0 2408
+0 50
+
+fn=(1658) pthread_once
+0 32
+cfn=(678)
+calls=1 0 
+0 5510
+0 27
+
+fn=(762) _pthread_mutex_lock_slow
+0 252
+cfn=(764)
+calls=6 0 
+0 528
+0 1031
+
+fn=(776)
+0 2221
+cfn=(778)
+calls=17 0 
+0 1819
+
+fn=(828) qos_class_main
+0 24
+
+fn=(678)
+0 9
+cob=(6)
+cfi=(6)
+cfn=(650) _simple_getenv
+calls=3 0 
+0 5682
+0 16
+cob=(6)
+cfi=(6)
+cfn=(784) os_unfair_lock_lock_with_options
+calls=10 0 
+0 60
+0 11
+cob=(6)
+cfi=(6)
+cfn=(786) os_unfair_lock_unlock
+calls=10 0 
+0 60
+0 39
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=13 0 
+0 40731
+0 26
+
+fn=(894)
+0 125
+
+fn=(1350) pthread_getspecific
+0 22
+
+fn=(642) _pthread_exit_if_canceled
+0 12
+
+fn=(720)
+0 2
+
+fn=(1592)
+0 118
+
+fn=(724) _pthread_mutex_global_init
+0 7
+cfn=(678)
+calls=1 0 
+0 1912
+0 8
+
+fn=(760)
+0 2027
+cfn=(762)
+calls=20 0 
+0 1811
+
+fn=(820) pthread_key_create
+0 9
+cfn=(678)
+calls=1 0 
+0 7
+0 10
+cfn=(678)
+calls=1 0 
+0 7
+0 5
+
+fn=(706)
+0 8
+cfn=(678)
+calls=1 0 
+0 2953
+0 15
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 2966
+0 2
+
+fn=(1062) pthread_rwlock_unlock
+0 6006
+
+fn=(1660) __pthread_once_handler
+0 18
+cob=(7)
+cfi=(7)
+cfn=(1662) __sinit
+calls=1 0 
+0 3345
+0 10
+
+fn=(676) __pthread_init
+0 23
+cfn=(678)
+calls=1 0 
+0 3850
+0 6
+cfn=(678)
+calls=1 0 
+0 2615
+0 8
+cfn=(678)
+calls=1 0 
+0 3687
+0 4
+cfn=(678)
+calls=1 0 
+0 2215
+0 13
+cfn=(678)
+calls=1 0 
+0 3111
+0 40
+cfn=(700)
+calls=1 0 
+0 12781
+0 3
+cfn=(712)
+calls=1 0 
+0 4940
+0 2
+cfn=(722)
+calls=1 0 
+0 3795
+0 3
+cfn=(724)
+calls=1 0 
+0 1927
+0 9
+
+fn=(872) _pthread_qos_class_encode
+0 32
+
+fn=(1570) pthread_self
+0 4
+
+fn=(1572) pthread_mach_thread_np
+0 38
+
+ob=(2) /usr/lib/libSystem.B.dylib
+fl=(2) ???
+fn=(598) mach_init_old
+0 60
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=15 0 
+0 2379912
+0 30
+
+fn=(596) libSystem_initializer
+0 14
+cfn=(598)
+calls=1 0 
+0 45271
+0 5
+cfn=(598)
+calls=1 0 
+0 49967
+0 5
+cfn=(598)
+calls=1 0 
+0 86191
+0 5
+cfn=(598)
+calls=1 0 
+0 66497
+0 2
+cfn=(598)
+calls=1 0 
+0 54711
+0 1
+cfn=(598)
+calls=1 0 
+0 12228
+0 1
+cfn=(598)
+calls=1 0 
+0 15692
+0 1
+cfn=(598)
+calls=1 0 
+0 1595908
+0 1
+cfn=(598)
+calls=1 0 
+0 205855
+0 1
+cfn=(598)
+calls=1 0 
+0 81817
+0 1
+cfn=(598)
+calls=1 0 
+0 53056
+0 1
+cfn=(598)
+calls=1 0 
+0 25575
+0 1
+cfn=(598)
+calls=1 0 
+0 33983
+0 2
+cfn=(598)
+calls=1 0 
+0 10107
+0 3
+cfn=(598)
+calls=1 0 
+0 43144
+0 7
+
+ob=(6)
+fl=(6)
+fn=(932) _platform_memset$VARIANT$Haswell
+0 3499
+
+fn=(1464) os_unfair_lock_lock
+0 10
+
+fn=(646) __libplatform_init
+0 8
+cfn=(648) __pfz_setup
+calls=1 0 
+0 159
+0 6
+cfn=(660) _simple_asl_init
+calls=1 0 
+0 6089
+
+fn=(1476) _platform_strchr
+0 8
+
+fn=(648)
+0 6
+cfn=(650)
+calls=1 0 
+0 142
+0 11
+
+fn=(656) _platform_memchr$VARIANT$Haswell
+0 6048
+
+fn=(786)
+0 210
+
+fn=(1478) _platform_strchr$VARIANT$Haswell
+0 31
+
+fn=(660)
+0 14
+cfn=(650)
+calls=1 0 
+0 2182
+0 21
+cfn=(662) _os_alloc_once
+calls=1 0 
+0 3870
+0 2
+
+fn=(968) _platform_memmove$VARIANT$Haswell
+0 1660
+
+fn=(658) _platform_memcmp
+0 1567
+
+fn=(862)
+0 74626
+
+fn=(650)
+0 120
+cfn=(652) _setcontext
+calls=8 0 
+0 281
+0 96
+cfn=(652)
+calls=8 0 
+0 288
+0 600
+cfn=(652)
+calls=150 0 
+0 5620
+0 870
+cfn=(658)
+calls=99 0 
+0 1567
+0 910
+
+fn=(666) _os_alloc
+0 94
+cfn=(668) _os_alloc_slow
+calls=1 0 
+0 3800
+0 32
+cfn=(674) _simple_asl_init_context
+calls=1 0 
+0 4
+0 9
+
+fn=(714) __bzero
+0 33
+
+fn=(784)
+0 198
+
+fn=(652)
+0 166
+cfn=(656)
+calls=165 0 
+0 5973
+0 4
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 3737
+0 8
+cfn=(654) _platform_memchr
+calls=1 0 
+0 8
+0 9
+cfn=(656)
+calls=1 0 
+0 25
+0 2
+
+fn=(664) _os_once
+0 66
+cob=(5)
+cfi=(5)
+cfn=(1660)
+calls=1 0 
+0 3373
+cob=(8) /usr/lib/system/libsystem_malloc.dylib
+cfi=(8) ???
+cfn=(918) _malloc_initialize
+calls=1 0 
+0 40835
+cfn=(666)
+calls=4 0 
+0 3939
+0 48
+
+fn=(674)
+0 4
+
+fn=(716) _platform_bzero$VARIANT$Haswell
+0 437
+
+fn=(790)
+0 66959
+
+fn=(966) _platform_memmove
+0 50
+
+fn=(654)
+0 16
+
+fn=(662)
+0 48
+cfn=(664)
+calls=4 0 
+0 4015
+0 20
+
+fn=(668)
+0 28
+cfn=(652)
+calls=1 0 
+0 3743
+0 29
+
+fn=(930) _platform_memset
+0 11
+
+ob=(19) /usr/local/Cellar/valgrind/3.16.1/lib/valgrind/vgpreload_core-amd64-darwin.so
+fl=(19) ???
+fn=(1546) vg_cleanup_env
+0 5
+cfn=(1548) __cpu_indicator_init
+calls=1 0 
+0 18760
+0 4
+cfn=(1550) env_unsetenv
+calls=1 0 
+0 39198
+0 3
+cfn=(1550)
+calls=1 0 
+0 1125
+0 6
+cfn=(1550)
+calls=1 0 
+0 1079
+
+fn=(1548)
+0 248
+cob=(7)
+cfi=(7)
+cfn=(850)
+calls=2 0 
+0 50
+0 92
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=91 0 
+0 1770
+0 9
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=3 0 
+0 56950
+0 6
+
+fn=(1550)
+0 30
+cfn=(1548)
+calls=3 0 
+0 18473
+0 30
+cfn=(1548)
+calls=3 0 
+0 19817
+0 267
+cfn=(1548)
+calls=89 0 
+0 1831
+0 954
+
+ob=(15) /usr/lib/system/libxpc.dylib
+fl=(15) ???
+fn=(1264) +[OS_xpc_connection load]
+0 1
+
+fn=(1282) +[OS_xpc_data load]
+0 1
+
+fn=(1300) +[OS_xpc_endpoint load]
+0 1
+
+fn=(1326) ___xpc_activity_create_control_channel_block_invoke_2
+0 3
+cob=(4) /usr/lib/system/libsystem_kernel.dylib
+cfi=(4) ???
+cfn=(1438) __error
+calls=1 0 
+0 5
+0 11
+cob=(10) /usr/lib/system/libdispatch.dylib
+cfi=(10) ???
+cfn=(1402) _os_object_retain
+calls=7 0 
+0 56
+0 3
+cob=(4)
+cfi=(4)
+cfn=(1436) csops
+calls=1 0 
+0 14
+0 15
+cob=(7)
+cfi=(7)
+cfn=(844) getenv
+calls=13 0 
+0 6850
+0 5
+cob=(4)
+cfi=(4)
+cfn=(1328) getpid
+calls=4 0 
+0 16
+0 3
+cob=(12) /usr/lib/system/libmacho.dylib
+cfi=(12) ???
+cfn=(1356) getsectbyname
+calls=2 0 
+0 1422
+0 7
+cob=(8)
+cfi=(8)
+cfn=(1002) malloc
+calls=6 0 
+0 1912
+0 3
+cob=(4)
+cfi=(4)
+cfn=(1354) stat$INODE64
+calls=1 0 
+0 14
+0 9
+cob=(6)
+cfi=(6)
+cfn=(862)
+calls=8 0 
+0 112
+0 7
+cob=(7)
+cfi=(7)
+cfn=(1398) strcpy
+calls=6 0 
+0 346
+0 45
+cob=(7)
+cfi=(7)
+cfn=(850)
+calls=44 0 
+0 1071
+0 31
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=30 0 
+0 438
+0 65
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=21 0 
+0 109380
+0 42
+
+fn=(1327) ___xpc_activity_create_control_channel_block_invoke_2'2
+0 43
+cob=(10)
+cfi=(10)
+cfn=(1402)
+calls=42 0 
+0 336
+0 40
+cob=(3)
+cfi=(3)
+cfn=(1416)
+calls=39 0 
+0 11544
+0 1
+cob=(4)
+cfi=(4)
+cfn=(1328)
+calls=1 0 
+0 4
+0 1
+cob=(8)
+cfi=(8)
+cfn=(1002)
+calls=1 0 
+0 273
+0 2
+cob=(6)
+cfi=(6)
+cfn=(862)
+calls=2 0 
+0 28
+0 1
+cob=(7)
+cfi=(7)
+cfn=(1398)
+calls=1 0 
+0 61
+0 44
+cob=(7)
+cfi=(7)
+cfn=(850)
+calls=44 0 
+0 861
+0 41
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=41 0 
+0 3379
+0 10
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=3 0 
+0 12598
+0 6
+
+fn=(1334) _xpc_install_dispatch_hooks
+0 6
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 3364
+0 2
+
+fn=(1338) xpc_array_create
+0 15
+cfn=(1340) _xpc_base_create
+calls=1 0 
+0 5159
+0 4
+cfn=(1346) _xpc_calloc
+calls=1 0 
+0 2243
+0 13
+
+fn=(1374) _xpc_collect_environment
+0 16
+cfn=(1376) xpc_dictionary_create
+calls=1 0 
+0 553
+0 5
+cfn=(1326)
+calls=1 0 
+0 229
+0 14
+cfn=(1326)
+calls=7 0 
+0 3329
+0 44
+cfn=(1378) xpc_dictionary_set_string
+calls=7 0 
+0 32754
+0 34
+cfn=(1326)
+calls=1 0 
+0 2434
+0 9
+cfn=(1408) _xpc_has_prefix
+calls=1 0 
+0 3523
+0 90
+cfn=(1408)
+calls=30 0 
+0 1578
+0 189
+cfn=(1400) xpc_retain
+calls=1 0 
+0 22
+0 3
+cfn=(1404) xpc_release
+calls=1 0 
+0 18
+0 12
+
+fn=(1380) xpc_string_create
+0 35
+cfn=(1382) _xpc_try_strdup
+calls=7 0 
+0 9422
+0 35
+cfn=(1326)
+calls=7 0 
+0 2472
+0 21
+cfn=(1386) _xpc_string_create
+calls=7 0 
+0 3236
+0 35
+
+fn=(1400)
+0 500
+cfn=(1327)
+calls=42 0 
+0 378
+cfn=(1326)
+calls=8 0 
+0 2486
+0 150
+
+fn=(1424) _xpc_services_unavailable
+0 20
+
+fn=(1448) _xpc_pid_is_being_debugged
+0 13
+cfn=(1327)
+calls=1 0 
+0 2269
+0 14
+cfn=(1327)
+calls=1 0 
+0 5668
+0 12
+
+fn=(1268) +[OS_xpc_null load]
+0 1
+
+fn=(1286) +[OS_xpc_uuid load]
+0 1
+
+fn=(1304) +[OS_xpc_pipe load]
+0 1
+
+fn=(1376)
+0 24
+cfn=(1340)
+calls=2 0 
+0 909
+0 32
+
+fn=(1390) xpc_get_type
+0 128
+
+fn=(1408)
+0 576
+cfn=(1327)
+calls=41 0 
+0 786
+cfn=(1326)
+calls=31 0 
+0 589
+0 288
+cfn=(1327)
+calls=41 0 
+0 3420
+cfn=(1326)
+calls=31 0 
+0 3954
+0 432
+
+fn=(1434) _xpc_get_csops_blob
+0 24
+cfn=(1326)
+calls=2 0 
+0 2240
+0 20
+
+fn=(1272) +[OS_xpc_int64 load]
+0 1
+
+fn=(1290) +[OS_xpc_shmem load]
+0 1
+
+fn=(1308) +[OS_xpc_bundle load]
+0 1
+
+fn=(1346)
+0 9
+cfn=(1326)
+calls=1 0 
+0 2228
+0 6
+
+fn=(1404)
+0 441
+cob=(10)
+cfi=(10)
+cfn=(1406) _os_object_release
+calls=48 0 
+0 432
+0 3
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 2500
+0 2
+
+fn=(1430) _xpc_copy_entitlements
+0 5
+cfn=(1432) _xpc_copy_entitlements_data
+calls=1 0 
+0 4267
+0 8
+
+fn=(1276) +[OS_xpc_double load]
+0 1
+
+fn=(1294) +[OS_xpc_array load]
+0 1
+
+fn=(1312) +[OS_xpc_activity load]
+0 1
+
+fn=(1322) _libxpc_initializer
+0 12
+cfn=(1324) _xpc_ktrace_pid0
+calls=1 0 
+0 6124
+0 3
+cfn=(1334)
+calls=1 0 
+0 3372
+0 8
+cfn=(1338)
+calls=1 0 
+0 7434
+0 5
+cfn=(1326)
+calls=1 0 
+0 3532
+0 6
+cfn=(1326)
+calls=1 0 
+0 5272
+0 4
+cfn=(1326)
+calls=1 0 
+0 652
+0 4
+cfn=(1326)
+calls=1 0 
+0 580
+0 5
+cfn=(1326)
+calls=1 0 
+0 2815
+0 4
+cfn=(1326)
+calls=1 0 
+0 751
+0 5
+cfn=(1326)
+calls=1 0 
+0 5991
+0 5
+cfn=(1326)
+calls=1 0 
+0 712
+0 5
+cfn=(1326)
+calls=1 0 
+0 712
+0 12
+cfn=(1326)
+calls=1 0 
+0 15
+0 29
+cfn=(1326)
+calls=1 0 
+0 3067
+0 6
+cfn=(1362) _xpc_mach_port_retain_send
+calls=1 0 
+0 3592
+0 1
+cfn=(1368) _xpc_create_bootstrap_pipe
+calls=1 0 
+0 638
+0 1
+cfn=(1374)
+calls=1 0 
+0 44856
+0 1
+cfn=(1410) _xpc_collect_images
+calls=1 0 
+0 31146
+0 6
+cfn=(1426) _should_do_early_init
+calls=1 0 
+0 15436
+0 7
+cfn=(1326)
+calls=1 0 
+0 538
+0 18
+cfn=(1326)
+calls=1 0 
+0 8585
+0 4
+cfn=(1326)
+calls=1 0 
+0 9068
+0 3
+cfn=(1324)
+calls=1 0 
+0 61
+0 17
+cfn=(1326)
+calls=1 0 
+0 2165
+0 2
+
+fn=(1362)
+0 24
+cob=(4)
+cfi=(4)
+cfn=(1364) mach_port_mod_refs
+calls=2 0 
+0 46
+0 3
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 3579
+0 2
+
+fn=(1386)
+0 63
+cfn=(1340)
+calls=7 0 
+0 3082
+0 91
+
+fn=(1280) +[OS_xpc_date load]
+0 1
+
+fn=(1298) +[OS_xpc_error load]
+0 1
+
+fn=(1324)
+0 24
+cfn=(1326)
+calls=4 0 
+0 3470
+0 40
+cob=(4)
+cfi=(4)
+cfn=(1330) kdebug_trace
+calls=3 0 
+0 120
+0 3
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 2648
+0 2
+
+fn=(1340)
+0 36
+cob=(10)
+cfi=(10)
+cfn=(1342) _os_object_alloc_realized
+calls=11 0 
+0 4844
+0 3
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 5151
+0 2
+
+fn=(1368)
+0 10
+cfn=(1362)
+calls=1 0 
+0 31
+0 3
+cfn=(1370) xpc_pipe_create_from_port
+calls=1 0 
+0 587
+0 7
+
+fn=(1370)
+0 6
+cfn=(1372) _xpc_pipe_create
+calls=1 0 
+0 581
+
+fn=(1372)
+0 17
+cfn=(1340)
+calls=1 0 
+0 510
+0 3
+cfn=(1362)
+calls=1 0 
+0 31
+0 20
+
+fn=(1396) _xpc_malloc
+0 64
+cfn=(1327)
+calls=1 0 
+0 274
+cfn=(1326)
+calls=7 0 
+0 4071
+0 48
+
+fn=(1414) _xpc_dyld_image_callback
+0 660
+cfn=(1376)
+calls=1 0 
+0 412
+0 3
+cfn=(1400)
+calls=1 0 
+0 22
+0 40
+cfn=(1400)
+calls=40 0 
+0 880
+0 203
+cfn=(1327)
+calls=40 0 
+0 16262
+0 160
+cfn=(1408)
+calls=40 0 
+0 4786
+0 83
+cfn=(1408)
+calls=1 0 
+0 158
+0 5
+cfn=(1422) _xpc_has_suffix
+calls=1 0 
+0 111
+0 6
+cfn=(1388) xpc_dictionary_set_value
+calls=1 0 
+0 1271
+0 1
+cfn=(1424)
+calls=1 0 
+0 20
+0 291
+cfn=(1404)
+calls=41 0 
+0 738
+
+fn=(1428) xpc_copy_entitlement_for_token
+0 16
+cfn=(1430)
+calls=1 0 
+0 4280
+0 12
+
+fn=(1432)
+0 34
+cfn=(1434)
+calls=2 0 
+0 2284
+0 6
+cfn=(1326)
+calls=2 0 
+0 1990
+0 32
+
+fn=(1538) xpc_copy_entitlements_for_pid
+0 2
+cfn=(1432)
+calls=1 0 
+0 79
+
+fn=(1266) +[OS_xpc_service load]
+0 1
+
+fn=(1284) +[OS_xpc_string load]
+0 1
+
+fn=(1302) +[OS_xpc_serializer load]
+0 1
+
+fn=(1382)
+0 14
+cob=(7)
+cfi=(7)
+cfn=(1384) strdup
+calls=6 0 
+0 2468
+0 3
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 6935
+0 2
+
+fn=(1394) _hash_bucket
+0 56
+cfn=(1327)
+calls=1 0 
+0 15
+cfn=(1326)
+calls=7 0 
+0 3575
+0 1605
+
+fn=(1446) _xpc_is_being_debugged_once
+0 6
+cfn=(1327)
+calls=1 0 
+0 5
+0 2
+cfn=(1448)
+calls=1 0 
+0 7976
+0 5
+
+fn=(1270) +[OS_xpc_bool load]
+0 1
+
+fn=(1288) +[OS_xpc_fd load]
+0 1
+
+fn=(1306) +[OS_xpc_mach_recv load]
+0 1
+
+fn=(1392) _xpc_dictionary_insert
+0 96
+cfn=(1390)
+calls=8 0 
+0 64
+0 32
+cfn=(1394)
+calls=8 0 
+0 5251
+0 72
+cfn=(1326)
+calls=2 0 
+0 30
+0 108
+cfn=(1327)
+calls=1 0 
+0 50
+cfn=(1326)
+calls=7 0 
+0 174
+0 16
+cfn=(1396)
+calls=8 0 
+0 4457
+0 64
+cfn=(1327)
+calls=1 0 
+0 62
+cfn=(1326)
+calls=7 0 
+0 2469
+0 16
+cfn=(1400)
+calls=8 0 
+0 2590
+0 210
+
+fn=(1410)
+0 6
+cfn=(1324)
+calls=1 0 
+0 61
+0 8
+cfn=(1412) xpc_uint64_create
+calls=1 0 
+0 390
+0 3
+cfn=(1326)
+calls=1 0 
+0 30609
+0 2
+cfn=(1324)
+calls=1 0 
+0 61
+0 6
+
+fn=(1412)
+0 8
+cfn=(1340)
+calls=1 0 
+0 376
+0 6
+
+fn=(1440) _xpc_is_being_debugged
+0 21
+cfn=(1326)
+calls=1 0 
+0 10292
+0 1
+
+fn=(1274) +[OS_xpc_uint64 load]
+0 1
+
+fn=(1292) +[OS_xpc_mach_send load]
+0 1
+
+fn=(1310) +[OS_xpc_service_instance load]
+0 1
+
+fn=(1378)
+0 70
+cfn=(1380)
+calls=7 0 
+0 15256
+0 35
+cfn=(1388)
+calls=7 0 
+0 14722
+0 49
+cfn=(1404)
+calls=7 0 
+0 2622
+
+fn=(1388)
+0 80
+cfn=(1390)
+calls=8 0 
+0 64
+0 88
+cfn=(1392)
+calls=8 0 
+0 15761
+
+fn=(1426)
+0 5
+cfn=(1326)
+calls=1 0 
+0 784
+0 5
+cfn=(1326)
+calls=1 0 
+0 5
+0 9
+cfn=(1428)
+calls=1 0 
+0 4308
+0 3
+cfn=(1440)
+calls=1 0 
+0 10314
+0 3
+
+fn=(1278) +[OS_xpc_pointer load]
+0 1
+
+fn=(1296) +[OS_xpc_dictionary load]
+0 1
+
+fn=(1314) +[OS_xpc_file_transfer load]
+0 1
+
+fn=(1422)
+0 9
+cfn=(1327)
+calls=1 0 
+0 50
+0 3
+cfn=(1327)
+calls=1 0 
+0 19
+0 6
+cfn=(1327)
+calls=1 0 
+0 15
+0 9
+
+ob=(18) /usr/lib/system/libsystem_darwin.dylib
+fl=(18) ???
+fn=(1540) __libdarwin_init
+0 4
+
+ob=(7)
+fl=(7)
+fn=(730) _libc_fork_init
+0 10
+
+fn=(848) strstr
+0 14
+cfn=(850)
+calls=1 0 
+0 25
+0 498
+cfn=(736) __vsnprintf_chk
+calls=8 0 
+0 138
+0 24
+
+fn=(1004) bcopy
+0 8
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 2275
+0 2
+
+fn=(1452) __snprintf_chk
+0 20
+cfn=(1454) vsnprintf
+calls=1 0 
+0 4739
+0 7
+
+fn=(1460) __vfprintf
+0 30
+cfn=(1462) localeconv_l
+calls=1 0 
+0 2348
+0 136
+cfn=(1470) __ultoa
+calls=1 0 
+0 17
+0 78
+cfn=(1472) __sfvwrite
+calls=1 0 
+0 166
+0 69
+cfn=(736)
+calls=1 0 
+0 1680
+0 25
+
+fn=(1470)
+0 17
+
+fn=(1472)
+0 76
+cfn=(736)
+calls=2 0 
+0 51
+0 39
+
+fn=(1654) __srefill
+0 12
+cfn=(1656) __srefill0
+calls=2 0 
+0 14833
+0 14
+cfn=(1686) __srefill1
+calls=2 0 
+0 98
+
+fn=(1656)
+0 16
+cfn=(736)
+calls=2 0 
+0 8010
+0 38
+cfn=(1670) __smakebuf
+calls=1 0 
+0 6343
+0 16
+cfn=(1682) _fwalk
+calls=2 0 
+0 384
+0 26
+
+fn=(1670)
+0 14
+cfn=(1672) __swhatbuf
+calls=1 0 
+0 3403
+0 5
+cfn=(1676) isatty
+calls=1 0 
+0 2614
+0 10
+cfn=(736)
+calls=1 0 
+0 279
+0 18
+
+fn=(1672)
+0 14
+cfn=(736)
+calls=1 0 
+0 3362
+0 27
+
+fn=(728) _program_vars_init
+0 14
+
+fn=(1352) strtoll_l
+0 129
+
+fn=(1450) sysctl
+0 8
+cfn=(736)
+calls=1 0 
+0 3116
+0 2
+
+fn=(1466) __get_current_monetary_locale
+0 7
+
+fn=(1482) _owned_ptr_alloc
+0 6
+cfn=(736)
+calls=1 0 
+0 146
+0 5
+cfn=(736)
+calls=1 0 
+0 274
+0 12
+
+fn=(1650) flockfile
+0 54
+cfn=(736)
+calls=9 0 
+0 2032
+0 36
+cfn=(736)
+calls=9 0 
+0 711
+0 9
+cfn=(736)
+calls=9 0 
+0 54
+0 45
+
+fn=(1662)
+0 7
+cfn=(1664) sysconf
+calls=1 0 
+0 2887
+0 451
+
+fn=(736)
+0 36
+cob=(4)
+cfi=(4)
+cfn=(1438)
+calls=35 0 
+0 175
+0 21
+cob=(8)
+cfi=(8)
+cfn=(1002)
+calls=10 0 
+0 2656
+0 15
+cob=(6)
+cfi=(6)
+cfn=(968)
+calls=14 0 
+0 478
+0 4
+cob=(6)
+cfi=(6)
+cfn=(1464)
+calls=1 0 
+0 5
+0 21
+cob=(6)
+cfi=(6)
+cfn=(784)
+calls=20 0 
+0 120
+0 23
+cob=(6)
+cfi=(6)
+cfn=(786)
+calls=22 0 
+0 132
+0 11
+cob=(5)
+cfi=(5)
+cfn=(1350)
+calls=10 0 
+0 20
+0 11
+cob=(5)
+cfi=(5)
+cfn=(760)
+calls=10 0 
+0 735
+0 11
+cob=(5)
+cfi=(5)
+cfn=(776)
+calls=10 0 
+0 1025
+0 2
+cob=(5)
+cfi=(5)
+cfn=(1658)
+calls=1 0 
+0 27
+0 12
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=8 0 
+0 130
+0 78
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=26 0 
+0 80784
+0 52
+
+fn=(737) __vsnprintf_chk'2
+0 4
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 2840
+0 2
+
+fn=(1348) strtoll
+0 11
+cfn=(736)
+calls=1 0 
+0 2299
+0 12
+cfn=(1352)
+calls=1 0 
+0 129
+
+fn=(1480) __environ_lock
+0 7
+cob=(6)
+cfi=(6)
+cfn=(784)
+calls=1 0 
+0 6
+
+fn=(1486) _owned_ptr_search
+0 28
+
+fn=(1640) atexit_register
+0 24
+cfn=(736)
+calls=2 0 
+0 2482
+0 38
+cfn=(736)
+calls=2 0 
+0 2462
+0 16
+
+fn=(1648) scanf
+0 252
+cfn=(1650)
+calls=9 0 
+0 2941
+0 27
+cfn=(736)
+calls=9 0 
+0 27
+0 63
+cfn=(1652) __svfscanf_l
+calls=9 0 
+0 18147
+0 27
+cfn=(1694) funlockfile
+calls=9 0 
+0 1251
+0 108
+
+fn=(1676)
+0 12
+cfn=(736)
+calls=1 0 
+0 2587
+0 15
+
+fn=(744) __chk_init
+0 7
+cfn=(736)
+calls=1 0 
+0 5986
+0 4
+cfn=(736)
+calls=1 0 
+0 9545
+0 6
+
+fn=(750)
+0 50
+
+fn=(1454)
+0 13
+cfn=(736)
+calls=1 0 
+0 3
+0 10
+cfn=(1456) _vsnprintf
+calls=1 0 
+0 4706
+0 7
+
+fn=(772) __chk_assert_no_overlap_callback
+0 123
+
+fn=(1652)
+0 437
+cfn=(1654)
+calls=1 0 
+0 14628
+0 948
+cfn=(1692) strtoimax_l
+calls=9 0 
+0 1035
+0 583
+cfn=(1654)
+calls=1 0 
+0 329
+0 187
+
+fn=(780) __xlocale_init
+0 13
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 7462
+0 2
+
+fn=(802) _NSGetEnviron
+0 140
+
+fn=(850)
+0 2526
+
+fn=(1458) __v2printf
+0 41
+cfn=(1460)
+calls=1 0 
+0 4549
+0 15
+
+fn=(1462)
+0 14
+cfn=(736)
+calls=1 0 
+0 2221
+0 4
+cfn=(1466)
+calls=1 0 
+0 7
+0 53
+cfn=(736)
+calls=1 0 
+0 7
+0 5
+cfn=(736)
+calls=1 0 
+0 6
+0 4
+cfn=(1468) __get_current_numeric_locale
+calls=1 0 
+0 7
+0 7
+cfn=(736)
+calls=1 0 
+0 7
+0 6
+
+fn=(1468)
+0 7
+
+fn=(1474) setenv
+0 16
+cfn=(736)
+calls=1 0 
+0 2492
+0 9
+cfn=(1480)
+calls=1 0 
+0 13
+0 3
+cfn=(1482)
+calls=1 0 
+0 443
+0 4
+cfn=(802)
+calls=1 0 
+0 5
+0 7
+cfn=(1484) __setenv_locked
+calls=1 0 
+0 3321
+0 2
+cfn=(802)
+calls=1 0 
+0 5
+0 3
+cfn=(1490) __environ_unlock
+calls=1 0 
+0 12
+0 2
+
+fn=(1484)
+0 17
+cfn=(846) __findenv_locked
+calls=1 0 
+0 494
+0 15
+cfn=(1486)
+calls=1 0 
+0 14
+0 68
+cfn=(850)
+calls=1 0 
+0 18
+0 2
+cfn=(736)
+calls=1 0 
+0 243
+0 10
+cfn=(1488) _owned_ptr_add
+calls=1 0 
+0 2326
+0 114
+
+fn=(1502) rb_tree_init
+0 10
+
+fn=(1690) __sread
+0 14
+cob=(4)
+cfi=(4)
+cfn=(794) read$NOCANCEL
+calls=2 0 
+0 10
+
+fn=(1694)
+0 54
+cfn=(736)
+calls=9 0 
+0 54
+0 36
+cfn=(736)
+calls=9 0 
+0 999
+0 9
+cfn=(736)
+calls=9 0 
+0 54
+0 45
+
+fn=(726) _libc_initializer
+0 8
+cfn=(728)
+calls=1 0 
+0 14
+0 2
+cfn=(730)
+calls=1 0 
+0 10
+0 2
+cfn=(732) __confstr_init
+calls=1 0 
+0 6
+0 1
+cfn=(734) __atexit_init
+calls=1 0 
+0 2408
+0 1
+cfn=(738) _init_clock_port
+calls=1 0 
+0 12594
+0 1
+cfn=(744)
+calls=1 0 
+0 15548
+0 1
+cfn=(780)
+calls=1 0 
+0 7477
+0 5
+cfn=(788) __guard_setup
+calls=1 0 
+0 9686
+
+fn=(738)
+0 5
+cfn=(736)
+calls=1 0 
+0 3450
+0 5
+cfn=(736)
+calls=1 0 
+0 2685
+0 8
+cfn=(736)
+calls=1 0 
+0 2746
+0 12
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 3681
+0 2
+
+fn=(844)
+0 210
+cfn=(736)
+calls=21 0 
+0 2924
+0 21
+cfn=(802)
+calls=21 0 
+0 105
+0 84
+cfn=(846)
+calls=21 0 
+0 10934
+0 63
+cfn=(736)
+calls=21 0 
+0 2553
+0 126
+
+fn=(846)
+0 11428
+
+fn=(1456)
+0 86
+cfn=(1458)
+calls=1 0 
+0 4605
+0 15
+
+fn=(1488)
+0 11
+cfn=(1486)
+calls=1 0 
+0 14
+0 16
+cfn=(736)
+calls=1 0 
+0 2274
+0 11
+
+fn=(1682)
+0 130
+cfn=(1684) lflush
+calls=4 0 
+0 60
+0 194
+
+fn=(1692)
+0 1035
+
+fn=(732)
+0 6
+
+fn=(942)
+0 318
+
+fn=(1630) mbtowc_l
+0 29
+
+fn=(1664)
+0 23
+cfn=(737)
+calls=1 0 
+0 2846
+0 18
+
+fn=(1686)
+0 18
+cfn=(1688) _sread
+calls=2 0 
+0 56
+0 24
+
+fn=(734)
+0 11
+cfn=(736)
+calls=1 0 
+0 2395
+0 2
+
+fn=(788)
+0 22
+cfn=(736)
+calls=1 0 
+0 2187
+0 10
+cfn=(736)
+calls=1 0 
+0 2378
+0 7
+cfn=(736)
+calls=1 0 
+0 2714
+0 3
+cfn=(736)
+calls=1 0 
+0 2352
+0 13
+
+fn=(1384)
+0 56
+cfn=(850)
+calls=7 0 
+0 384
+0 28
+cfn=(736)
+calls=7 0 
+0 3877
+0 49
+cfn=(736)
+calls=7 0 
+0 2504
+0 56
+
+fn=(1398)
+0 164
+cfn=(736)
+calls=4 0 
+0 127
+0 12
+cfn=(736)
+calls=2 0 
+0 91
+0 74
+
+fn=(1490)
+0 6
+cob=(6)
+cfi=(6)
+cfn=(786)
+calls=1 0 
+0 6
+
+fn=(1638) __cxa_atexit
+0 20
+cfn=(1640)
+calls=2 0 
+0 5022
+0 6
+
+fn=(1684)
+0 60
+
+fn=(1688)
+0 14
+cfn=(1690)
+calls=2 0 
+0 24
+0 18
+
+ob=(11) /usr/lib/libobjc.A.dylib
+fl=(11) ???
+fn=(870) lock_init
+0 6
+cfn=(840) header_info::getHeaderInfoRW()
+calls=1 0 
+0 44797
+0 2
+cfn=(840)
+calls=1 0 
+0 43773
+0 4
+cfn=(840)
+calls=1 0 
+0 16
+0 3
+
+fn=(976) appendHeader
+0 35
+cfn=(841) header_info::getHeaderInfoRW()'2
+calls=5 0 
+0 85
+0 36
+cfn=(841)
+calls=4 0 
+0 68
+0 54
+
+fn=(982) sel_init
+0 6
+cfn=(984) __sel_registerName(char const*, int, int)
+calls=1 0 
+0 8
+0 7
+cfn=(876) rwlock_tt<false>::write()
+calls=1 0 
+0 191
+0 4
+cfn=(984)
+calls=1 0 
+0 206882
+0 6
+cfn=(984)
+calls=1 0 
+0 1351
+0 6
+cfn=(984)
+calls=1 0 
+0 415
+0 6
+cfn=(984)
+calls=1 0 
+0 22307
+0 6
+cfn=(984)
+calls=1 0 
+0 331
+0 6
+cfn=(984)
+calls=1 0 
+0 453
+0 6
+cfn=(984)
+calls=1 0 
+0 2610
+0 6
+cfn=(984)
+calls=1 0 
+0 416
+0 6
+cfn=(984)
+calls=1 0 
+0 301
+0 6
+cfn=(984)
+calls=1 0 
+0 1040
+0 6
+cfn=(984)
+calls=1 0 
+0 435
+0 6
+cfn=(984)
+calls=1 0 
+0 331
+0 6
+cfn=(984)
+calls=1 0 
+0 3311
+0 6
+cfn=(984)
+calls=1 0 
+0 229
+0 6
+cfn=(984)
+calls=1 0 
+0 217
+0 6
+cfn=(984)
+calls=1 0 
+0 444
+0 6
+cfn=(984)
+calls=1 0 
+0 360
+0 6
+cfn=(984)
+calls=1 0 
+0 475
+0 6
+cfn=(984)
+calls=1 0 
+0 517
+0 6
+cfn=(984)
+calls=1 0 
+0 831
+0 12
+cfn=(841)
+calls=1 0 
+0 44974
+0 10
+
+fn=(1016) freeBuckets(NXHashTable*, int)
+0 16
+
+fn=(1044) _mapStrHash(_NXMapTable*, void const*)
+0 126534
+
+fn=(1102) void std::__1::__insertion_sort<method_t::SortBySELAddress&, entsize_list_tt<method_t, method_list_t, 3u>::iterator>(entsize_list_tt<method_t, method_list_t, 3u>::iterator, entsize_list_tt<method_t, method_list_t, 3u>::iterator, method_t::SortBySELAddress&)
+0 7326
+cfn=(1050) getProtocol(char const*)
+calls=333 0 
+0 75490
+0 3633
+cfn=(1040) objc_opt::objc_protocolopt_t::getProtocol(char const*) const
+calls=109 0 
+0 65959
+0 4989
+
+fn=(1134) prepareMethodLists(objc_class*, method_list_t**, int, bool, bool)
+0 3108
+cfn=(1136) method_setImplementation
+calls=84 0 
+0 92935
+0 1260
+
+fn=(1172) class_replaceProperty
+0 100
+
+fn=(1256) recursive_mutex_tt<false>::unlock()
+0 48
+
+fn=(866) _objc_atfork_child
+0 10
+
+fn=(888) objc_object::sidetable_retainCount()
+0 5
+cfn=(841)
+calls=1 0 
+0 67
+0 21
+cfn=(876)
+calls=1 0 
+0 45011
+0 4
+cfn=(896) map_images_nolock
+calls=1 0 
+0 1047919
+0 7
+
+fn=(988) NXCreateMapTableFromZone
+0 56
+cfn=(841)
+calls=4 0 
+0 31321
+0 22
+cfn=(989) NXCreateMapTableFromZone'2
+calls=1 0 
+0 144966
+0 81
+cfn=(994) NXCreateHashTableFromZone
+calls=4 0 
+0 410
+0 16
+cfn=(841)
+calls=2 0 
+0 684
+0 14
+cfn=(1000) isEqualPrototype(void const*, void const*, void const*)
+calls=2 0 
+0 3979
+0 131
+cfn=(1036) allocBuckets(void*, unsigned int)
+calls=4 0 
+0 2240
+0 8
+
+fn=(989)
+0 8
+cfn=(841)
+calls=1 0 
+0 3
+0 7
+cfn=(992) NXCreateHashTable
+calls=1 0 
+0 144943
+0 5
+
+fn=(1032) object_getMethodImplementation_stret
+0 80
+cfn=(1034) NXPtrHash
+calls=8 0 
+0 56
+0 32
+cfn=(1034)
+calls=8 0 
+0 56
+0 40
+cfn=(1034)
+calls=8 0 
+0 56
+0 80
+
+fn=(1034)
+0 168
+
+fn=(1038) TimeLogger::log(char const*)
+0 120
+
+fn=(1050)
+0 3654
+cfn=(1052) NXMapGet
+calls=522 0 
+0 149820
+0 4176
+
+fn=(1066) _read_images
+0 15
+cfn=(841)
+calls=1 0 
+0 40376
+0 7
+cfn=(841)
+calls=1 0 
+0 275
+0 63
+cfn=(974) NXCreateMapTable
+calls=1 0 
+0 5
+0 14
+cfn=(974)
+calls=1 0 
+0 1755
+0 4
+cfn=(1038)
+calls=1 0 
+0 12
+0 46
+cfn=(1080) _unload_image
+calls=5 0 
+0 125
+0 40
+cfn=(1078) header_info::isPreoptimized() const
+calls=5 0 
+0 35
+0 20
+cfn=(972) classref** getDataSection<classref*>(mach_header_64 const*, char const*, unsigned long*, unsigned long*)
+calls=5 0 
+0 3793
+0 60
+cfn=(1082) readClass(objc_class*, bool, bool)
+calls=5 0 
+0 3147
+0 560
+cfn=(1082)
+calls=80 0 
+0 71728
+0 544
+cfn=(1038)
+calls=1 0 
+0 12
+0 5
+cfn=(1038)
+calls=1 0 
+0 12
+0 1
+cfn=(1084) remapClass(objc_class*)
+calls=1 0 
+0 66
+0 39
+cfn=(1078)
+calls=5 0 
+0 35
+0 35
+cfn=(978) objc_selector** getDataSection<objc_selector*>(mach_header_64 const*, char const*, unsigned long*, unsigned long*)
+calls=5 0 
+0 5845
+0 55
+cfn=(1102)
+calls=5 0 
+0 1412
+0 540
+cfn=(1102)
+calls=108 0 
+0 99127
+0 468
+cfn=(1110) sel_lock
+calls=1 0 
+0 87
+0 3
+cfn=(1038)
+calls=1 0 
+0 12
+0 44
+cfn=(1100) message_ref_t* getDataSection<message_ref_t>(mach_header_64 const*, char const*, unsigned long*, unsigned long*)
+calls=5 0 
+0 14573
+0 38
+cfn=(1038)
+calls=1 0 
+0 12
+0 38
+cfn=(1112) protocols()
+calls=5 0 
+0 808
+0 15
+cfn=(1078)
+calls=5 0 
+0 35
+0 30
+cfn=(1112)
+calls=5 0 
+0 4585
+0 1034
+cfn=(1040)
+calls=82 0 
+0 56163
+0 586
+cfn=(1116) protocol_t** getDataSection<protocol_t*>(mach_header_64 const*, char const*, unsigned long*, unsigned long*)
+calls=85 0 
+0 50755
+0 542
+cfn=(1038)
+calls=1 0 
+0 12
+0 39
+cfn=(1122) _getObjc2ProtocolRefs(header_info const*, unsigned long*)
+calls=5 0 
+0 14771
+0 33
+cfn=(1038)
+calls=1 0 
+0 12
+0 39
+cfn=(1124) _getObjc2NonlazyClassList(header_info const*, unsigned long*)
+calls=5 0 
+0 6453
+0 27
+cfn=(1082)
+calls=4 0 
+0 68
+0 96
+cfn=(1082)
+calls=48 0 
+0 816
+0 208
+cfn=(1126) realizeClass(objc_class*)
+calls=52 0 
+0 201773
+0 175
+cfn=(1038)
+calls=1 0 
+0 12
+0 6
+cfn=(1038)
+calls=1 0 
+0 12
+0 48
+cfn=(1176) _getObjc2CategoryList(header_info const*, unsigned long*)
+calls=5 0 
+0 14672
+0 38
+cfn=(1038)
+calls=1 0 
+0 12
+0 14
+
+fn=(1090) getPreoptimizedClass
+0 680
+cfn=(1050)
+calls=85 0 
+0 22474
+0 2975
+
+fn=(1110)
+0 425
+cfn=(841)
+calls=85 0 
+0 5695
+0 1275
+
+fn=(1116)
+0 510
+cfn=(1112)
+calls=85 0 
+0 765
+0 255
+cfn=(1050)
+calls=85 0 
+0 36159
+0 416
+cfn=(1044)
+calls=82 0 
+0 11900
+0 750
+
+fn=(1160) attachCategories(objc_class*, locstamped_category_list_t*, bool)
+0 2128
+
+fn=(1162) list_array_tt<property_t, property_list_t>::attachLists(property_list_t* const*, unsigned int)
+0 1380
+
+fn=(1192) add_class_to_loadable_list
+0 336
+cfn=(1194) objc_class::getLoadMethod()
+calls=56 0 
+0 5261
+0 516
+cfn=(840)
+calls=1 0 
+0 293
+cfn=(841)
+calls=5 0 
+0 32539
+0 652
+
+fn=(868) _GLOBAL__sub_I_objc_accessors.mm
+0 264
+cfn=(866)
+calls=1 0 
+0 5
+0 262
+cfn=(866)
+calls=1 0 
+0 5
+0 268
+
+fn=(876)
+0 4
+cfn=(840)
+calls=1 0 
+0 2406
+0 99
+cfn=(840)
+calls=1 0 
+0 38
+cfn=(841)
+calls=5 0 
+0 45270
+0 42
+
+fn=(906) objc_image_info* getDataSection<objc_image_info>(mach_header_64 const*, char const*, unsigned long*, unsigned long*)
+0 240
+cfn=(841)
+calls=10 0 
+0 9658
+0 150
+
+fn=(978)
+0 125
+cfn=(841)
+calls=5 0 
+0 5640
+0 80
+
+fn=(984)
+0 446
+cfn=(1050)
+calls=19 0 
+0 23527
+0 225
+cfn=(974)
+calls=1 0 
+0 206733
+0 202
+cfn=(1040)
+calls=20 0 
+0 11911
+0 220
+
+fn=(1040)
+0 2954
+cfn=(1042) _NXMapMember(_NXMapTable*, void const*, void**)
+calls=211 0 
+0 22754
+0 1769
+cfn=(1046) NXMapInsert
+calls=119 0 
+0 5135
+0 4238
+cfn=(1054) _mapStrIsEqual(_NXMapTable*, void const*, void const*)
+calls=9 0 
+0 61018
+0 10214
+cfn=(1046)
+calls=492 0 
+0 21862
+0 4089
+
+fn=(1041) objc_opt::objc_protocolopt_t::getProtocol(char const*) const'2
+0 3794
+cfn=(1042)
+calls=271 0 
+0 27895
+0 1679
+cfn=(1046)
+calls=54 0 
+0 2169
+0 7137
+cfn=(1046)
+calls=31 0 
+0 1618
+0 2856
+
+fn=(1054)
+0 162
+cfn=(841)
+calls=9 0 
+0 1215
+0 36
+cfn=(1036)
+calls=9 0 
+0 5896
+0 1908
+cfn=(1041)
+calls=271 0 
+0 47148
+0 1167
+cob=(8)
+cfi=(8)
+cfn=(1018) free
+calls=9 0 
+0 3486
+
+fn=(1144) list_array_tt<method_t, method_list_t>::attachLists(method_list_t* const*, unsigned int)
+0 2520
+
+fn=(1188) realizeAllClasses()
+0 44
+cfn=(1186) _getObjc2NonlazyCategoryList(mach_header_64 const*, unsigned long*)
+calls=4 0 
+0 3400
+0 24
+cfn=(1082)
+calls=4 0 
+0 68
+0 96
+cfn=(1082)
+calls=48 0 
+0 816
+0 104
+cfn=(1190) schedule_class_load(objc_class*)
+calls=52 0 
+0 41656
+0 172
+cfn=(1208) class_createInstance
+calls=4 0 
+0 11601
+0 40
+
+fn=(1214) (anonymous namespace)::AutoreleasePoolPage::pop(void*)
+0 104
+cfn=(1256)
+calls=4 0 
+0 48
+
+fn=(836) _objc_init
+0 11
+cfn=(838) environ_init
+calls=1 0 
+0 130426
+0 1
+cfn=(852) tls_init
+calls=1 0 
+0 44746
+0 4
+cfn=(854) getLibobjcInitializers(mach_header_64 const*, unsigned long*)
+calls=1 0 
+0 20701
+0 5
+cfn=(864) _GLOBAL__sub_I_objc_sync.mm
+calls=1 0 
+0 334
+0 1
+cfn=(868)
+calls=1 0 
+0 804
+0 7
+cfn=(870)
+calls=1 0 
+0 88601
+0 1
+cfn=(876)
+calls=1 0 
+0 2413
+0 4
+cfn=(840)
+calls=1 0 
+0 1283764
+0 6
+
+fn=(838)
+0 9
+cfn=(840)
+calls=1 0 
+0 41667
+0 3
+cfn=(840)
+calls=1 0 
+0 18738
+0 135
+cfn=(840)
+calls=31 0 
+0 20237
+0 186
+cfn=(840)
+calls=31 0 
+0 529
+0 178
+cfn=(840)
+calls=29 0 
+0 435
+0 70
+cfn=(840)
+calls=2 0 
+0 30
+0 116
+cfn=(840)
+calls=29 0 
+0 444
+0 190
+cfn=(840)
+calls=1 0 
+0 25380
+0 3
+cfn=(840)
+calls=1 0 
+0 568
+0 3
+cfn=(840)
+calls=1 0 
+0 637
+0 3
+cfn=(840)
+calls=1 0 
+0 580
+0 4
+cfn=(840)
+calls=1 0 
+0 634
+0 27
+cfn=(840)
+calls=1 0 
+0 19617
+0 3
+
+fn=(852)
+0 11
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 44733
+0 2
+
+fn=(1084)
+0 1360
+cfn=(841)
+calls=85 0 
+0 3230
+0 1020
+
+fn=(1130) objc_class::setHasCustomRR(bool)
+0 2886
+
+fn=(1132) objc_class::setHasCustomAWZ(bool)
+0 3219
+
+fn=(1146) list_array_tt<unsigned long, protocol_list_t>::attachLists(protocol_list_t* const*, unsigned int)
+0 2760
+
+fn=(1190)
+0 12
+cfn=(840)
+calls=1 0 
+0 69
+cfn=(841)
+calls=3 0 
+0 45027
+0 746
+cfn=(1191) schedule_class_load(objc_class*)'2
+calls=51 0 
+0 31900
+0 102
+cfn=(1192)
+calls=51 0 
+0 8618
+0 310
+
+fn=(1191)
+0 677
+cfn=(1191)
+calls=5 0 
+0 61761
+0 10
+cfn=(1192)
+calls=5 0 
+0 30979
+0 234
+
+fn=(1196) call_load_methods
+0 52
+cfn=(1210) objc_autoreleasePoolPush
+calls=4 0 
+0 168
+0 736
+cfn=(840)
+calls=1 0 
+0 4
+cfn=(1214)
+calls=1 0 
+0 4
+cfn=(1214)
+calls=1 0 
+0 4
+cob=(15)
+cfi=(15)
+cfn=(1314)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1312)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1310)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1308)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1306)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1304)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1302)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1300)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1298)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1296)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1294)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1292)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1290)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1288)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1286)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1284)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1282)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1280)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1278)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1276)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1274)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1272)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1270)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1268)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1266)
+calls=1 0 
+0 1
+cob=(15)
+cfi=(15)
+cfn=(1264)
+calls=1 0 
+0 1
+cob=(14) /usr/lib/system/libsystem_trace.dylib
+cfi=(14) ???
+cfn=(1262) +[OS_os_activity load]
+calls=1 0 
+0 1
+cob=(14)
+cfi=(14)
+cfn=(1260) +[OS_os_log load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1254) +[OS_dispatch_data_empty load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1252) +[OS_voucher load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1250) +[OS_dispatch_disk load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1248) +[OS_dispatch_operation load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1246) +[OS_dispatch_io load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1244) +[OS_dispatch_mach_msg load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1242) +[OS_dispatch_queue_attr load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1240) +[OS_dispatch_queue_specific_queue load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1238) +[OS_dispatch_queue_mgr load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1236) +[OS_dispatch_queue_network_event load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1234) +[OS_dispatch_queue_root load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1232) +[OS_dispatch_queue_main load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1230) +[OS_dispatch_queue_concurrent load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1228) +[OS_dispatch_queue_serial load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1226) +[OS_dispatch_group load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1224) +[OS_dispatch_semaphore load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1222) +[OS_dispatch_queue_runloop load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1220) +[OS_dispatch_mach load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1218) +[OS_dispatch_source load]
+calls=1 0 
+0 1
+cob=(10)
+cfi=(10)
+cfn=(1216) +[OS_dispatch_queue load]
+calls=1 0 
+0 1
+cfn=(1214)
+calls=1 0 
+0 4
+0 164
+cfn=(840)
+calls=1 0 
+0 480
+cfn=(841)
+calls=3 0 
+0 1567
+0 12
+cfn=(1214)
+calls=4 0 
+0 140
+0 36
+
+fn=(840)
+0 9
+cob=(5)
+cfi=(5)
+cfn=(872)
+calls=1 0 
+0 15
+0 13
+cob=(8)
+cfi=(8)
+cfn=(912) calloc
+calls=13 0 
+0 4994
+0 1
+cob=(8)
+cfi=(8)
+cfn=(1018)
+calls=1 0 
+0 479
+0 5
+cob=(7)
+cfi=(7)
+cfn=(844)
+calls=4 0 
+0 2415
+0 6
+cob=(12)
+cfi=(12)
+cfn=(858) getsectiondata
+calls=5 0 
+0 4593
+0 2
+cob=(5)
+cfi=(5)
+cfn=(760)
+calls=1 0 
+0 68
+0 1
+cob=(5)
+cfi=(5)
+cfn=(776)
+calls=1 0 
+0 110
+0 1
+cob=(5)
+cfi=(5)
+cfn=(1062)
+calls=1 0 
+0 66
+0 1
+cob=(5)
+cfi=(5)
+cfn=(890)
+calls=1 0 
+0 37
+0 2
+cob=(8)
+cfi=(8)
+cfn=(1198) realloc
+calls=1 0 
+0 292
+0 3
+cob=(6)
+cfi=(6)
+cfn=(862)
+calls=3 0 
+0 168
+0 122
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=121 0 
+0 1767
+0 31
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=10 0 
+0 1520530
+0 20
+
+fn=(841)
+0 1012
+cob=(8)
+cfi=(8)
+cfn=(912)
+calls=116 0 
+0 37734
+0 2
+cob=(3)
+cfi=(3)
+cfn=(746)
+calls=1 0 
+0 274
+0 9
+cob=(8)
+cfi=(8)
+cfn=(1018)
+calls=8 0 
+0 3975
+0 103
+cob=(12)
+cfi=(12)
+cfn=(858)
+calls=103 0 
+0 95475
+0 5
+cob=(12)
+cfi=(12)
+cfn=(910) getsegmentdata
+calls=4 0 
+0 2055
+0 4
+cob=(8)
+cfi=(8)
+cfn=(1002)
+calls=2 0 
+0 682
+0 7
+cob=(8)
+cfi=(8)
+cfn=(986) malloc_default_zone
+calls=6 0 
+0 12
+0 6
+cob=(8)
+cfi=(8)
+cfn=(914) malloc_zone_calloc
+calls=5 0 
+0 2052
+0 18
+cob=(8)
+cfi=(8)
+cfn=(1008) malloc_zone_from_ptr
+calls=17 0 
+0 2278
+0 21
+cob=(8)
+cfi=(8)
+cfn=(952) malloc_zone_malloc
+calls=20 0 
+0 6257
+0 1
+cob=(5)
+cfi=(5)
+cfn=(782)
+calls=1 0 
+0 43
+0 3
+cob=(5)
+cfi=(5)
+cfn=(760)
+calls=2 0 
+0 136
+0 3
+cob=(5)
+cfi=(5)
+cfn=(776)
+calls=2 0 
+0 220
+0 90
+cob=(5)
+cfi=(5)
+cfn=(1062)
+calls=89 0 
+0 5874
+0 90
+cob=(5)
+cfi=(5)
+cfn=(890)
+calls=89 0 
+0 3423
+0 5
+cob=(8)
+cfi=(8)
+cfn=(1198)
+calls=4 0 
+0 2008
+0 938
+cob=(6)
+cfi=(6)
+cfn=(862)
+calls=937 0 
+0 59593
+0 54
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=18 0 
+0 613454
+0 36
+
+fn=(898) preopt_init
+0 13
+cfn=(900) NXHashRemove
+calls=1 0 
+0 7
+0 14
+
+fn=(972)
+0 250
+cfn=(841)
+calls=10 0 
+0 7176
+0 160
+
+fn=(1000)
+0 42
+cfn=(1032)
+calls=2 0 
+0 100
+cfn=(996) NXHashGet
+calls=1 0 
+0 18
+0 30
+cfn=(841)
+calls=3 0 
+0 30795
+0 33
+cfn=(1072) class_getMethodImplementation_stret
+calls=1 0 
+0 9
+cfn=(998) hashPrototype(void const*, void const*)
+calls=1 0 
+0 9
+0 12
+cfn=(841)
+calls=2 0 
+0 742
+0 34
+cfn=(1006) NXHashInsert
+calls=2 0 
+0 34580
+0 30
+
+fn=(1001) isEqualPrototype(void const*, void const*, void const*)'2
+0 56
+cfn=(1032)
+calls=2 0 
+0 100
+cfn=(996)
+calls=2 0 
+0 36
+0 40
+cfn=(841)
+calls=4 0 
+0 540
+0 76
+
+fn=(1014) NXNextHashState
+0 64
+cfn=(1016)
+calls=2 0 
+0 8
+0 6
+cfn=(1016)
+calls=2 0 
+0 8
+0 18
+cfn=(841)
+calls=2 0 
+0 29463
+0 32
+
+fn=(1046)
+0 20591
+cfn=(841)
+calls=880 0 
+0 77398
+0 8037
+
+fn=(1080)
+0 40
+cfn=(1078)
+calls=5 0 
+0 35
+0 1650
+cfn=(1164) -[NSObject autorelease]
+calls=50 0 
+0 250
+0 100
+cfn=(841)
+calls=50 0 
+0 400
+0 800
+cfn=(1166) logReplacedMethod
+calls=50 0 
+0 1950
+0 950
+cfn=(1166)
+calls=50 0 
+0 200
+0 300
+cfn=(1168) objc_appRequiresGC
+calls=50 0 
+0 200
+0 600
+
+fn=(1082)
+0 2743
+cfn=(1083) readClass(objc_class*, bool, bool)'2
+calls=197 0 
+0 3349
+0 2739
+cfn=(1086) +[NSObject allocWithZone:]
+calls=85 0 
+0 65109
+0 6509
+
+fn=(1083)
+0 3349
+
+fn=(1100)
+0 125
+cfn=(841)
+calls=5 0 
+0 8810
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 70
+
+fn=(1148) addMethod(objc_class*, objc_selector*, void (*)(), char const*, bool)
+0 14
+cfn=(1150) getMethodNoSuper_nolock(objc_class*, objc_selector*)
+calls=1 0 
+0 155
+0 14
+
+fn=(1154) unattachedCategoriesForClass(objc_class*, bool)
+0 902
+cfn=(974)
+calls=1 0 
+0 5038
+0 2354
+cfn=(1158) _mapPtrHash(_NXMapTable*, void const*)
+calls=112 0 
+0 672
+0 2576
+
+fn=(1168)
+0 700
+cfn=(1172)
+calls=50 0 
+0 100
+0 550
+
+fn=(1176)
+0 125
+cfn=(841)
+calls=5 0 
+0 8909
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 70
+
+fn=(854)
+0 24
+cfn=(840)
+calls=1 0 
+0 20661
+0 16
+
+fn=(996)
+0 90
+
+fn=(1052)
+0 7308
+cfn=(1042)
+calls=522 0 
+0 47592
+0 6552
+cfn=(1046)
+calls=324 0 
+0 40213
+0 17029
+cfn=(1046)
+calls=634 0 
+0 28820
+0 2306
+
+fn=(1078)
+0 140
+
+fn=(1086)
+0 1190
+cfn=(1042)
+calls=85 0 
+0 9783
+0 617
+cfn=(1046)
+calls=32 0 
+0 1669
+0 4175
+cfn=(1046)
+calls=113 0 
+0 4540
+0 2231
+cfn=(1088) getClass_impl(char const*)
+calls=85 0 
+0 39969
+0 935
+
+fn=(1126)
+0 1191
+cfn=(841)
+calls=51 0 
+0 16556
+0 1020
+cfn=(1082)
+calls=51 0 
+0 867
+0 102
+cfn=(1127) realizeClass(objc_class*)'2
+calls=51 0 
+0 65489
+0 204
+cfn=(1082)
+calls=51 0 
+0 867
+0 102
+cfn=(1127)
+calls=51 0 
+0 67832
+0 345
+cfn=(1080)
+calls=47 0 
+0 6909
+0 2942
+cfn=(1128) addSubclass(objc_class*, objc_class*)
+calls=51 0 
+0 6663
+0 975
+cfn=(1134)
+calls=26 0 
+0 20315
+0 130
+cfn=(1144)
+calls=26 0 
+0 780
+0 376
+cfn=(1162)
+calls=43 0 
+0 1290
+0 419
+cfn=(1146)
+calls=43 0 
+0 1290
+0 255
+cfn=(1154)
+calls=51 0 
+0 2958
+0 255
+cfn=(1160)
+calls=51 0 
+0 969
+0 672
+
+fn=(1127)
+0 4330
+cfn=(841)
+calls=61 0 
+0 20010
+0 1222
+cfn=(1082)
+calls=61 0 
+0 1035
+0 122
+cfn=(1127)
+calls=61 0 
+0 98794
+0 244
+cfn=(1082)
+calls=61 0 
+0 1037
+0 122
+cfn=(1127)
+calls=61 0 
+0 36607
+0 248
+cfn=(1080)
+calls=1 0 
+0 147
+0 6
+cfn=(1080)
+calls=2 0 
+0 294
+0 275
+cfn=(841)
+calls=2 0 
+0 77
+0 2291
+cfn=(1128)
+calls=60 0 
+0 6240
+0 1493
+cfn=(1134)
+calls=58 0 
+0 76988
+0 290
+cfn=(1144)
+calls=58 0 
+0 1740
+0 256
+cfn=(1162)
+calls=3 0 
+0 90
+0 489
+cfn=(1146)
+calls=49 0 
+0 1470
+0 190
+cfn=(1148)
+calls=1 0 
+0 183
+0 122
+cfn=(1154)
+calls=61 0 
+0 8584
+0 305
+cfn=(1160)
+calls=61 0 
+0 1159
+0 2262
+
+fn=(1136)
+0 1008
+cfn=(1084)
+calls=84 0 
+0 5544
+0 924
+cfn=(1102)
+calls=84 0 
+0 17229
+0 408
+cfn=(1102)
+calls=136 0 
+0 39629
+0 964
+cfn=(1110)
+calls=84 0 
+0 7308
+0 2100
+cfn=(1142) void std::__1::__inplace_merge<method_t::SortBySELAddress&, entsize_list_tt<method_t, method_list_t, 3u>::iterator>(entsize_list_tt<method_t, method_list_t, 3u>::iterator, entsize_list_tt<method_t, method_list_t, 3u>::iterator, entsize_list_tt<method_t, method_list_t, 3u>::iterator, method_t::SortBySELAddress&, std::__1::iterator_traits<entsize_list_tt<method_t, method_list_t, 3u>::iterator>::difference_type, std::__1::iterator_traits<entsize_list_tt<method_t, method_list_t, 3u>::iterator>::difference_type, std::__1::iterator_traits<entsize_list_tt<method_t, method_list_t, 3u>::iterator>::value_type*, long)
+calls=84 0 
+0 16225
+0 1596
+
+fn=(1158)
+0 672
+
+fn=(1186)
+0 144
+cfn=(840)
+calls=2 0 
+0 1752
+cfn=(841)
+calls=7 0 
+0 6490
+0 23
+cfn=(841)
+calls=1 0 
+0 617
+0 7
+cfn=(841)
+calls=1 0 
+0 617
+0 198
+
+fn=(1006)
+0 20
+cfn=(841)
+calls=2 0 
+0 270
+0 8
+cfn=(841)
+calls=2 0 
+0 652
+0 30
+cfn=(841)
+calls=2 0 
+0 754
+0 14
+cfn=(1012) _NXHashRehashToCapacity
+calls=2 0 
+0 70
+0 14
+cfn=(1001)
+calls=2 0 
+0 424
+0 6
+cfn=(1001)
+calls=2 0 
+0 424
+0 16
+cfn=(1012)
+calls=4 0 
+0 80
+0 14
+cfn=(1014)
+calls=2 0 
+0 29599
+0 10
+cfn=(841)
+calls=2 0 
+0 1142
+0 4
+cfn=(841)
+calls=2 0 
+0 1015
+0 14
+
+fn=(1088)
+0 510
+cfn=(1090)
+calls=85 0 
+0 26129
+0 595
+cfn=(1044)
+calls=85 0 
+0 12055
+0 680
+
+fn=(1128)
+0 3552
+cfn=(1130)
+calls=111 0 
+0 2886
+0 777
+cfn=(1132)
+calls=111 0 
+0 3219
+0 2469
+
+fn=(1142)
+0 16225
+
+fn=(1152) search_method_list(method_list_t const*, objc_selector*)
+0 116
+
+fn=(1164)
+0 250
+
+fn=(1182) load_images
+0 35
+cfn=(1184) objc_class::setInstancesRequireRawIsa(bool)
+calls=5 0 
+0 9597
+0 18
+cfn=(1190)
+calls=4 0 
+0 45128
+0 8
+cfn=(876)
+calls=4 0 
+0 244
+0 8
+cfn=(1188)
+calls=4 0 
+0 58021
+0 8
+cfn=(1060) rwlock_tt<false>::unlockWrite()
+calls=4 0 
+0 328
+0 4
+cfn=(1196)
+calls=4 0 
+0 3419
+0 36
+cfn=(840)
+calls=1 0 
+0 111
+cfn=(841)
+calls=3 0 
+0 45161
+0 20
+
+fn=(1184)
+0 40
+cfn=(1186)
+calls=5 0 
+0 6448
+0 30
+cfn=(1208)
+calls=1 0 
+0 3048
+0 31
+
+fn=(1194)
+0 1479
+cfn=(840)
+calls=3 0 
+0 171
+cfn=(841)
+calls=50 0 
+0 2766
+0 18
+cfn=(841)
+calls=6 0 
+0 132
+0 695
+
+fn=(1210)
+0 168
+
+fn=(864)
+0 334
+
+fn=(896)
+0 24
+cfn=(898)
+calls=1 0 
+0 34
+0 60
+cfn=(904) _getObjcImageInfo
+calls=5 0 
+0 45
+0 85
+cfn=(841)
+calls=10 0 
+0 170
+0 50
+cfn=(906)
+calls=5 0 
+0 5024
+0 25
+cfn=(841)
+calls=5 0 
+0 15355
+0 25
+cfn=(841)
+calls=5 0 
+0 74663
+0 60
+cfn=(841)
+calls=5 0 
+0 85
+0 15
+cfn=(841)
+calls=5 0 
+0 85
+0 35
+cfn=(972)
+calls=5 0 
+0 3793
+0 50
+cfn=(976)
+calls=5 0 
+0 278
+0 78
+cfn=(982)
+calls=1 0 
+0 288582
+0 1
+cfn=(1064) arr_init
+calls=1 0 
+0 45022
+0 40
+cfn=(906)
+calls=5 0 
+0 5024
+0 41
+cfn=(841)
+calls=1 0 
+0 10136
+0 49
+cfn=(1066)
+calls=1 0 
+0 598972
+0 13
+
+fn=(900)
+0 7
+
+fn=(974)
+0 29
+cfn=(841)
+calls=4 0 
+0 30284
+0 24
+cfn=(988)
+calls=4 0 
+0 183928
+0 16
+
+fn=(992)
+0 15
+cfn=(841)
+calls=1 0 
+0 258
+0 5
+cfn=(841)
+calls=1 0 
+0 3
+0 3
+cfn=(841)
+calls=1 0 
+0 258
+0 6
+cfn=(841)
+calls=1 0 
+0 3
+0 4
+cfn=(841)
+calls=1 0 
+0 30581
+0 16
+cfn=(994)
+calls=1 0 
+0 70
+0 4
+cfn=(841)
+calls=1 0 
+0 29869
+0 6
+cfn=(841)
+calls=1 0 
+0 20713
+0 4
+cfn=(1000)
+calls=1 0 
+0 62455
+0 3
+cfn=(994)
+calls=1 0 
+0 81
+0 15
+cfn=(841)
+calls=1 0 
+0 561
+0 10
+
+fn=(998)
+0 36
+
+fn=(1012)
+0 150
+
+fn=(1036)
+0 104
+cfn=(841)
+calls=13 0 
+0 4326
+0 3706
+
+fn=(1042)
+0 5445
+cfn=(1044)
+calls=1089 0 
+0 102579
+
+fn=(1072)
+0 54
+
+fn=(1112)
+0 456
+cfn=(974)
+calls=1 0 
+0 750
+0 492
+cfn=(841)
+calls=5 0 
+0 4380
+0 80
+
+fn=(1122)
+0 80
+cfn=(841)
+calls=5 0 
+0 9008
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 35
+cfn=(841)
+calls=5 0 
+0 2749
+0 115
+
+fn=(1124)
+0 80
+cfn=(841)
+calls=5 0 
+0 5002
+0 15
+cfn=(841)
+calls=1 0 
+0 617
+0 7
+cfn=(841)
+calls=1 0 
+0 617
+0 115
+
+fn=(1150)
+0 29
+cfn=(1152)
+calls=1 0 
+0 116
+0 10
+
+fn=(1208)
+0 80
+cfn=(840)
+calls=1 0 
+0 1906
+cfn=(841)
+calls=4 0 
+0 6985
+0 35
+cfn=(840)
+calls=1 0 
+0 470
+cfn=(841)
+calls=4 0 
+0 2279
+0 35
+cfn=(840)
+calls=1 0 
+0 470
+cfn=(841)
+calls=4 0 
+0 2279
+0 435
+cfn=(840)
+calls=13 0 
+0 5007
+0 169
+
+fn=(904)
+0 45
+
+fn=(994)
+0 84
+cfn=(1032)
+calls=4 0 
+0 200
+cfn=(996)
+calls=2 0 
+0 36
+0 93
+cfn=(1072)
+calls=3 0 
+0 45
+cfn=(998)
+calls=2 0 
+0 27
+0 76
+
+fn=(1060)
+0 20
+cfn=(840)
+calls=1 0 
+0 67
+cfn=(841)
+calls=3 0 
+0 201
+0 40
+
+fn=(1064)
+0 7
+cfn=(841)
+calls=1 0 
+0 44
+0 4
+cfn=(841)
+calls=1 0 
+0 44510
+0 457
+
+fn=(1166)
+0 800
+cfn=(1168)
+calls=50 0 
+0 1150
+0 200
+
+ob=(17) /usr/lib/system/libsystem_secinit.dylib
+fl=(17) ???
+fn=(1534) _libsecinit_initialize_once
+0 6
+cfn=(1536) _libsecinit_setup_secinitd_client
+calls=1 0 
+0 9935
+0 2
+cfn=(1532) _libsecinit_setup_app_sandbox
+calls=1 0 
+0 29
+0 14
+
+fn=(1530) _libsecinit_initializer
+0 12
+cfn=(1532)
+calls=1 0 
+0 2517
+0 10
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=1 0 
+0 12278
+0 2
+
+fn=(1536)
+0 16
+cfn=(1532)
+calls=1 0 
+0 3002
+0 2
+cfn=(1532)
+calls=1 0 
+0 3249
+0 11
+cfn=(1532)
+calls=1 0 
+0 3637
+
+ob=(4)
+fl=(4)
+fn=(636) access
+0 6
+cfn=(638) cerror
+calls=1 0 
+0 37
+
+fn=(708) __thread_selfid
+0 5
+
+fn=(1320) __libkernel_voucher_init
+0 3
+
+fn=(1678) ioctl
+0 26
+cfn=(1680) __ioctl
+calls=1 0 
+0 5
+0 3
+
+fn=(630) _get_cpu_capabilities
+0 3
+
+fn=(682) host_self_trap
+0 8
+
+fn=(692) memcpy
+0 78
+
+fn=(792) open$NOCANCEL
+0 5
+
+fn=(796) close$NOCANCEL
+0 5
+
+fn=(622) mach_init_doit
+0 3
+cfn=(624) task_self_trap
+calls=1 0 
+0 4
+0 2
+cfn=(626) mach_reply_port
+calls=1 0 
+0 4
+0 19
+cfn=(628) _init_cpu_capabilities
+calls=1 0 
+0 9
+0 3
+cfn=(632) _pthread_set_self
+calls=1 0 
+0 1
+
+fn=(628)
+0 3
+cfn=(630)
+calls=1 0 
+0 3
+0 3
+
+fn=(688) mach_msg
+0 100
+cfn=(690) mach_msg_trap
+calls=5 0 
+0 20
+0 60
+
+fn=(1668) __getrlimit
+0 5
+
+fn=(634) strcmp
+0 132
+cfn=(635) strcmp'2
+calls=2 0 
+0 12
+0 58
+
+fn=(635)
+0 12
+
+fn=(640) _pthread_exit_if_canceled
+0 3
+cob=(5)
+cfi=(5)
+cfn=(642)
+calls=1 0 
+0 12
+
+fn=(686) mig_get_reply_port
+0 20
+
+fn=(698) __sysctl
+0 10
+
+fn=(704) thread_self_trap
+0 4
+
+fn=(1354)
+0 12
+cfn=(644) cerror_nocancel
+calls=2 0 
+0 16
+
+fn=(1366) _kernelrpc_mach_port_mod_refs_trap
+0 12
+
+fn=(626)
+0 8
+
+fn=(670) mach_vm_map
+0 290
+cfn=(672) _kernelrpc_mach_vm_map_trap
+calls=10 0 
+0 40
+0 200
+
+fn=(672)
+0 40
+
+fn=(684) host_info
+0 22
+cfn=(686)
+calls=1 0 
+0 4
+0 12
+cfn=(688)
+calls=1 0 
+0 36
+0 46
+cfn=(692)
+calls=1 0 
+0 78
+0 3
+
+fn=(702) mach_thread_self
+0 1
+cfn=(704)
+calls=1 0 
+0 4
+
+fn=(804) getentropy
+0 5
+
+fn=(1364)
+0 33
+cfn=(1366)
+calls=3 0 
+0 12
+0 24
+
+fn=(1680)
+0 5
+
+fn=(740) host_get_clock_service
+0 14
+cfn=(686)
+calls=1 0 
+0 4
+0 12
+cfn=(688)
+calls=1 0 
+0 36
+0 33
+
+fn=(842) issetugid
+0 5
+
+fn=(1674) fstat$INODE64
+0 5
+
+fn=(624)
+0 4
+
+fn=(644)
+0 40
+
+fn=(680) mach_host_self
+0 2
+cfn=(682)
+calls=2 0 
+0 8
+
+fn=(690)
+0 20
+
+fn=(710) _thread_set_tsd_base
+0 4
+
+fn=(936) mprotect
+0 40
+
+fn=(1068) mach_absolute_time
+0 23
+
+fn=(1328)
+0 41
+
+fn=(1438)
+0 195
+
+fn=(1526) task_set_special_port
+0 15
+cfn=(686)
+calls=1 0 
+0 4
+0 12
+cfn=(688)
+calls=1 0 
+0 36
+0 23
+
+fn=(620) mach_init
+0 6
+cfn=(622)
+calls=1 0 
+0 45
+0 4
+
+fn=(632)
+0 1
+
+fn=(696) _kernelrpc_mach_port_deallocate_trap
+0 8
+
+fn=(718) __bsdthread_register
+0 5
+
+fn=(794)
+0 15
+
+fn=(948) _kernelrpc_mach_vm_allocate_trap
+0 4
+
+fn=(1332) kdebug_is_enabled
+0 60
+
+fn=(1360) task_get_special_port
+0 14
+cfn=(686)
+calls=1 0 
+0 4
+0 12
+cfn=(688)
+calls=1 0 
+0 36
+0 33
+
+fn=(1436)
+0 12
+cfn=(644)
+calls=2 0 
+0 16
+
+fn=(1524) _kernelrpc_mach_port_construct_trap
+0 4
+
+fn=(1666) getrlimit
+0 2
+cfn=(1668)
+calls=1 0 
+0 5
+
+fn=(618) __libkernel_init
+0 13
+cfn=(620)
+calls=1 0 
+0 55
+0 8
+cfn=(634)
+calls=1 0 
+0 6
+0 90
+cfn=(634)
+calls=30 0 
+0 196
+
+ob=(17)
+fl=(17)
+fn=(1536)
+0 18
+
+fn=(1532)
+0 30
+
+ob=(4)
+fl=(4)
+fn=(618)
+0 191
+cfn=(636)
+calls=1 0 
+0 43
+0 8
+
+fn=(638)
+0 6
+cfn=(640)
+calls=1 0 
+0 15
+0 2
+cfn=(644)
+calls=1 0 
+0 8
+0 6
+
+fn=(694) mach_port_deallocate
+0 14
+cfn=(696)
+calls=2 0 
+0 8
+0 12
+
+fn=(742) semaphore_create
+0 15
+cfn=(686)
+calls=1 0 
+0 4
+0 12
+cfn=(688)
+calls=1 0 
+0 36
+0 33
+
+fn=(946) mach_vm_allocate
+0 13
+cfn=(948)
+calls=1 0 
+0 4
+0 15
+
+fn=(1330)
+0 56
+cfn=(1332)
+calls=4 0 
+0 60
+0 8
+
+ob=(17)
+fl=(17)
+fn=(1532)
+0 15
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=4 0 
+0 12381
+0 2
+
+ob=(4)
+fl=(4)
+fn=(1330)
+0 36
+
+fn=(1522) mach_port_construct
+0 11
+cfn=(1524)
+calls=1 0 
+0 4
+0 8
+
+ob=(17)
+fl=(17)
+fn=(1532)
+0 6
+
+ob=(20) /usr/lib/libc++.1.dylib
+fl=(20) ???
+fn=(1560) std::__1::locale::locale()
+0 56
+cfn=(1561) std::__1::locale::locale()'2
+calls=14 0 
+0 375936
+
+fn=(1561)
+0 84
+cfn=(1562) std::__1::locale::__global()
+calls=14 0 
+0 375698
+0 84
+cfn=(1596) std::__1::__shared_count::__add_shared()
+calls=14 0 
+0 70
+
+fn=(1564) std::__1::gslice::__init(unsigned long)
+0 2
+cob=(13) /usr/lib/libc++abi.dylib
+cfi=(13) ???
+cfn=(1566) __cxa_guard_acquire
+calls=1 0 
+0 128
+0 2
+cob=(13)
+cfi=(13)
+cfn=(1602) __cxa_guard_release
+calls=1 0 
+0 155
+0 29
+cob=(5)
+cfi=(5)
+cfn=(1590)
+calls=27 0 
+0 1647
+0 56
+cob=(5)
+cfi=(5)
+cfn=(760)
+calls=55 0 
+0 1815
+0 56
+cob=(5)
+cfi=(5)
+cfn=(776)
+calls=55 0 
+0 1925
+0 18
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=6 0 
+0 383690
+0 12
+
+fn=(1582) std::__1::locale::id::__get()
+0 632
+cfn=(1584) std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
+calls=28 0 
+0 142012
+0 204
+
+fn=(1588) std::__1::locale::id::__init()
+0 224
+
+fn=(1600) std::__1::vector<std::__1::locale::facet*, std::__1::__sso_allocator<std::__1::locale::facet*, 28ul> >::__append(unsigned long)
+0 840
+
+fn=(1610) std::__1::locale::__imp::use_facet(long) const
+0 60
+
+fn=(1620) std::__1::ios_base::init(void*)
+0 208
+cfn=(1560)
+calls=8 0 
+0 264
+
+fn=(1584)
+0 364
+cfn=(1564)
+calls=28 0 
+0 45804
+0 224
+cfn=(1564)
+calls=28 0 
+0 45836
+0 56
+cfn=(1586) void std::__1::__call_once_proxy<std::__1::tuple<std::__1::(anonymous namespace)::__fake_bind&&> >(void*)
+calls=28 0 
+0 532
+0 56
+cfn=(1564)
+calls=28 0 
+0 952
+0 84
+cfn=(1564)
+calls=28 0 
+0 1008
+0 56
+cfn=(1564)
+calls=28 0 
+0 46816
+0 224
+
+fn=(1604) std::__1::locale::locale(std::__1::locale const&)
+0 42
+cfn=(1596)
+calls=6 0 
+0 30
+
+fn=(1606) std::__1::__stdinbuf<char>::imbue(std::__1::locale const&)
+0 9
+cfn=(1608) std::__1::locale::use_facet(std::__1::locale::id&) const
+calls=1 0 
+0 41
+0 4
+cfn=(1612) std::__1::codecvt<char, char, __mbstate_t>::do_encoding() const
+calls=1 0 
+0 5
+0 4
+cfn=(1614) std::__1::codecvt<char, char, __mbstate_t>::do_always_noconv() const
+calls=1 0 
+0 5
+0 7
+
+fn=(1580) std::__1::vector<std::__1::locale::facet*, std::__1::__sso_allocator<std::__1::locale::facet*, 28ul> >::allocate(unsigned long)
+0 25
+
+fn=(1612)
+0 5
+
+fn=(1636) std::__1::__stdoutbuf<wchar_t>::__stdoutbuf(__sFILE*, __mbstate_t*)
+0 20
+cfn=(1624) std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::basic_streambuf()
+calls=2 0 
+0 108
+0 14
+cfn=(1604)
+calls=2 0 
+0 24
+0 6
+cfn=(1608)
+calls=2 0 
+0 82
+0 6
+cfn=(1616) std::__1::locale::~locale()
+calls=2 0 
+0 24
+0 10
+cfn=(1632) std::__1::codecvt<wchar_t, char, __mbstate_t>::do_always_noconv() const
+calls=2 0 
+0 10
+0 14
+
+fn=(1552) _GLOBAL__sub_I_iostream.cpp
+0 3
+cfn=(1554) std::__1::ios_base::Init::Init()
+calls=1 0 
+0 396306
+0 9
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=1 0 
+0 25074
+0 2
+
+fn=(1558) std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()
+0 30
+cfn=(1560)
+calls=3 0 
+0 375629
+0 33
+
+fn=(1576) std::__1::locale::__imp::__imp(unsigned long)
+0 15
+cfn=(1578) std::__1::vector<std::__1::locale::facet*, std::__1::__sso_allocator<std::__1::locale::facet*, 28ul> >::vector(unsigned long)
+calls=1 0 
+0 214
+0 23
+cfn=(1582)
+calls=1 0 
+0 135045
+0 4
+cfn=(1594) std::__1::locale::__imp::install(std::__1::locale::facet*, long)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 9
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 5
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 5
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 7
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 5
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 5
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 10
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 11
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 8
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 8
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 8
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 8
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+cfn=(1582)
+calls=1 0 
+0 285
+0 4
+cfn=(1594)
+calls=1 0 
+0 79
+0 6
+
+fn=(1616)
+0 30
+cfn=(1618) std::__1::__shared_count::__release_shared()
+calls=6 0 
+0 42
+
+fn=(1628) std::__1::codecvt<wchar_t, char, __mbstate_t>::do_encoding() const
+0 10
+cfn=(1564)
+calls=1 0 
+0 19132
+0 12
+
+fn=(1554)
+0 12
+cfn=(1556) std::__1::__stdinbuf<char>::__stdinbuf(__sFILE*, __mbstate_t*)
+calls=1 0 
+0 375714
+0 9
+cfn=(1620)
+calls=1 0 
+0 59
+0 8
+cfn=(1622) std::__1::__stdinbuf<wchar_t>::__stdinbuf(__sFILE*, __mbstate_t*)
+calls=1 0 
+0 19333
+0 9
+cfn=(1620)
+calls=1 0 
+0 59
+0 8
+cfn=(1634) std::__1::__stdoutbuf<char>::__stdoutbuf(__sFILE*, __mbstate_t*)
+calls=1 0 
+0 159
+0 11
+cfn=(1620)
+calls=1 0 
+0 59
+0 7
+cfn=(1636)
+calls=1 0 
+0 159
+0 11
+cfn=(1620)
+calls=1 0 
+0 59
+0 8
+cfn=(1634)
+calls=1 0 
+0 159
+0 5
+cfn=(1620)
+calls=1 0 
+0 59
+0 10
+cfn=(1620)
+calls=1 0 
+0 59
+0 7
+cfn=(1636)
+calls=1 0 
+0 159
+0 5
+cfn=(1620)
+calls=1 0 
+0 59
+0 10
+cfn=(1620)
+calls=1 0 
+0 59
+0 31
+
+fn=(1574) std::__1::locale::classic()
+0 9
+cfn=(1564)
+calls=1 0 
+0 129
+0 6
+cfn=(1576)
+calls=1 0 
+0 145501
+0 5
+cfn=(1564)
+calls=1 0 
+0 47691
+0 5
+
+fn=(1598) std::__1::vector<std::__1::locale::facet*, std::__1::__sso_allocator<std::__1::locale::facet*, 28ul> >::resize(unsigned long)
+0 336
+cfn=(1600)
+calls=28 0 
+0 840
+
+fn=(1608)
+0 42
+cfn=(1582)
+calls=6 0 
+0 108
+0 36
+cfn=(1610)
+calls=6 0 
+0 60
+
+fn=(1618)
+0 42
+
+fn=(1622)
+0 10
+cfn=(1624)
+calls=1 0 
+0 54
+0 10
+cfn=(1604)
+calls=1 0 
+0 12
+0 3
+cfn=(1626) std::__1::__stdinbuf<wchar_t>::imbue(std::__1::locale const&)
+calls=1 0 
+0 19224
+0 2
+cfn=(1616)
+calls=1 0 
+0 12
+0 6
+
+fn=(1626)
+0 9
+cfn=(1608)
+calls=1 0 
+0 41
+0 4
+cfn=(1628)
+calls=1 0 
+0 19154
+0 4
+cfn=(1632)
+calls=1 0 
+0 5
+0 7
+
+fn=(1556)
+0 10
+cfn=(1558)
+calls=1 0 
+0 375584
+0 10
+cfn=(1604)
+calls=1 0 
+0 12
+0 3
+cfn=(1606)
+calls=1 0 
+0 75
+0 2
+cfn=(1616)
+calls=1 0 
+0 12
+0 6
+
+fn=(1594)
+0 308
+cfn=(1596)
+calls=28 0 
+0 140
+0 280
+cfn=(1598)
+calls=28 0 
+0 1176
+0 308
+
+fn=(1596)
+0 245
+
+fn=(1624)
+0 30
+cfn=(1560)
+calls=3 0 
+0 99
+0 33
+
+fn=(1634)
+0 20
+cfn=(1558)
+calls=2 0 
+0 108
+0 14
+cfn=(1604)
+calls=2 0 
+0 24
+0 6
+cfn=(1608)
+calls=2 0 
+0 82
+0 6
+cfn=(1616)
+calls=2 0 
+0 24
+0 10
+cfn=(1614)
+calls=2 0 
+0 10
+0 14
+
+fn=(1562)
+0 100
+cfn=(1564)
+calls=1 0 
+0 182011
+0 3
+cfn=(1574)
+calls=1 0 
+0 193346
+0 4
+cfn=(1596)
+calls=1 0 
+0 5
+0 3
+cfn=(1564)
+calls=1 0 
+0 156
+0 70
+
+fn=(1578)
+0 16
+cfn=(1580)
+calls=1 0 
+0 25
+0 173
+
+fn=(1586)
+0 308
+cfn=(1588)
+calls=28 0 
+0 224
+
+fn=(1614)
+0 15
+
+fn=(1632)
+0 15
+
+ob=(8)
+fl=(8)
+fn=(914)
+0 3014
+cfn=(916) default_zone_calloc
+calls=137 0 
+0 81913
+0 1507
+
+fn=(962) rack_region_insert
+0 294
+
+fn=(1008)
+0 414
+cfn=(1010) szone_size
+calls=18 0 
+0 1656
+0 342
+
+fn=(1076) small_malloc_from_free_list
+0 241
+cfn=(1118) small_free_list_remove_ptr
+calls=1 0 
+0 131
+0 899
+
+fn=(1120) small_free_list_remove_ptr_no_clear
+0 104
+
+fn=(944) malloc_zone_register_while_locked
+0 30
+cfn=(801) free_tiny_botch'2
+calls=1 0 
+0 3223
+0 18
+cfn=(801)
+calls=1 0 
+0 6
+0 8
+
+fn=(1002)
+0 656
+cfn=(952)
+calls=82 0 
+0 19979
+0 656
+
+fn=(1020) default_zone_free_definite_size
+0 1260
+cfn=(1022) szone_free_definite_size
+calls=63 0 
+0 13189
+
+fn=(958) tiny_malloc_from_free_list
+0 8657
+cfn=(964) set_tiny_meta_header_in_use
+calls=185 0 
+0 8395
+0 7464
+cfn=(1070) get_tiny_free_size
+calls=39 0 
+0 741
+0 468
+cfn=(1030) tiny_free_list_add_ptr
+calls=39 0 
+0 3599
+0 39
+
+fn=(960) mvm_allocate_pages_securely
+0 114
+cfn=(926) mvm_allocate_pages
+calls=6 0 
+0 720
+0 60
+
+fn=(964)
+0 8675
+
+fn=(1018)
+0 1460
+cfn=(1010)
+calls=63 0 
+0 5513
+0 2142
+cfn=(1020)
+calls=63 0 
+0 14449
+0 8
+
+fn=(1104) tiny_free_list_remove_ptr
+0 830
+
+fn=(1204) szone_realloc
+0 36
+cfn=(1010)
+calls=2 0 
+0 164
+0 12
+cfn=(1206) szone_good_size
+calls=2 0 
+0 14
+0 136
+cfn=(1070)
+calls=2 0 
+0 38
+0 52
+cfn=(1104)
+calls=2 0 
+0 168
+0 38
+cfn=(964)
+calls=2 0 
+0 100
+0 28
+
+fn=(912)
+0 1310
+cfn=(914)
+calls=131 0 
+0 84121
+0 1048
+
+fn=(952)
+0 1944
+cfn=(990) default_zone_malloc
+calls=107 0 
+0 24617
+cfn=(954) szone_malloc
+calls=1 0 
+0 502
+0 1404
+
+fn=(956) szone_malloc_should_clear
+0 12571
+cfn=(958)
+calls=205 0 
+0 29363
+0 2665
+cfn=(800) free_tiny_botch
+calls=136 0 
+0 3517
+0 942
+cfn=(1076)
+calls=10 0 
+0 1271
+0 5501
+cfn=(960)
+calls=4 0 
+0 596
+0 112
+cfn=(962)
+calls=4 0 
+0 196
+0 32
+cfn=(964)
+calls=4 0 
+0 180
+0 176
+cfn=(960)
+calls=2 0 
+0 298
+0 50
+cfn=(962)
+calls=2 0 
+0 98
+0 158
+
+fn=(1026) tiny_free_no_lock
+0 715
+cfn=(1028) get_tiny_previous_free_msize
+calls=23 0 
+0 421
+0 719
+cfn=(1070)
+calls=6 0 
+0 113
+0 120
+cfn=(1104)
+calls=6 0 
+0 497
+0 830
+cfn=(1030)
+calls=25 0 
+0 2379
+0 585
+cfn=(1070)
+calls=2 0 
+0 37
+0 18
+cfn=(1104)
+calls=2 0 
+0 165
+0 247
+
+fn=(1106) free_small
+0 623
+cfn=(1108) small_free_list_add_ptr
+calls=3 0 
+0 328
+0 177
+
+fn=(798) __malloc_init
+0 13
+cfn=(800)
+calls=1 0 
+0 2726
+0 4
+cfn=(800)
+calls=1 0 
+0 2215
+0 5
+cfn=(800)
+calls=1 0 
+0 2155
+0 13
+cfn=(800)
+calls=1 0 
+0 3481
+0 13
+cfn=(800)
+calls=1 0 
+0 3275
+0 2
+cfn=(800)
+calls=1 0 
+0 2769
+0 2
+cfn=(800)
+calls=1 0 
+0 4133
+0 16
+
+fn=(924) create_scalable_szone
+0 24
+cfn=(926)
+calls=1 0 
+0 3425
+0 4
+cfn=(801)
+calls=1 0 
+0 6
+0 2
+cfn=(801)
+calls=1 0 
+0 140
+0 20
+cfn=(928) rack_init
+calls=1 0 
+0 5087
+0 6
+cfn=(928)
+calls=1 0 
+0 366
+0 5
+cfn=(801)
+calls=1 0 
+0 15304
+0 43
+cfn=(801)
+calls=1 0 
+0 6
+0 13
+
+fn=(950) malloc_set_zone_name
+0 13
+cfn=(801)
+calls=1 0 
+0 6
+0 9
+cfn=(801)
+calls=1 0 
+0 2420
+0 6
+cfn=(952)
+calls=1 0 
+0 533
+0 7
+cfn=(801)
+calls=1 0 
+0 26
+0 8
+cfn=(801)
+calls=1 0 
+0 2281
+0 14
+cob=(4)
+cfi=(4)
+cfn=(936)
+calls=1 0 
+0 5
+
+fn=(986)
+0 14
+
+fn=(1022)
+0 1062
+cfn=(1024) free_tiny
+calls=54 0 
+0 10882
+0 117
+cfn=(1106)
+calls=9 0 
+0 1128
+
+fn=(1024)
+0 3338
+cfn=(1026)
+calls=25 0 
+0 6846
+0 698
+
+fn=(1028)
+0 421
+
+fn=(1118)
+0 27
+cfn=(1120)
+calls=1 0 
+0 104
+
+fn=(1200) malloc_zone_realloc
+0 40
+cfn=(1202) default_zone_realloc
+calls=2 0 
+0 826
+0 26
+
+fn=(800)
+0 140
+cob=(6)
+cfi=(6)
+cfn=(932)
+calls=136 0 
+0 3381
+0 2
+cob=(6)
+cfi=(6)
+cfn=(650)
+calls=1 0 
+0 2154
+0 6
+cob=(4)
+cfi=(4)
+cfn=(670)
+calls=5 0 
+0 265
+0 22
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=7 0 
+0 61529
+0 14
+
+fn=(801)
+0 2
+cob=(7)
+cfi=(7)
+cfn=(802)
+calls=1 0 
+0 5
+0 1
+cob=(7)
+cfi=(7)
+cfn=(750)
+calls=1 0 
+0 5
+0 1
+cob=(3)
+cfi=(3)
+cfn=(806)
+calls=1 0 
+0 139
+0 2
+cob=(6)
+cfi=(6)
+cfn=(656)
+calls=1 0 
+0 25
+0 3
+cob=(6)
+cfi=(6)
+cfn=(932)
+calls=1 0 
+0 59
+0 31
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=30 0 
+0 420
+0 6
+cob=(4)
+cfi=(4)
+cfn=(670)
+calls=3 0 
+0 159
+0 7
+cob=(4)
+cfi=(4)
+cfn=(936)
+calls=6 0 
+0 30
+0 27
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=9 0 
+0 38293
+0 18
+
+fn=(1010)
+0 7497
+
+fn=(1030)
+0 5978
+
+fn=(1198)
+0 102
+cfn=(952)
+calls=4 0 
+0 1441
+0 14
+cfn=(1010)
+calls=2 0 
+0 164
+0 26
+cfn=(1200)
+calls=2 0 
+0 892
+0 84
+
+fn=(1542) __stack_logging_early_finished
+0 3
+
+fn=(916)
+0 2740
+cfn=(970) szone_calloc
+calls=137 0 
+0 36196
+0 4
+cfn=(800)
+calls=1 0 
+0 42972
+0 1
+
+fn=(934) mvm_protect
+0 40
+cfn=(801)
+calls=2 0 
+0 2426
+0 26
+cfn=(801)
+calls=2 0 
+0 12
+0 20
+
+fn=(970)
+0 1447
+cfn=(956)
+calls=137 0 
+0 34749
+
+fn=(990)
+0 1926
+cfn=(954)
+calls=107 0 
+0 22691
+
+fn=(1070)
+0 929
+
+fn=(1202)
+0 40
+cfn=(1204)
+calls=2 0 
+0 786
+
+fn=(954)
+0 216
+cfn=(956)
+calls=108 0 
+0 22977
+
+fn=(1108)
+0 328
+
+fn=(918)
+0 16
+cfn=(801)
+calls=1 0 
+0 6
+0 18
+cfn=(801)
+calls=1 0 
+0 2192
+0 90
+cfn=(801)
+calls=30 0 
+0 450
+0 188
+cfn=(801)
+calls=1 0 
+0 4781
+0 4
+cfn=(924)
+calls=1 0 
+0 24451
+0 5
+cfn=(944)
+calls=1 0 
+0 3285
+0 3
+cfn=(950)
+calls=1 0 
+0 5328
+0 18
+
+fn=(926)
+0 440
+cfn=(800)
+calls=5 0 
+0 270
+cfn=(801)
+calls=4 0 
+0 3521
+0 103
+cfn=(934)
+calls=2 0 
+0 2524
+0 81
+
+fn=(928)
+0 52
+cfn=(801)
+calls=2 0 
+0 2427
+0 50
+cfn=(926)
+calls=2 0 
+0 2794
+0 130
+
+fn=(1206)
+0 14
+
+ob=(10)
+fl=(10)
+fn=(824) libdispatch_init
+0 5
+cfn=(826) _dispatch_benchmark_init
+calls=1 0 
+0 2056
+0 25
+cfn=(826)
+calls=1 0 
+0 2301
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 3
+cfn=(826)
+calls=1 0 
+0 44
+0 12
+cfn=(830) _dispatch_time_init
+calls=1 0 
+0 1
+0 1
+cfn=(832) _dispatch_vtable_init
+calls=1 0 
+0 1
+0 1
+cfn=(834) _os_object_init
+calls=1 0 
+0 1579569
+0 4
+cfn=(1318) _voucher_init
+calls=1 0 
+0 4142
+
+fn=(1234)
+0 1
+
+fn=(1342)
+0 143
+cfn=(826)
+calls=13 0 
+0 7688
+0 78
+
+fn=(1402)
+0 400
+
+fn=(1406)
+0 441
+
+fn=(1442) dispatch_once_f
+0 26
+cfn=(1444) _dispatch_client_callout
+calls=2 0 
+0 17998
+0 20
+
+fn=(830)
+0 1
+
+fn=(1240)
+0 1
+
+fn=(1242)
+0 1
+
+fn=(1504) dispatch_queue_attr_make_with_autorelease_frequency
+0 49
+
+fn=(1218)
+0 1
+
+fn=(1246)
+0 1
+
+fn=(1222)
+0 1
+
+fn=(1224)
+0 1
+
+fn=(1250)
+0 1
+
+fn=(1508) _dispatch_queue_create_with_target
+0 73
+cfn=(1510) _dispatch_strdup_if_mutable
+calls=1 0 
+0 7711
+0 9
+cfn=(1516) _dispatch_object_alloc
+calls=1 0 
+0 377
+0 43
+cfn=(1518) _dispatch_queue_inherit_wlh_from_target
+calls=1 0 
+0 50
+0 13
+
+fn=(1228)
+0 1
+
+fn=(1230)
+0 1
+
+fn=(1232)
+0 1
+
+fn=(1254)
+0 1
+
+fn=(1336) dispatch_mach_hooks_install_4libxpc
+0 4
+
+fn=(826)
+0 17
+cob=(11)
+cfi=(11)
+cfn=(1208)
+calls=12 0 
+0 5004
+0 8
+cob=(5)
+cfi=(5)
+cfn=(782)
+calls=6 0 
+0 258
+0 29
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=9 0 
+0 1596551
+0 18
+
+fn=(1236)
+0 1
+
+fn=(1238)
+0 1
+
+fn=(1518)
+0 50
+
+fn=(1216)
+0 1
+
+fn=(1244)
+0 1
+
+fn=(1506) dispatch_queue_create
+0 3
+cfn=(1508)
+calls=1 0 
+0 8276
+
+fn=(1510)
+0 8
+cfn=(826)
+calls=1 0 
+0 2126
+0 5
+cfn=(826)
+calls=1 0 
+0 5563
+0 9
+
+fn=(1220)
+0 1
+
+fn=(1248)
+0 1
+
+fn=(1318)
+0 4
+cfn=(826)
+calls=1 0 
+0 2341
+0 1797
+
+fn=(1444)
+0 10
+cob=(17)
+cfi=(17)
+cfn=(1534)
+calls=1 0 
+0 9986
+cob=(15)
+cfi=(15)
+cfn=(1446)
+calls=1 0 
+0 7994
+0 8
+
+fn=(1528) voucher_activity_initialize_4libtrace
+0 8
+
+fn=(832)
+0 1
+
+fn=(834)
+0 4
+cfn=(826)
+calls=1 0 
+0 1573937
+0 10
+cfn=(826)
+calls=1 0 
+0 1990
+0 2
+cfn=(826)
+calls=1 0 
+0 3619
+0 7
+
+fn=(1226)
+0 1
+
+fn=(1252)
+0 1
+
+fn=(1516)
+0 1
+cfn=(1342)
+calls=1 0 
+0 376
+
+ob=(21) ./my
+fl=(23) /Library/Developer/CommandLineTools/usr/include/c++/v1/vector
+fn=(1712) void std::__1::vector<Edge, std::__1::allocator<Edge> >::__push_back_slow_path<Edge const&>(Edge const&)
+1576 36
++1 18
+338 30
+1577 18
+633 24
+1578 24
+968 24
+cfi=(22) ???
+cfn=(1647) void std::__1::vector<Edge, std::__1::allocator<Edge> >::__push_back_slow_path<Edge>(Edge&&)'2
+calls=6 0 
+* 300
+* 6
++1 18
+0 42
+347 30
++12 24
+971 6
++1 30
+0 18
+974 30
+fi=(24) /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm
+2719 24
+-8 30
+719 24
+2711 24
+fe=(23)
+974 10
+0 5
+975 20
+633 20
+1578 10
+cfi=(25) /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer
+cfn=(1720) std::__1::__split_buffer<Edge, std::__1::allocator<Edge>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<Edge>&)
+calls=5 310 
+* 2060
+fi=(24)
+2711 1
+fe=(23)
+974 2
+0 1
+975 4
+633 4
+1578 2
+cfi=(25)
+cfn=(1720)
+calls=1 310 
+* 702
++2 18
+fi=(26) /Library/Developer/CommandLineTools/usr/include/c++/v1/memory
+1106 6
+fe=(23)
+1580 12
+fi=(29) /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits
+2301 24
+fi=(26)
+1562 24
+fi=(29)
+2301 24
+fi=(26)
+1715 24
+fi=(29)
+2301 24
+fi=(26)
+1805 18
+fi=(29)
+2301 6
+fi=(26)
+1805 48
+fe=(23)
+1581 24
++1 12
+cfi=(22)
+cfn=(1647)
+calls=6 0 
+* 2038
+* 6
+0 6
+1583 6
+cfi=(25)
+cfn=(1730) std::__1::__split_buffer<Edge, std::__1::allocator<Edge>&>::~__split_buffer()
+calls=6 340 
+* 4478
+* 18
+
+fn=(1732) void std::__1::vector<Edge, std::__1::allocator<Edge> >::__push_back_slow_path<Edge>(Edge&&)
+1576 6
++1 3
+338 5
+1577 3
+633 4
+1578 4
+968 4
+cfi=(22)
+cfn=(1647)
+calls=1 0 
+* 50
+* 1
++1 3
+0 7
+347 5
++12 4
+971 1
++1 5
+0 3
+974 5
+fi=(24)
+2719 4
+-8 5
+719 4
+2711 4
+fe=(23)
+974 2
+0 1
+975 4
+633 4
+1578 2
+cfi=(25)
+cfn=(1720)
+calls=1 310 
+* 408
++2 3
+fi=(26)
+1106 1
+fe=(23)
+1580 2
+fi=(29)
+2301 4
+fi=(26)
+1562 4
+fi=(29)
+2301 4
+fi=(26)
+1715 4
+fi=(29)
+2301 4
+fi=(26)
+1805 3
+fi=(29)
+2301 1
+fi=(26)
+1805 8
+fe=(23)
+1581 4
++1 2
+cfi=(22)
+cfn=(1647)
+calls=1 0 
+* 20727
+* 1
+0 1
+1583 1
+cfi=(25)
+cfn=(1730)
+calls=1 340 
+* 29312
+* 3
+
+fn=(1714) std::__1::vector<Edge, std::__1::allocator<Edge> >::max_size() const
+957 84
+341 42
+fi=(26)
+1599 14
+1737 14
+fe=(23)
+958 7
++1 21
+fi=(24)
+2654 28
+-8 35
+719 28
+2646 35
+fe=(23)
+958 35
+
+fn=(1740) std::__1::vector<int, std::__1::allocator<int> >::max_size() const
+957 456
+341 228
+fi=(26)
+1599 76
+1737 76
+fe=(23)
+958 38
++1 114
+fi=(24)
+2654 152
+-8 190
+719 152
+2646 190
+fe=(23)
+958 190
+
+fn=(1724) std::__1::vector<Edge, std::__1::allocator<Edge> >::__swap_out_circular_buffer(std::__1::__split_buffer<Edge, std::__1::allocator<Edge>&>&)
+896 91
+675 14
+fi=(26)
+1106 21
+fe=(23)
+675 14
+fi=(26)
+1106 49
+fe=(23)
+347 35
++12 28
+849 28
+675 14
+fi=(26)
+1106 21
+fe=(23)
+633 28
+850 28
+675 14
+fi=(26)
+1106 49
+fe=(23)
+347 35
++12 28
+850 49
++48 21
+338 35
+898 56
+fi=(26)
+1694 35
++1 49
++1 21
++1 48
+cfi=(22)
+cfn=(1647)
+calls=6 0 
+* 20820
+0 21
+fe=(23)
+899 35
+fi=(29)
+4592 14
+2293 7
+4592 14
++1 14
+2293 7
+4593 28
+2293 7
+4594 21
+fe=(23)
+900 42
+fi=(29)
+4592 14
+2293 7
+4592 14
++1 14
+2293 7
+4593 28
+2293 7
+4594 21
+fe=(23)
+901 21
+344 35
+901 21
+fi=(25)
+58 49
+fi=(29)
+4592 14
+2293 7
+4592 14
++1 14
+2293 7
+4593 28
+2293 7
+4594 21
+fe=(23)
+902 49
+633 63
++42 14
+fi=(26)
+1106 21
+fe=(23)
+675 14
+fi=(26)
+1106 49
+fe=(23)
+347 35
++12 28
+843 28
+675 14
+fi=(26)
+1106 49
+fe=(23)
+347 35
++12 28
+844 28
+675 14
+fi=(26)
+1106 7
+fe=(23)
+844 63
++61 28
+
+fn=(1738) void std::__1::vector<int, std::__1::allocator<int> >::__push_back_slow_path<int>(int&&)
+1576 228
++1 114
+338 190
+1577 114
+633 152
+1578 152
+968 152
+cfi=(22)
+cfn=(1647)
+calls=38 0 
+* 1900
+* 38
++1 114
+0 266
+347 190
++12 152
+971 38
++1 190
+0 114
+974 190
+fi=(24)
+2719 152
+-8 190
+719 152
+2711 152
+fe=(23)
+974 56
+0 28
+975 112
+633 112
+1578 56
+cfi=(25)
+cfn=(1746) std::__1::__split_buffer<int, std::__1::allocator<int>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int>&)
+calls=28 310 
+* 10962
+fi=(24)
+2711 10
+fe=(23)
+974 20
+0 10
+975 40
+633 40
+1578 20
+cfi=(25)
+cfn=(1746)
+calls=10 310 
+* 3457
++2 114
+fi=(26)
+1106 38
+fe=(23)
+1580 76
+fi=(29)
+2301 152
+fi=(26)
+1562 152
+fi=(29)
+2301 152
+fi=(26)
+1715 152
+fi=(29)
+2301 152
+fi=(26)
+1805 114
+fi=(29)
+2301 38
+fi=(26)
+1805 76
+fe=(23)
+1581 152
++1 76
+cfi=(22)
+cfn=(1647)
+calls=38 0 
+* 11252
+* 38
+0 38
+1583 38
+cfi=(25)
+cfn=(1756) std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
+calls=38 340 
+* 14279
+* 114
+
+fn=(1702) std::__1::vector<Edge, std::__1::allocator<Edge> >::vector(unsigned long)
+1074 8
+cfn=(1703) std::__1::vector<Edge, std::__1::allocator<Edge> >::vector(unsigned long)'2
+calls=1 * 
+* 42
++9 3
+
+fn=(1703)
+1074 10
+424 2
+-3 1
++1 1
++1 5
+fi=(26)
+2187 7
+fi=(29)
+2301 4
+fi=(26)
+2097 6
+fe=(23)
+1078 3
++5 3
+
+fn=(1750) std::__1::vector<int, std::__1::allocator<int> >::__swap_out_circular_buffer(std::__1::__split_buffer<int, std::__1::allocator<int>&>&)
+896 494
+675 76
+fi=(26)
+1106 114
+fe=(23)
+675 76
+fi=(26)
+1106 266
+fe=(23)
+347 190
++12 152
+849 152
+675 76
+fi=(26)
+1106 114
+fe=(23)
+633 152
+850 152
+675 76
+fi=(26)
+1106 266
+fe=(23)
+347 190
++12 152
+850 266
++48 114
+338 190
+898 304
+fi=(26)
+1694 190
++1 266
++1 114
++1 224
+cfi=(22)
+cfn=(1647)
+calls=28 0 
+* 730
+0 114
+fe=(23)
+899 190
+fi=(29)
+4592 76
+2293 38
+4592 76
++1 76
+2293 38
+4593 152
+2293 38
+4594 114
+fe=(23)
+900 228
+fi=(29)
+4592 76
+2293 38
+4592 76
++1 76
+2293 38
+4593 152
+2293 38
+4594 114
+fe=(23)
+901 114
+344 190
+901 114
+fi=(25)
+58 266
+fi=(29)
+4592 76
+2293 38
+4592 76
++1 76
+2293 38
+4593 152
+2293 38
+4594 114
+fe=(23)
+902 266
+633 342
++42 76
+fi=(26)
+1106 114
+fe=(23)
+675 76
+fi=(26)
+1106 266
+fe=(23)
+347 190
++12 152
+843 152
+675 76
+fi=(26)
+1106 266
+fe=(23)
+347 190
++12 152
+844 152
+675 76
+fi=(26)
+1106 38
+fe=(23)
+844 342
++61 152
+
+fl=(21) /Users/alexeykudrinsky/Documents/MIPT/2_course/algo/2-contest/g.cpp
+fn=(1764) void Graph::fillArray<bool>(bool*, int, bool const&)
+567 30
++1 170
++1 300
+-1 200
++3 10
+
+fn=(1704) main::$_0::operator()() const
+188 64
++1 96
++1 48
+0 28
+191 28
++2 112
++1 28
+-1 16
++1 4
+0 32
+195 32
++2 64
+
+fn=(1700) Graph::Graph(int)
+270 8
+cfn=(1701) Graph::Graph(int)'2
+calls=1 * 
+* 1378
+* 3
+
+fn=(1701)
+270 6
+-6 2
++2 7
+cfi=(23)
+cfn=(1702)
+calls=1 1074 
+* 53
+-1 16
+cfi=(22)
+cfn=(1646) void std::__1::vector<Edge, std::__1::allocator<Edge> >::__push_back_slow_path<Edge>(Edge&&)
+calls=1 0 
+* 299
+* 24
+fi=(23)
+424 2
+-3 1
++1 1
++1 5
+fi=(26)
+2187 7
+fi=(29)
+2301 4
+fi=(26)
+2097 6
+fe=(21)
+265 77
+fi=(23)
+424 18
+-3 9
++1 9
++1 45
+fi=(26)
+2187 63
+fi=(29)
+2301 36
+fi=(26)
+2097 54
+fe=(21)
+265 48
++2 11
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 293
+* 5
++2 5
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 262
+* 5
++1 5
+
+fn=(1810) Graph::updateFlow(int, int)
+617 32
++2 4
++1 12
++1 48
++3 108
+fi=(23)
+1504 48
+fe=(21)
+624 24
+cfn=(1812) Edge::availableCap()
+calls=12 245 
+* 96
+* 72
+fi=(24)
+2654 48
+-8 60
+719 48
+2646 48
+fe=(21)
+624 16
++9 72
+fi=(23)
+1504 32
+fe=(21)
+633 16
+-12 8
+fi=(24)
+2646 4
+fe=(21)
+624 8
++9 36
+fi=(23)
+1504 16
+fe=(21)
+633 8
+-12 4
++15 8
++1 48
++2 120
+fi=(23)
+1504 48
+fe=(21)
+639 24
++1 132
+fi=(23)
+1504 48
+fe=(21)
+640 36
++1 96
+fi=(23)
+1504 48
+fe=(21)
+641 24
+-4 12
++9 16
++1 12
+
+fn=(1818) void Graph::fillArray<int>(int*, int, int const&)
+567 6
++1 34
++1 50
+-1 40
++3 2
+
+fn=(1762) Graph::findShortPath(int, int, bool (Graph::*)(int))
+488 65
++1 50
+cfi=(22)
+cfn=(1646)
+calls=5 0 
+* 715
+* 75
+fi=(25)
+320 45
+fi=(26)
+2187 30
+fi=(29)
+2301 20
+fi=(26)
+2097 30
+fi=(27) /Library/Developer/CommandLineTools/usr/include/c++/v1/deque
+1095 35
+fi=(26)
+2187 30
+fi=(29)
+2301 20
+fi=(26)
+2097 10
+fi=(29)
+2301 5
+fi=(26)
+2097 45
+fi=(30) /Library/Developer/CommandLineTools/usr/include/c++/v1/queue
+286 10
+cfi=(22)
+cfn=(1646)
+calls=5 0 
+* 5773
+* 10
+fe=(21)
+497 20
++1 15
+0 35
+fi=(27)
+960 25
+1318 15
+fe=(21)
+500 20
+0 147
+fi=(27)
+960 105
+1318 63
+fe=(21)
+500 85
+0 125
+fi=(27)
+1762 75
+fi=(25)
+81 25
+fi=(27)
+1762 75
++1 125
+fe=(21)
+501 150
+fi=(30)
+301 25
+cfi=(22)
+cfn=(1646)
+calls=25 0 
+* 1475
+* 50
+0 50
+fe=(21)
+504 225
+fi=(23)
+1471 75
+-21 100
+fi=(31) /Library/Developer/CommandLineTools/usr/include/c++/v1/iterator
+-30 150
+fi=(23)
++30 25
++21 50
+fe=(21)
+504 100
+fi=(23)
+1487 75
+-37 100
+fi=(31)
+-30 150
+fi=(23)
++30 25
++37 50
+fe=(21)
+504 25
+0 100
+fi=(31)
+1558 100
+-52 75
+-95 25
+fe=(21)
+0 464
+fi=(31)
+1558 464
+-52 348
+-95 116
++95 580
++52 116
+fe=(21)
+504 232
+fi=(31)
+1506 125
++52 25
+fe=(21)
+504 71
+0 360
+fi=(31)
+1355 120
+fe=(21)
+504 240
++7 1920
+cfn=(1796) Graph::edgeNotFull(int)
+calls=120 +49 
+* 3720
+* 660
++1 360
+fi=(23)
+1504 300
+fe=(21)
+512 180
++1 300
++1 324
+fi=(30)
+286 72
+cfi=(22)
+cfn=(1646)
+calls=36 0 
+* 6444
+* 72
+fe=(21)
+516 180
++3 180
++6 4
++2 56
+-23 116
+0 348
+fi=(31)
+1371 348
+fe=(21)
+504 116
+-4 22
++32 25
++1 12
++3 2
+0 1
+538 1
+cfi=(30)
+cfn=(1798) std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::~queue()
+calls=1 194 
+* 911
+0 4
+538 4
+cfi=(30)
+cfn=(1798)
+calls=4 194 
+* 5277
+* 30
+
+fn=(1816) Graph::negCycle(int)
+353 9
++2 11
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 293
+* 2
++2 7
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 133
+* 1
++1 6
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 133
+* 1
++2 3
++4 45
++1 60
+fi=(23)
+633 40
+fe=(21)
+365 2420
+fi=(23)
+633 1920
+fe=(21)
+365 960
++1 3360
+fi=(23)
+1504 1920
+fe=(21)
+366 4320
+fi=(23)
+1504 1920
+fe=(21)
+366 3360
+cfn=(1822) Graph::edgeCost(int)
+calls=480 478 
+* 12960
+* 4661
+fi=(23)
+1504 1292
+fe=(21)
+366 969
++1 498
+cfn=(1822)
+calls=166 478 
+* 4482
+* 1162
+fi=(23)
+1504 664
+fe=(21)
+367 332
++1 996
+fi=(23)
+1504 664
+fe=(21)
+368 1328
+fi=(23)
+1504 664
+fe=(21)
+368 332
++2 480
+-5 1920
++6 10
+-7 40
++9 6
+fi=(23)
+633 4
+fe=(21)
+373 7
+fi=(23)
+633 4
+fe=(21)
+373 2
++1 14
+fi=(23)
+1504 8
+fe=(21)
+374 18
+fi=(23)
+1504 8
+fe=(21)
+374 14
+cfn=(1822)
+calls=2 478 
+* 54
+* 10
++1 6
+fi=(23)
+1504 4
+fe=(21)
+375 2
++1 21
++1 20
+-1 16
++11 1
+-14 4
+
+fn=(1706) Edge::Edge(int, int, long long, long long, long long)
+232 768
+cfn=(1707) Edge::Edge(int, int, long long, long long, long long)'2
+calls=48 * 
+* 1008
+* 144
+
+fn=(1707)
+232 432
+-4 96
++1 96
++1 96
++1 96
++1 192
+
+fn=(1708) Graph::NewEdge(Edge const&)
+573 144
++3 144
++5 144
+fi=(23)
+1590 96
+344 120
+1590 72
+0 108
+886 126
+338 90
+1594 54
+fi=(26)
+1106 18
+fi=(23)
+1594 72
+fi=(26)
+-32 72
+fi=(29)
+2301 72
+fi=(26)
+1715 72
+fi=(29)
+2301 72
+fi=(26)
+1805 54
+fi=(29)
+2301 18
+fi=(26)
+1805 162
+fi=(23)
+1596 54
++1 18
++2 18
+cfi=(22)
+cfn=(1646)
+calls=6 0 
+* 10443
+0 72
+fe=(21)
+582 336
+cfn=(1706)
+calls=24 232 
+* 960
+* 120
+fi=(23)
+1609 96
+344 120
+1609 72
+0 138
+886 161
+338 115
+1613 69
+fi=(26)
+1106 23
+fi=(23)
+1614 46
+fi=(29)
+2293 92
+fi=(26)
+1562 92
+fi=(29)
+2301 92
+fi=(26)
+1715 92
+fi=(29)
+2301 92
+fi=(26)
+1805 69
+fi=(29)
+2301 23
+fi=(26)
+1805 207
+fi=(23)
+1616 69
++1 23
++2 2
+fi=(29)
+2293 1
+fi=(23)
+1619 2
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 50641
+0 24
+fe=(21)
+583 216
+fi=(23)
++50 96
+fe=(21)
+-50 144
+fi=(23)
+1609 96
+344 120
+1609 72
+0 30
+886 35
+338 25
+1613 15
+fi=(26)
+1106 5
+fi=(23)
+1614 10
+fi=(29)
+2293 20
+fi=(26)
+1562 20
+fi=(29)
+2301 20
+fi=(26)
+1715 20
+fi=(29)
+2301 20
+fi=(26)
+1805 15
+fi=(29)
+2301 5
+fi=(26)
+1805 15
+fi=(23)
+1616 15
++1 5
++2 38
+fi=(29)
+2293 19
+fi=(23)
+1619 38
+cfi=(22)
+cfn=(1646)
+calls=19 0 
+* 24111
+0 24
+fe=(21)
+584 216
+fi=(23)
++49 96
+fe=(21)
+-49 144
+fi=(23)
+1609 96
+344 120
+1609 72
+0 30
+886 35
+338 25
+1613 15
+fi=(26)
+1106 5
+fi=(23)
+1614 10
+fi=(29)
+2293 20
+fi=(26)
+1562 20
+fi=(29)
+2301 20
+fi=(26)
+1715 20
+fi=(29)
+2301 20
+fi=(26)
+1805 15
+fi=(29)
+2301 5
+fi=(26)
+1805 15
+fi=(23)
+1616 15
++1 5
++2 38
+fi=(29)
+2293 19
+fi=(23)
+1619 38
+cfi=(22)
+cfn=(1646)
+calls=19 0 
+* 22993
+fe=(21)
+602 96
+
+fn=(1758) Graph::maxFlowMinCost(int, int)
+394 7
++1 4
+cfn=(1760) Graph::maxFlowEdmondsKarp(int, int)
+calls=1 604 
+* 38005
+* 1
++1 10
++6 2
+cfn=(1816)
+calls=1 -49 
+* 54601
+
+fn=(1820) void Graph::fillArray<long long>(long long*, int, long long const&)
+567 6
++1 34
++1 50
+-1 40
++3 2
+
+fn=(1644) main
+159 6
++1 1
++1 2
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 36298
+0 3
+162 9
+cfi=(22)
+cfn=(1646)
+calls=1 0 
+* 29888
+* 1
++2 16
++1 12
++1 12
+-2 16
++5 46
+0 16
+170 8
++1 16
+cfi=(22)
+cfn=(1646)
+calls=8 0 
+* 5142
++1 24
++1 40
++1 16
++1 4
++2 16
++2 8
+-10 32
+0 1
+181 5
+cfn=(1700)
+calls=1 +89 
+* 1389
++1 3
++1 4
++2 16
++2 108
++1 160
+cfn=(1704)
+calls=16 * 
+* 552
+* 64
++14 16
++1 16
++3 16
+-5 80
+cfn=(1706)
+calls=16 +31 
+* 640
+* 16
+0 32
+200 16
+cfn=(1708)
+calls=16 573 
+* 90650
+* 16
++9 16
+-22 64
++23 4
+-25 16
++27 16
++1 48
+cfn=(1706)
+calls=4 +19 
+* 160
+* 4
+0 8
+213 4
+cfn=(1708)
+calls=4 573 
+* 13559
+* 4
++1 56
+cfn=(1706)
+calls=4 +18 
+* 160
+* 4
+0 8
+214 4
+cfn=(1708)
+calls=4 573 
+* 11335
+* 4
++1 4
+-3 16
++5 4
+cfn=(1758)
+calls=1 394 
+* 92630
+
+fn=(1760)
+604 8
++1 9
+cfn=(1762)
+calls=1 488 
+* 8565
+* 36
+cfn=(1762)
+calls=4 488 
+* 27808
+* 11
++1 16
+cfn=(1810)
+calls=4 +11 
+* 1540
+-1 4
++6 3
++1 1
++2 4
+
+fn=(1796)
+560 600
++3 720
+fi=(23)
+1504 480
+fe=(21)
+563 720
+fi=(23)
+1504 480
+fe=(21)
+563 720
+
+fn=(1812)
+245 48
++1 48
+
+fn=(1822)
+478 3240
++1 3240
+fi=(23)
+1504 2592
+fe=(21)
+479 648
++1 3240
++1 1376
++3 1216
++2 1944
+
+fl=(22)
+fn=(1646)
+0 5
+cfi=(21)
+cfn=(1764)
+calls=5 567 
+0 710
+0 1
+cfi=(21)
+cfn=(1818)
+calls=1 567 
+0 132
+0 1
+cfi=(21)
+cfn=(1820)
+calls=1 567 
+0 132
+0 5
+cfi=(27)
+cfn=(1804) std::__1::__deque_base<int, std::__1::allocator<int> >::clear()
+calls=5 1165 
+0 1915
+0 25
+cfi=(27)
+cfn=(1792) std::__1::deque<int, std::__1::allocator<int> >::pop_front()
+calls=25 2565 
+0 1450
+0 41
+cfi=(27)
+cfn=(1768) std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&)
+calls=41 1796 
+0 12176
+0 6
+cfi=(23)
+cfn=(1712)
+calls=6 1576 
+0 10437
+0 1
+cfi=(23)
+cfn=(1732)
+calls=1 1576 
+0 50640
+0 38
+cfi=(23)
+cfn=(1738)
+calls=38 1576 
+0 47066
+0 10
+cob=(13)
+cfi=(13)
+cfn=(1736) operator delete(void*)
+calls=10 0 
+0 3273
+0 5
+cob=(13)
+cfi=(13)
+cfn=(1696) operator new[](unsigned long)
+calls=5 0 
+0 31030
+0 9
+cob=(7)
+cfi=(7)
+cfn=(1648)
+calls=8 0 
+0 5134
+0 3
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=1 0 
+0 36292
+0 2
+
+fn=(1647)
+0 7
+cfi=(23)
+cfn=(1714)
+calls=7 957 
+0 343
+0 38
+cfi=(23)
+cfn=(1740)
+calls=38 957 
+0 1862
+0 46
+cfi=(27)
+cfn=(1788) std::__1::__deque_base<int, std::__1::allocator<int> >::end()
+calls=46 1076 
+0 3128
+0 5
+cfi=(27)
+cfn=(1806) std::__1::__deque_base<int, std::__1::allocator<int> >::begin()
+calls=5 1060 
+0 270
+0 5
+cfi=(25)
+cfn=(1784) std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::push_back(int*&&)
+calls=5 564 
+0 320
+0 5
+cfi=(27)
+cfn=(1770) std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity()
+calls=5 2425 
+0 4893
+0 7
+cfi=(23)
+cfn=(1724)
+calls=7 896 
+0 22758
+0 38
+cfi=(23)
+cfn=(1750)
+calls=38 896 
+0 11214
+0 34
+cob=(13)
+cfi=(13)
+cfn=(1736)
+calls=34 0 
+0 41203
+0 55
+cob=(13)
+cfi=(13)
+cfn=(1698) operator new(unsigned long)
+calls=55 0 
+0 14272
+0 34
+cob=(6)
+cfi=(6)
+cfn=(968)
+calls=33 0 
+0 1069
+0 3
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=1 0 
+0 20442
+0 2
+
+fl=(30)
+fn=(1798)
+194 30
+cfn=(1799) std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::~queue()'2
+calls=5 * 
+* 6143
+* 15
+
+fn=(1799)
+194 30
+cfi=(27)
+cfn=(1800) std::__1::deque<int, std::__1::allocator<int> >::~deque()
+calls=5 1187 
+* 6098
+* 15
+
+fl=(27)
+fn=(1768)
+1796 246
++1 123
+961 205
+1797 205
+1402 123
+fi=(25)
+89 164
+fe=(27)
+1402 205
+0 10
+1402 118
+fi=(25)
+89 144
+fe=(27)
+1402 144
++10 144
+960 180
+1412 72
+1798 72
+1402 5
++10 20
+960 25
+1412 10
+1798 10
++1 10
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 4898
++2 205
+cfi=(22)
+cfn=(1647)
+calls=41 0 
+* 2829
+* 205
+309 82
+fi=(29)
+451 41
+fe=(27)
+1801 205
+fi=(26)
+1562 164
+fi=(29)
+2301 164
+fi=(26)
+1715 164
+fi=(29)
+2301 164
+fi=(26)
+1805 123
+fi=(29)
+2301 41
+fi=(26)
+1805 82
+fe=(27)
+-3 123
+958 205
+1802 123
++1 123
+
+fn=(1788)
+1076 322
+958 322
+1077 322
+fi=(25)
+81 46
+fe=(27)
+1078 230
++1 138
+fi=(25)
+90 230
+fe=(27)
+1079 828
+430 460
+1079 230
+
+fn=(1802) std::__1::__deque_base<int, std::__1::allocator<int> >::~__deque_base()
+1104 25
++1 10
+cfi=(22)
+cfn=(1646)
+calls=5 0 
+* 1920
+* 15
+fi=(25)
+81 5
+fe=(27)
+1106 15
+fi=(25)
+83 5
+fe=(27)
+1107 5
++1 30
+0 15
+961 30
+1109 30
+fi=(26)
+1555 30
+1796 10
+fi=(28) /Library/Developer/CommandLineTools/usr/include/c++/v1/new
+236 10
+cfi=(22)
+cfn=(1646)
+calls=5 0 
+* 1589
+fe=(27)
+1108 20
++2 10
+cfi=(25)
+cfn=(1808) std::__1::__split_buffer<int*, std::__1::allocator<int*> >::~__split_buffer()
+calls=5 340 
+* 2219
+* 15
+
+fn=(1770)
+2425 25
++1 15
+961 25
+2426 15
++1 15
++8 15
+fi=(25)
+89 20
+fe=(27)
+2435 25
+fi=(25)
+59 25
++32 20
+fe=(27)
+2435 10
+0 15
+2454 25
+fi=(25)
+59 25
++32 20
+fe=(27)
+2454 25
+fi=(24)
+2719 20
+-8 25
+719 20
+2711 30
+fe=(27)
+2454 5
++1 15
+fi=(25)
+89 20
+fe=(27)
+2456 15
+fi=(25)
+56 25
+fe=(27)
+2454 15
+cfi=(25)
+cfn=(1774) std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int*>&)
+calls=5 310 
+* 1498
+* 5
++6 15
+fi=(26)
+1547 30
+1790 20
++3 15
+fi=(28)
+228 10
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 1090
+* 10
+fi=(26)
+1793 10
+fe=(27)
+2461 30
+fi=(26)
+3166 80
+2429 40
+fi=(29)
+2293 30
+fi=(26)
+-96 40
+fi=(29)
+2301 20
+fi=(26)
+2097 10
+fi=(29)
+2301 5
+fi=(26)
+2097 10
+2197 15
+fi=(29)
+2301 20
+fi=(26)
+2097 10
+fi=(29)
+2301 5
+fi=(26)
+2097 50
+2571 5
+fe=(27)
+2462 20
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 325
+* 5
+0 35
+fi=(26)
+2588 30
++1 5
+fe=(27)
+2465 15
+fi=(25)
+83 5
+fe=(27)
+2465 5
++1 25
+-1 5
+0 30
+2468 15
+fi=(29)
+4592 10
+2293 5
+4592 10
++1 10
+2293 5
+4593 20
+2293 5
+4594 15
+fe=(27)
+2469 30
+fi=(29)
+4592 10
+2293 5
+4592 10
++1 10
+2293 5
+4593 20
+2293 5
+4594 15
+fe=(27)
+2470 30
+fi=(29)
+4592 10
+2293 5
+4592 10
++1 10
+2293 5
+4593 20
+2293 5
+4594 15
+fe=(27)
+2471 15
+fi=(25)
+58 70
+fi=(29)
+4592 10
+2293 5
+4592 10
++1 10
+2293 5
+4593 20
+2293 5
+4594 70
+fi=(26)
+2595 10
++1 30
++1 15
+fi=(28)
+0 5
+fe=(27)
+2472 5
+cfi=(25)
+cfn=(1786) std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::~__split_buffer()
+calls=5 340 
+* 180
+* 5
+0 5
+2473 15
+
+fn=(1804)
+1165 35
+961 35
+1166 10
++1 10
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 275
+* 20
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 345
+* 10
+0 20
+409 20
+-4 25
++4 10
+1167 15
+0 64
+409 64
+-4 80
++4 32
+1167 53
+0 16
+1168 48
+309 48
+0 32
+fi=(29)
+451 64
+fi=(26)
+1595 64
+1727 64
+fe=(27)
+1168 16
+0 48
+314 160
++5 16
+1167 16
+0 15
+958 30
+1169 10
+0 15
+fi=(25)
+89 25
+fe=(27)
+1170 15
+0 15
+fi=(25)
+89 25
+fe=(27)
+1175 20
++3 10
++1 5
++5 15
+
+fn=(1800)
+1187 30
+cfn=(1801) std::__1::deque<int, std::__1::allocator<int> >::~deque()'2
+calls=5 * 
+* 6053
+* 15
+
+fn=(1801)
+1187 30
+cfn=(1802)
+calls=5 -83 
+* 6008
+* 15
+
+fn=(1806)
+1060 30
+fi=(25)
+81 5
+fe=(27)
+1061 25
++1 15
+fi=(25)
+90 30
+fe=(27)
+1062 95
+430 50
+1062 20
+
+fn=(1792)
+2565 125
++1 75
+961 125
+2566 25
++1 100
+fi=(25)
+81 25
+fe=(27)
+2568 50
+-1 25
++2 50
+-1 75
+fi=(26)
+1106 75
+1595 100
+1727 100
+fe=(27)
+2570 75
+958 125
+2570 75
++1 150
++6 75
+
+fl=(25)
+fn=(1808)
+340 30
+cfn=(1809) std::__1::__split_buffer<int*, std::__1::allocator<int*> >::~__split_buffer()'2
+calls=5 * 
+* 2174
++4 15
+
+fn=(1809)
+340 35
+88 20
++53 30
+295 40
+0 15
+56 25
+296 20
+fi=(26)
+1106 15
+1595 20
+1727 20
+fe=(25)
+295 5
++47 15
+0 15
+56 25
+343 25
+59 25
++32 35
+-91 30
+fi=(26)
+1555 30
+1796 10
+fi=(28)
+236 10
+cfi=(22)
+cfn=(1646)
+calls=5 0 
+* 1694
+fe=(25)
+344 15
+
+fn=(1720)
+310 84
+cfn=(1721) std::__1::__split_buffer<Edge, std::__1::allocator<Edge>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<Edge>&)'2
+calls=7 * 
+* 3065
++4 21
+
+fn=(1721)
+310 63
+-1 56
+fi=(26)
+2197 63
+fi=(29)
+2301 28
+fi=(26)
+2097 21
+2197 21
+fi=(29)
+2301 28
+fi=(26)
+2097 14
+fi=(29)
+2301 7
+fi=(26)
+2097 7
+fe=(25)
+311 21
+0 28
+56 21
+fi=(26)
+2236 21
+2110 7
+fe=(25)
+311 21
+fi=(26)
+1547 42
+1790 28
++3 21
+fi=(28)
+228 14
+cfi=(22)
+cfn=(1647)
+calls=7 0 
+* 2351
+fe=(25)
++83 35
++1 42
++1 42
+58 35
+313 7
++1 21
+
+fn=(1786)
+340 30
+cfn=(1787) std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::~__split_buffer()'2
+calls=5 * 
+* 135
++4 15
+
+fn=(1787)
+340 35
+88 20
++53 30
+295 20
++47 15
++2 15
+
+fn=(1730)
+340 42
+cfn=(1731) std::__1::__split_buffer<Edge, std::__1::allocator<Edge>&>::~__split_buffer()'2
+calls=7 * 
+* 33727
++4 21
+
+fn=(1731)
+340 49
+88 28
++53 42
+295 280
+0 189
+56 189
+fi=(26)
+2236 189
+2110 63
+fe=(25)
+296 252
+fi=(26)
+1106 189
+1595 252
+1727 252
+fe=(25)
+295 63
++47 21
+0 18
+56 18
+fi=(26)
+2236 18
+2110 6
+fe=(25)
+343 30
+59 30
++32 42
+-91 36
+fi=(26)
+1555 36
+1796 12
+fi=(28)
+236 12
+cfi=(22)
+cfn=(1647)
+calls=6 0 
+* 31390
+fe=(25)
+344 21
+
+fn=(1774)
+310 60
+cfn=(1775) std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int*>&)'2
+calls=5 * 
+* 1423
++4 15
+
+fn=(1775)
+310 45
+-1 40
+fi=(26)
+2197 45
+fi=(29)
+2301 20
+fi=(26)
+2097 15
+2197 15
+fi=(29)
+2301 20
+fi=(26)
+2097 10
+fi=(29)
+2301 5
+fi=(26)
+2097 5
+fe=(25)
+311 15
+0 20
+56 15
+fi=(26)
+2236 15
+2110 5
+fe=(25)
+311 15
+fi=(26)
+1547 30
+1790 20
++3 15
+fi=(28)
+228 10
+cfi=(22)
+cfn=(1647)
+calls=5 0 
+* 913
+fe=(25)
++83 25
++1 30
++1 30
+58 25
+313 5
++1 15
+
+fn=(1784)
+564 30
++1 15
+58 25
+565 15
+0 15
+56 15
+fi=(26)
+2236 15
+2110 5
+fe=(25)
+586 10
+fi=(26)
+1106 5
+fe=(25)
+587 10
+fi=(29)
+2293 20
+fi=(26)
+1562 20
+fi=(29)
+2301 20
+fi=(26)
+1715 20
+fi=(29)
+2301 20
+fi=(26)
+1805 15
+fi=(29)
+2301 5
+fi=(26)
+1805 10
+fe=(25)
+588 15
++1 15
+
+fn=(1756)
+340 228
+cfn=(1757) std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()'2
+calls=38 * 
+* 13937
++4 114
+
+fn=(1757)
+340 266
+88 152
++53 228
+295 400
+0 186
+56 186
+fi=(26)
+2236 186
+2110 62
+fe=(25)
+296 248
+fi=(26)
+1106 186
+1595 248
+1727 248
+fe=(25)
+295 62
++47 114
+0 84
+56 84
+fi=(26)
+2236 84
+2110 28
+fe=(25)
+343 140
+59 140
++32 196
+-91 168
+fi=(26)
+1555 168
+1796 56
+fi=(28)
+236 56
+cfi=(22)
+cfn=(1647)
+calls=28 0 
+* 9847
+fe=(25)
+344 114
+
+fn=(1746)
+310 456
+cfn=(1747) std::__1::__split_buffer<int, std::__1::allocator<int>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int>&)'2
+calls=38 * 
+* 13849
++4 114
+
+fn=(1747)
+310 342
+-1 304
+fi=(26)
+2197 342
+fi=(29)
+2301 152
+fi=(26)
+2097 114
+2197 114
+fi=(29)
+2301 152
+fi=(26)
+2097 76
+fi=(29)
+2301 38
+fi=(26)
+2097 38
+fe=(25)
+311 114
+0 152
+56 114
+fi=(26)
+2236 114
+2110 38
+fe=(25)
+311 114
+fi=(26)
+1547 228
+1790 152
++3 114
+fi=(28)
+228 76
+cfi=(22)
+cfn=(1647)
+calls=38 0 
+* 9973
+fe=(25)
++83 190
++1 228
++1 228
+58 190
+313 38
++1 114
+
+ob=(1)
+fl=(1)
+fn=(0) _dyld_start
+0 13
+cfn=(2) dyldbootstrap::start(macho_header const*, int, char const**, long, macho_header const*, unsigned long*)
+calls=1 0 
+0 6801872
+0 130
+cob=(21)
+cfi=(21)
+cfn=(1644)
+calls=1 159 
+0 283560
+
+fn=(34) getentropy
+0 10
+
+fn=(38) dyld::_main(macho_header const*, unsigned long, int, char const**, char const**, char const**, unsigned long*)
+0 22
+cfn=(40) dyld3::kdebug_trace_dyld_signpost(unsigned int, unsigned long long, unsigned long long)
+calls=1 0 
+0 37
+0 3
+cfn=(44) _simple_getenv
+calls=1 0 
+0 117
+0 8
+cfn=(44)
+calls=1 0 
+0 98
+0 3
+cfn=(48) dyld::notifyKernelAboutImage(macho_header const*, char const*)
+calls=1 0 
+0 170
+0 3
+cfn=(44)
+calls=1 0 
+0 98
+0 3
+cfn=(48)
+calls=1 0 
+0 184
+0 5
+cfn=(44)
+calls=1 0 
+0 2691
+0 10
+cfn=(56) dyld::setContext(macho_header const*, int, char const**, char const**, char const**)
+calls=1 0 
+0 105
+0 3
+cfn=(44)
+calls=1 0 
+0 98
+0 12
+cfn=(58) getcwd
+calls=1 0 
+0 173
+0 5
+cfn=(76) strlen
+calls=1 0 
+0 37
+0 3
+cfn=(76)
+calls=1 0 
+0 18
+0 2
+cfn=(78) operator new[](unsigned long)
+calls=1 0 
+0 43
+0 4
+cfn=(84) strcpy
+calls=1 0 
+0 45
+0 2
+cfn=(76)
+calls=1 0 
+0 37
+0 4
+cfn=(86) strcat
+calls=1 0 
+0 107
+0 5
+cfn=(90) strrchr
+calls=1 0 
+0 348
+0 12
+cfn=(92) issetugid
+calls=1 0 
+0 5
+0 4
+cfn=(94) dyld::hasRestrictedSegment(macho_header const*)
+calls=1 0 
+0 287
+0 4
+cfn=(96) csr_check
+calls=1 0 
+0 25
+0 8
+cfn=(102) csops
+calls=1 0 
+0 5
+0 16
+cfn=(104) dyld::checkEnvironmentVariables(char const**)
+calls=1 0 
+0 7193
+0 11
+cfn=(122) mach_host_self
+calls=1 0 
+0 5
+0 6
+cfn=(126) host_info
+calls=1 0 
+0 222
+0 10
+cfn=(134) mach_port_deallocate
+calls=1 0 
+0 17
+0 55
+cfn=(4) strcmp
+calls=4 0 
+0 172
+0 26
+cfn=(24) strncmp
+calls=3 0 
+0 96
+0 105
+cfn=(138) dyld3::MachOParser::MachOParser(mach_header const*, bool)
+calls=1 0 
+0 5
+0 2
+cfn=(140) dyld3::MachOParser::getSlide() const
+calls=1 0 
+0 266
+0 24
+cfn=(154) dyld3::MachOParser::forEachSegment(void ( block_pointer)(char const*, unsigned int, unsigned int, unsigned long long, unsigned long long, unsigned char, bool&)) const
+calls=1 0 
+0 766
+0 6
+cfn=(150) _Block_object_dispose
+calls=1 0 
+0 3
+0 13
+cfn=(162) dyld3::loader::bootArgsContains(char const*)
+calls=1 0 
+0 51
+0 6
+cfn=(24)
+calls=1 0 
+0 38
+0 6
+cfn=(24)
+calls=1 0 
+0 23
+0 6
+cfn=(24)
+calls=1 0 
+0 23
+0 6
+cfn=(24)
+calls=1 0 
+0 23
+0 6
+cfn=(24)
+calls=1 0 
+0 38
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(44)
+calls=1 0 
+0 709
+0 8
+cfn=(120) dyld::paths_expand_roots(char const**, char const*, char const*)
+calls=1 0 
+0 481
+0 10
+cfn=(120)
+calls=1 0 
+0 432
+0 11
+cfn=(164) void std::__1::vector<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*), std::__1::allocator<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)> >::__push_back_slow_path<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)>(char const* (*&&)(dyld_image_states, unsigned int, dyld_image_info const*))
+calls=1 0 
+0 152
+0 8
+cfn=(164)
+calls=1 0 
+0 152
+0 3
+cfn=(170) std::__1::vector<ImageLoader*, std::__1::allocator<ImageLoader*> >::reserve(unsigned long)
+calls=1 0 
+0 135
+0 3
+cfn=(176) std::__1::vector<void (*)(mach_header const*, long), std::__1::allocator<void (*)(mach_header const*, long)> >::reserve(unsigned long)
+calls=1 0 
+0 135
+0 3
+cfn=(176)
+calls=1 0 
+0 135
+0 3
+cfn=(170)
+calls=1 0 
+0 135
+0 3
+cfn=(182) std::__1::vector<dyld::RegisteredDOF, std::__1::allocator<dyld::RegisteredDOF> >::reserve(unsigned long)
+calls=1 0 
+0 138
+0 7
+cfn=(4)
+calls=1 0 
+0 14
+0 59
+cfn=(188) addNonSharedCacheImageUUID(dyld_uuid_info const&)
+calls=1 0 
+0 180
+0 6
+cfn=(194) dyld::isCompatibleMachO(unsigned char const*, char const*)
+calls=1 0 
+0 37
+0 7
+cfn=(196) ImageLoaderMachO::instantiateMainExecutable(macho_header const*, unsigned long, char const*, ImageLoader::LinkContext const&)
+calls=1 0 
+0 4659
+0 3
+cfn=(264) dyld::addImage(ImageLoader*)
+calls=1 0 
+0 1781
+0 125
+cfn=(282) ImageLoaderMachO::sdkVersion() const
+calls=1 0 
+0 128
+0 9
+cfn=(170)
+calls=1 0 
+0 187
+0 7
+cfn=(284) getpid
+calls=1 0 
+0 13
+0 6
+cfn=(286) proc_regionfilename
+calls=1 0 
+0 127
+0 8
+cfn=(4)
+calls=1 0 
+0 31
+0 23
+cfn=(292) dyld::load(char const*, dyld::LoadContext const&, unsigned int&)
+calls=1 0 
+0 11474
+0 17
+cfn=(392) dyld::link(ImageLoader*, bool, bool, ImageLoader::RPathChain const&, unsigned int)
+calls=1 0 
+0 3532409
+0 2
+cfn=(532) ImageLoader::setNeverUnloadRecursive()
+calls=1 0 
+0 12
+0 4
+cfn=(534) ImageLoaderMachO::forceFlat() const
+calls=1 0 
+0 7
+0 16
+cfn=(392)
+calls=1 0 
+0 67514
+0 2
+cfn=(532)
+calls=1 0 
+0 12
+0 13
+cfn=(538) ImageLoaderMachO::registerInterposing()
+calls=1 0 
+0 795
+0 441
+cfn=(256) ImageLoaderMachO::inSharedCache() const
+calls=39 0 
+0 273
+0 195
+cfn=(538)
+calls=39 0 
+0 35981
+0 47
+cfn=(540) ImageLoader::applyInterposing(ImageLoader::LinkContext const&)
+calls=1 0 
+0 7
+0 3
+cfn=(540)
+calls=1 0 
+0 7
+0 18
+cfn=(542) ImageLoader::weakBind(ImageLoader::LinkContext const&)
+calls=1 0 
+0 76846
+0 6
+cfn=(568) dyld::initializeMainExecutable()
+calls=1 0 
+0 3022422
+0 5
+cfn=(40)
+calls=1 0 
+0 37
+0 62
+cfn=(1642) ImageLoaderMachO::getThreadPC() const
+calls=1 0 
+0 369
+0 30
+
+fn=(150)
+0 6
+
+fn=(196)
+0 26
+cfn=(198) ImageLoaderMachO::sniffLoadCommands(macho_header const*, char const*, bool, bool*, unsigned int*, unsigned int*, ImageLoader::LinkContext const&, linkedit_data_command const**, encryption_info_command const**)
+calls=1 0 
+0 969
+0 11
+cfn=(202) ImageLoaderMachOCompressed::instantiateMainExecutable(macho_header const*, unsigned long, char const*, unsigned int, unsigned int, ImageLoader::LinkContext const&)
+calls=1 0 
+0 3644
+0 9
+
+fn=(236) ImageLoader::setMapped(ImageLoader::LinkContext const&)
+0 410
+cfn=(238) dyld::notifySingle(dyld_image_states, ImageLoader const*, ImageLoader::InitializerTimingList*)
+calls=41 0 
+0 13496
+
+fn=(380) ImageLoaderMachO::preFetchDATA(int, unsigned long long, ImageLoader::LinkContext const&)
+0 677
+cfn=(272) ImageLoaderMachO::segmentCount() const
+calls=39 0 
+0 195
+0 351
+cfn=(362) ImageLoaderMachO::segWriteable(unsigned int) const
+calls=39 0 
+0 936
+0 308
+cfn=(362)
+calls=77 0 
+0 1848
+0 384
+cfn=(222) ImageLoaderMachO::segFileSize(unsigned int) const
+calls=38 0 
+0 836
+0 228
+cfn=(220) ImageLoaderMachO::segFileOffset(unsigned int) const
+calls=38 0 
+0 836
+0 228
+cfn=(222)
+calls=38 0 
+0 836
+0 456
+cfn=(68) fcntl
+calls=38 0 
+0 1622
+0 782
+
+fn=(416) dyld3::pathIsInSharedCacheImage(dyld3::SharedCacheLoadInfo const&, char const*)
+0 195
+
+fn=(484) ImageLoaderMachOCompressed::bindAt(ImageLoader::LinkContext const&, unsigned long, unsigned char, char const*, unsigned char, long, long, char const*, ImageLoaderMachOCompressed::LastLookup*, bool)
+0 23598
+cfn=(486) ImageLoaderMachOCompressed::resolve(ImageLoader::LinkContext const&, char const*, unsigned char, long, ImageLoader const**, ImageLoaderMachOCompressed::LastLookup*, bool)
+calls=1026 0 
+0 1625366
+0 17442
+cfn=(506) ImageLoaderMachO::bindLocation(ImageLoader::LinkContext const&, unsigned long, unsigned long, unsigned char, char const*, long, char const*, char const*, char const*)
+calls=1026 0 
+0 36916
+0 8208
+
+fn=(488) ImageLoaderMachOCompressed::resolveTwolevel(ImageLoader::LinkContext const&, char const*, ImageLoader const*, ImageLoader const*, unsigned int, bool, bool, ImageLoader const**)
+0 17316
+cfn=(490) ImageLoader::findExportedSymbolAddress(ImageLoader::LinkContext const&, char const*, ImageLoader const*, int, bool, ImageLoader const**, unsigned long*) const
+calls=666 0 
+0 3528807
+0 11322
+
+fn=(492) ImageLoader::findExportedSymbol(char const*, bool, ImageLoader const**) const
+0 5994
+cfn=(494) ImageLoaderMachO::findExportedSymbol(char const*, bool, char const*, ImageLoader const**) const
+calls=666 0 
+0 3391105
+
+fn=(498) ImageLoader::trieWalk(unsigned char const*, unsigned char const*, char const*)
+0 1602573
+cfn=(474) ImageLoader::read_uleb128(unsigned char const*&, unsigned char const*)
+calls=14 0 
+0 696
+0 19089
+cfn=(474)
+calls=6363 0 
+0 208827
+0 349942
+
+fn=(500) ImageLoaderMachO::getExportedSymbolAddress(ImageLoader::Symbol const*, ImageLoader::LinkContext const&, ImageLoader const*, bool, char const*) const
+0 8088
+cfn=(502) ImageLoaderMachOCompressed::exportedSymbolAddress(ImageLoader::LinkContext const&, ImageLoader::Symbol const*, ImageLoader const*, bool) const
+calls=674 0 
+0 84054
+0 5392
+cfn=(504) ImageLoader::interposedAddress(ImageLoader::LinkContext const&, unsigned long, ImageLoader const*, ImageLoader const*)
+calls=674 0 
+0 8762
+
+fn=(510) ImageLoaderMachO::libPath(unsigned int) const
+0 648832
+
+fn=(518) ImageLoaderMachO::doGetDOFSections(ImageLoader::LinkContext const&, std::__1::vector<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo> >&)
+0 1331
+cfn=(240) ImageLoaderMachO::machHeader() const
+calls=6 0 
+0 30
+0 18
+cfn=(520) ImageLoader::getShortName() const
+calls=6 0 
+0 1302
+0 52
+cfn=(522) void std::__1::vector<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo> >::__push_back_slow_path<ImageLoader::DOFInfo const&>(ImageLoader::DOFInfo const&)
+calls=4 0 
+0 953
+0 1405
+
+fn=(584) ImageLoaderMachO::doInitialization(ImageLoader::LinkContext const&)
+0 369
+cfn=(586) ImageLoaderMachO::doImageInit(ImageLoader::LinkContext const&)
+calls=41 0 
+0 861
+0 123
+cfn=(588) ImageLoaderMachO::doModInitFunctions(ImageLoader::LinkContext const&)
+calls=41 0 
+0 2865077
+0 492
+
+fn=(22) __guard_setup
+0 15
+cfn=(24)
+calls=1 0 
+0 14
+0 7
+cfn=(26) arc4random
+calls=1 0 
+0 16552
+0 3
+cfn=(26)
+calls=1 0 
+0 94
+0 9
+
+fn=(170)
+0 57
+cfn=(172) std::__1::__split_buffer<ImageLoader*, std::__1::allocator<ImageLoader*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<ImageLoader*>&)
+calls=3 0 
+0 210
+0 9
+cfn=(174) std::__1::vector<ImageLoader*, std::__1::allocator<ImageLoader*> >::__swap_out_circular_buffer(std::__1::__split_buffer<ImageLoader*, std::__1::allocator<ImageLoader*>&>&)
+calls=3 0 
+0 124
+0 28
+cfn=(260) operator delete(void*)
+calls=1 0 
+0 14
+0 15
+
+fn=(172)
+0 76
+cfn=(80) operator new(unsigned long)
+calls=4 0 
+0 156
+0 48
+
+fn=(206) __bzero
+0 2186
+
+fn=(214) ImageLoaderMachO::parseLoadCmds(ImageLoader::LinkContext const&)
+0 738
+cfn=(216) ImageLoaderMachO::segName(unsigned int) const
+calls=41 0 
+0 902
+0 328
+cfn=(216)
+calls=82 0 
+0 1804
+0 369
+cfn=(4)
+calls=123 0 
+0 6849
+0 492
+cfn=(224) ImageLoaderMachO::segActualLoadAddress(unsigned int) const
+calls=41 0 
+0 943
+0 205
+cfn=(220)
+calls=41 0 
+0 902
+0 246
+cfn=(220)
+calls=41 0 
+0 902
+0 328
+cfn=(220)
+calls=82 0 
+0 1804
+0 414
+cfn=(222)
+calls=42 0 
+0 924
+0 248
+cfn=(224)
+calls=41 0 
+0 943
+0 656
+cfn=(226) ImageLoaderMachO::participatesInCoalescing() const
+calls=41 0 
+0 861
+0 106
+cfn=(230) ImageLoaderMachO::hasCoalescedExports() const
+calls=4 0 
+0 28
+0 16106
+cfn=(4)
+calls=123 0 
+0 5736
+0 615
+cfn=(24)
+calls=123 0 
+0 5216
+0 8669
+cfn=(24)
+calls=282 0 
+0 11650
+0 1672
+cfn=(24)
+calls=277 0 
+0 10668
+0 1758
+cfn=(4)
+calls=284 0 
+0 10787
+0 1372
+cfn=(4)
+calls=268 0 
+0 12094
+0 9505
+cfn=(232) ImageLoaderMachOCompressed::setDyldInfo(dyld_info_command const*)
+calls=41 0 
+0 205
+0 656
+cfn=(234) ImageLoaderMachOCompressed::setSymbolTableInfo(macho_nlist const*, char const*, dysymtab_command const*)
+calls=41 0 
+0 164
+
+fn=(260)
+0 66
+cfn=(262) free
+calls=11 0 
+0 88
+
+fn=(274) ImageLoaderMachO::segUnaccessible(unsigned int) const
+0 1976
+cfn=(218) ImageLoaderMachOCompressed::segmentCommandOffsets() const
+calls=247 0 
+0 1482
+0 2223
+
+fn=(288) __proc_info
+0 5
+
+fn=(348) ImageLoaderMachO::reserveAnAddressRange(unsigned long, ImageLoader::LinkContext const&)
+0 640
+cfn=(350) vm_alloc
+calls=40 0 
+0 2640
+0 360
+
+fn=(350)
+0 640
+cfn=(352) vm_allocate
+calls=40 0 
+0 2000
+
+fn=(358) ImageLoaderMachO::segExecutable(unsigned int) const
+0 952
+cfn=(218)
+calls=119 0 
+0 714
+0 1190
+
+fn=(362)
+0 2560
+cfn=(218)
+calls=320 0 
+0 1920
+0 3200
+
+fn=(12) mach_reply_port
+0 8
+
+fn=(62) __getcwd
+0 17
+cfn=(64) open
+calls=1 0 
+0 5
+0 7
+cfn=(66) fstat$INODE64
+calls=1 0 
+0 5
+0 14
+cfn=(68)
+calls=1 0 
+0 39
+0 20
+cfn=(72) close
+calls=1 0 
+0 5
+0 3
+cfn=(74) stat$INODE64
+calls=1 0 
+0 5
+0 12
+
+fn=(124) host_self_trap
+0 4
+
+fn=(146) ___ZNK5dyld311MachOParser8getSlideEv_block_invoke
+0 30
+cfn=(4)
+calls=2 0 
+0 65
+0 23
+
+fn=(162)
+0 12
+cfn=(96)
+calls=1 0 
+0 25
+0 14
+
+fn=(282)
+0 320
+cfn=(240)
+calls=80 0 
+0 400
+0 8548
+
+fn=(412) __munmap
+0 195
+
+fn=(448) _isort
+0 4474
+cfn=(444) dyld::imageSorter(void const*, void const*)
+calls=298 0 
+0 5268
+0 5326
+
+fn=(460) dyld::imageCount()
+0 35
+cfn=(266) _os_nospin_lock_lock
+calls=5 0 
+0 25
+0 25
+cfn=(270) _os_nospin_lock_unlock
+calls=5 0 
+0 30
+0 25
+
+fn=(468) ImageLoaderMachO::doRebase(ImageLoader::LinkContext const&)
+0 430
+cfn=(256)
+calls=5 0 
+0 35
+0 108
+cfn=(256)
+calls=36 0 
+0 252
+0 205
+cfn=(240)
+calls=41 0 
+0 205
+0 246
+cfn=(470) ImageLoaderMachO::usablePrebinding(ImageLoader::LinkContext const&) const
+calls=41 0 
+0 1066
+0 607
+cfn=(472) ImageLoaderMachOCompressed::rebase(ImageLoader::LinkContext const&, unsigned long)
+calls=40 0 
+0 433454
+0 4
+
+fn=(474)
+0 360294
+
+fn=(544) dyld::getCoalescedImages(ImageLoader**, unsigned int*)
+0 15
+cfn=(226)
+calls=1 0 
+0 21
+0 120
+cfn=(226)
+calls=40 0 
+0 840
+0 233
+
+fn=(548) ImageLoaderMachOCompressed::initializeCoalIterator(ImageLoader::CoalIterator&, unsigned int, unsigned int)
+0 72
+
+fn=(574) thread_self_trap
+0 8
+
+fn=(576) ImageLoader::processInitializers(ImageLoader::LinkContext const&, unsigned int, ImageLoader::InitializerTimingList&, ImageLoader::UninitedUpwards&)
+0 34
+cfn=(460)
+calls=2 0 
+0 56
+0 48
+cfn=(578) ImageLoader::recursiveInitialization(ImageLoader::LinkContext const&, unsigned int, char const*, ImageLoader::InitializerTimingList&, ImageLoader::UninitedUpwards&)
+calls=2 0 
+0 2566700
+0 18
+cfn=(577) ImageLoader::processInitializers(ImageLoader::LinkContext const&, unsigned int, ImageLoader::InitializerTimingList&, ImageLoader::UninitedUpwards&)'2
+calls=1 0 
+0 434294
+0 24
+
+fn=(577)
+0 17
+cfn=(460)
+calls=1 0 
+0 28
+0 24
+cfn=(578)
+calls=1 0 
+0 44
+0 264
+cfn=(578)
+calls=33 0 
+0 433799
+0 118
+
+fn=(608)
+0 1715
+cfn=(610) dyld::findMappedRange(unsigned long)
+calls=16 0 
+0 3642
+0 1644
+cfn=(612) ImageLoaderMachOCompressed::doBindFastLazySymbol(unsigned int, ImageLoader::LinkContext const&, void (*)(), void (*)())
+calls=42 0 
+0 283821
+0 435
+cfn=(612)
+calls=145 0 
+0 1810195
+0 748
+
+fn=(1498)
+0 6
+cfn=(1500) dyld::imMemorySharedCacheHeader()
+calls=1 0 
+0 5
+0 7
+
+fn=(1514)
+0 15
+cfn=(1500)
+calls=1 0 
+0 5
+0 4
+cfn=(1420) dyld::findImageContainingAddress(void const*)
+calls=1 0 
+0 420
+0 6
+cfn=(256)
+calls=1 0 
+0 7
+0 7
+cfn=(272)
+calls=1 0 
+0 5
+0 8
+cfn=(224)
+calls=1 0 
+0 23
+0 6
+cfn=(276) ImageLoaderMachO::segActualEndAddress(unsigned int) const
+calls=1 0 
+0 67
+0 15
+cfn=(362)
+calls=1 0 
+0 24
+0 3
+
+fn=(1544) ImageLoader::InitializerTimingList::addTime(char const*, unsigned long long)
+0 51
+cfn=(4)
+calls=2 0 
+0 58
+0 3
+cfn=(4)
+calls=1 0 
+0 14
+0 74
+
+fn=(52) kdebug_trace
+0 1204
+cfn=(42) kdebug_is_enabled
+calls=86 0 
+0 1290
+0 946
+
+fn=(86)
+0 27
+cfn=(76)
+calls=3 0 
+0 87
+0 9
+cfn=(76)
+calls=3 0 
+0 61
+0 12
+cfn=(88) memcpy
+calls=3 0 
+0 105
+0 21
+
+fn=(108) strlcat
+0 52
+cfn=(76)
+calls=4 0 
+0 122
+0 16
+cfn=(110) strnlen
+calls=4 0 
+0 1866
+0 48
+cfn=(88)
+calls=4 0 
+0 232
+0 44
+
+fn=(122)
+0 1
+cfn=(124)
+calls=1 0 
+0 4
+
+fn=(126)
+0 22
+cfn=(128) mig_get_reply_port
+calls=1 0 
+0 14
+0 12
+cfn=(130) mach_msg
+calls=1 0 
+0 36
+0 46
+cfn=(88)
+calls=1 0 
+0 89
+0 3
+
+fn=(148) Diagnostics::assertNoError() const
+0 8
+
+fn=(176)
+0 38
+cfn=(178) std::__1::__split_buffer<void (*)(mach_header const*, long), std::__1::allocator<void (*)(mach_header const*, long)>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<void (*)(mach_header const*, long)>&)
+calls=2 0 
+0 140
+0 6
+cfn=(180) std::__1::vector<void (*)(mach_header const*, long), std::__1::allocator<void (*)(mach_header const*, long)> >::__swap_out_circular_buffer(std::__1::__split_buffer<void (*)(mach_header const*, long), std::__1::allocator<void (*)(mach_header const*, long)>&>&)
+calls=2 0 
+0 62
+0 24
+
+fn=(178)
+0 38
+cfn=(80)
+calls=2 0 
+0 78
+0 24
+
+fn=(252) std::__1::__split_buffer<dyld_image_info, std::__1::allocator<dyld_image_info>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<dyld_image_info>&)
+0 20
+cfn=(80)
+calls=1 0 
+0 39
+0 14
+
+fn=(264)
+0 492
+cfn=(266)
+calls=41 0 
+0 205
+0 286
+cfn=(268) void std::__1::vector<ImageLoader*, std::__1::allocator<ImageLoader*> >::__push_back_slow_path<ImageLoader* const&>(ImageLoader* const&)
+calls=1 0 
+0 152
+0 82
+cfn=(270)
+calls=41 0 
+0 246
+0 123
+cfn=(272)
+calls=41 0 
+0 205
+0 451
+cfn=(274)
+calls=41 0 
+0 943
+0 328
+cfn=(274)
+calls=82 0 
+0 1886
+0 734
+cfn=(224)
+calls=122 0 
+0 2806
+0 610
+cfn=(276)
+calls=122 0 
+0 8174
+0 1307
+cfn=(280) dyld::addMappedRange(ImageLoader*, unsigned long, unsigned long)
+calls=41 0 
+0 7283
+0 492
+
+fn=(326) ImageLoaderMachOCompressed::instantiateFromFile(char const*, int, unsigned char const*, unsigned long, unsigned long long, unsigned long long, stat const&, unsigned int, unsigned int, linkedit_data_command const*, encryption_info_command const*, ImageLoader::LinkContext const&)
+0 880
+cfn=(82) malloc
+calls=40 0 
+0 920
+0 320
+cfn=(204) bzero
+calls=40 0 
+0 1141
+0 360
+cfn=(208) ImageLoaderMachO::ImageLoaderMachO(macho_header const*, char const*, unsigned int, unsigned int*, unsigned int)
+calls=40 0 
+0 19793
+0 360
+cfn=(328) ImageLoader::setFileInfo(int, unsigned long long, long)
+calls=40 0 
+0 280
+0 360
+cfn=(330) ImageLoaderMachO::loadCodeSignature(linkedit_data_command const*, int, unsigned long long, ImageLoader::LinkContext const&)
+calls=40 0 
+0 8134
+0 320
+cfn=(332) ImageLoaderMachO::validateFirstPages(linkedit_data_command const*, int, unsigned char const*, unsigned long, long long, ImageLoader::LinkContext const&)
+calls=40 0 
+0 60654
+0 320
+cfn=(334) ImageLoaderMachO::mapSegments(int, unsigned long long, unsigned long long, unsigned long long, ImageLoader::LinkContext const&)
+calls=40 0 
+0 54229
+0 80
+cfn=(370) ImageLoaderMachO::crashIfInvalidCodeSignature()
+calls=40 0 
+0 3880
+0 120
+cfn=(214)
+calls=40 0 
+0 115596
+0 120
+cfn=(372) ImageLoaderMachO::getInstallPath() const
+calls=40 0 
+0 480
+0 320
+cfn=(4)
+calls=40 0 
+0 1810
+0 275
+cfn=(414) ImageLoader::setPathUnowned(char const*)
+calls=39 0 
+0 10410
+0 42
+cfn=(4)
+calls=1 0 
+0 31
+0 7
+cfn=(374) strstr
+calls=1 0 
+0 566
+0 5
+cfn=(376) ImageLoader::setPath(char const*)
+calls=1 0 
+0 708
+0 121
+cfn=(236)
+calls=40 0 
+0 13239
+0 200
+cfn=(378) ImageLoaderMachO::isPrebindable() const
+calls=40 0 
+0 320
+0 280
+cfn=(380)
+calls=40 0 
+0 10523
+0 160
+cfn=(382) ImageLoaderMachOCompressed::markLINKEDIT(ImageLoader::LinkContext const&, int)
+calls=40 0 
+0 1629
+0 520
+
+fn=(366) mmap
+0 4067
+cfn=(368) __mmap
+calls=158 0 
+0 790
+0 790
+
+fn=(6) mach_init
+0 6
+cfn=(8) mach_init_doit
+calls=1 0 
+0 67
+0 4
+
+fn=(18) __thread_selfid
+0 5
+
+fn=(46) memchr
+0 2291
+
+fn=(50) dyld3::kdebug_trace_dyld_image(unsigned int, unsigned char const (*) [16], fsobj_id, fsid, mach_header const*)
+0 817
+cfn=(52)
+calls=43 0 
+0 1720
+0 473
+cfn=(52)
+calls=43 0 
+0 1720
+
+fn=(58)
+0 5
+cfn=(60) __private_getcwd
+calls=1 0 
+0 168
+
+fn=(66)
+0 5
+
+fn=(76)
+0 13134
+
+fn=(92)
+0 5
+
+fn=(96)
+0 16
+cfn=(98) __csrctl
+calls=2 0 
+0 28
+0 6
+
+fn=(100) cerror_nocancel
+0 48
+
+fn=(104)
+0 24
+cfn=(24)
+calls=1 0 
+0 14
+0 120
+cfn=(24)
+calls=30 0 
+0 502
+0 178
+cfn=(24)
+calls=29 0 
+0 424
+0 64
+cfn=(106) strchr
+calls=2 0 
+0 82
+0 16
+cfn=(108)
+calls=2 0 
+0 1102
+0 8
+cfn=(108)
+calls=2 0 
+0 1278
+0 28
+cfn=(112) strncpy
+calls=2 0 
+0 137
+0 14
+cfn=(114) dyld::processDyldEnvironmentVariable(char const*, char const*, char const*)
+calls=2 0 
+0 2936
+0 127
+cfn=(118) dyld::checkLoadCommandEnvironmentVariables()
+calls=1 0 
+0 125
+0 14
+
+fn=(106)
+0 82
+
+fn=(134)
+0 21
+cfn=(136) _kernelrpc_mach_port_deallocate_trap
+calls=3 0 
+0 12
+0 18
+
+fn=(144) dyld3::MachOParser::forEachLoadCommand(Diagnostics&, void ( block_pointer)(load_command const*, bool&)) const
+0 272
+cfn=(156) ___ZNK5dyld311MachOParser14forEachSegmentEU13block_pointerFvPKcjjyyhRbE_block_invoke
+calls=16 0 
+0 332
+cfn=(146)
+calls=2 0 
+0 118
+0 172
+
+fn=(164)
+0 62
+cfn=(166) std::__1::__split_buffer<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*), std::__1::allocator<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)>&)
+calls=2 0 
+0 140
+0 14
+cfn=(168) std::__1::vector<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*), std::__1::allocator<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)> >::__swap_out_circular_buffer(std::__1::__split_buffer<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*), std::__1::allocator<char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*)>&>&)
+calls=2 0 
+0 62
+0 26
+
+fn=(202)
+0 19
+cfn=(82)
+calls=1 0 
+0 23
+0 8
+cfn=(204)
+calls=1 0 
+0 21
+0 8
+cfn=(208)
+calls=1 0 
+0 595
+0 7
+cfn=(212) ImageLoaderMachO::setSlide(long)
+calls=1 0 
+0 5
+0 8
+cfn=(214)
+calls=1 0 
+0 2269
+0 3
+cfn=(236)
+calls=1 0 
+0 667
+0 11
+
+fn=(272)
+0 830
+
+fn=(382)
+0 3297
+
+fn=(386) ImageLoaderMachO::isExecutable() const
+0 280
+
+fn=(398) dyld::setErrorStrings(unsigned int, char const*, char const*, char const*)
+0 44
+
+fn=(406) dyld::libraryLocator(char const*, bool, char const*, ImageLoader::RPathChain const*, unsigned int&)
+0 5872
+cfn=(292)
+calls=367 0 
+0 970882
+0 1101
+
+fn=(426) ImageLoaderMachOCompressed::libImage(unsigned int) const
+0 56243
+
+fn=(434) dyld::notifyBatchPartial(dyld_image_states, bool, char const* (*)(dyld_image_states, unsigned int, dyld_image_info const*), bool, bool)
+0 265
+cfn=(266)
+calls=9 0 
+0 45
+0 9
+cfn=(436) allImagesCount()
+calls=9 0 
+0 81
+0 72
+cfn=(436)
+calls=9 0 
+0 81
+0 4677
+cfn=(438) qsort
+calls=9 0 
+0 54290
+0 72
+cfn=(240)
+calls=9 0 
+0 45
+0 1380
+cfn=(240)
+calls=276 0 
+0 1380
+0 1140
+cfn=(242) ImageLoader::getRealPath() const
+calls=285 0 
+0 2280
+0 855
+cfn=(244) ImageLoader::lastModified() const
+calls=285 0 
+0 1425
+0 1589
+cfn=(450) dyld::notifyKernel(ImageLoader const&, bool)
+calls=41 0 
+0 9635
+0 1693
+cfn=(452) notifyGDB(dyld_image_states, unsigned int, dyld_image_info const*)
+calls=2 0 
+0 466
+0 101
+cfn=(610)
+calls=1 0 
+0 20
+0 80
+cfn=(610)
+calls=40 0 
+0 9820
+0 205
+cfn=(886) ImageLoaderMachO::notifyObjC() const
+calls=41 0 
+0 287
+0 238
+cfn=(254) mach_absolute_time
+calls=1 0 
+0 23
+0 5
+cob=(11)
+cfi=(11)
+cfn=(888)
+calls=1 0 
+0 1093034
+0 1
+cfn=(254)
+calls=1 0 
+0 23
+0 8
+cfn=(270)
+calls=1 0 
+0 6
+0 16
+cfn=(270)
+calls=8 0 
+0 48
+0 275
+
+fn=(472)
+0 880
+cfn=(224)
+calls=40 0 
+0 920
+0 200
+cfn=(224)
+calls=40 0 
+0 920
+0 200
+cfn=(276)
+calls=40 0 
+0 2680
+0 72678
+cfn=(362)
+calls=39 0 
+0 936
+0 234
+cfn=(224)
+calls=39 0 
+0 897
+0 195
+cfn=(276)
+calls=39 0 
+0 2613
+0 156
+cfn=(474)
+calls=39 0 
+0 1026
+0 6561
+cfn=(474)
+calls=24 0 
+0 936
+0 22170
+cfn=(474)
+calls=1051 0 
+0 25764
+0 118653
+cfn=(474)
+calls=118 0 
+0 2997
+0 83558
+cfn=(474)
+calls=57 0 
+0 1383
+0 228
+cfn=(474)
+calls=57 0 
+0 1368
+0 85301
+
+fn=(494)
+0 10110
+cfn=(497) ImageLoaderMachOCompressed::findShallowExportedSymbol(char const*, ImageLoader const**) const'2
+calls=8 0 
+0 8485
+cfn=(496) ImageLoaderMachOCompressed::findShallowExportedSymbol(char const*, ImageLoader const**) const
+calls=666 0 
+0 943567
+0 2318
+cfn=(508) ImageLoaderMachOCompressed::libReExported(unsigned int) const
+calls=97 0 
+0 1067
+0 7092
+cfn=(508)
+calls=1773 0 
+0 19503
+0 11220
+cfn=(426)
+calls=1870 0 
+0 20570
+0 13090
+cfn=(510)
+calls=1870 0 
+0 563328
+0 13090
+cfn=(495) ImageLoaderMachO::findExportedSymbol(char const*, bool, char const*, ImageLoader const**) const'2
+calls=1870 0 
+0 1766580
+0 19770
+
+fn=(495)
+0 28425
+cfn=(497)
+calls=25 0 
+0 24575
+cfn=(496)
+calls=1870 0 
+0 1333474
+0 21410
+cfn=(508)
+calls=1751 0 
+0 19261
+0 56492
+cfn=(508)
+calls=14123 0 
+0 155353
+0 152790
+
+fn=(508)
+0 195184
+
+fn=(524) std::__1::__split_buffer<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<ImageLoader::DOFInfo>&)
+0 80
+cfn=(80)
+calls=4 0 
+0 156
+0 56
+
+fn=(538)
+0 8600
+cfn=(4)
+calls=564 0 
+0 18330
+0 9846
+
+fn=(572) mach_thread_self
+0 2
+cfn=(574)
+calls=2 0 
+0 8
+
+fn=(606)
+0 117
+cfn=(4)
+calls=9 0 
+0 841
+0 543
+cfn=(4)
+calls=181 0 
+0 13057
+0 1212
+
+fn=(768) dyld::registerAddCallback(void (*)(mach_header const*, long))
+0 1161
+cfn=(240)
+calls=123 0 
+0 615
+0 492
+cfn=(770) ImageLoaderMachO::getSlide() const
+calls=123 0 
+0 615
+0 369
+cob=(15)
+cfi=(15)
+cfn=(1414)
+calls=41 0 
+0 26112
+cob=(3)
+cfi=(3)
+cfn=(822)
+calls=41 0 
+0 779
+cob=(7)
+cfi=(7)
+cfn=(772)
+calls=41 0 
+0 123
+0 519
+
+fn=(922)
+0 5
+
+fn=(140)
+0 12
+cfn=(142) Diagnostics::Diagnostics(bool)
+calls=1 0 
+0 5
+0 20
+cfn=(144)
+calls=1 0 
+0 189
+0 2
+cfn=(148)
+calls=1 0 
+0 4
+0 5
+cfn=(150)
+calls=1 0 
+0 3
+0 2
+cfn=(152) Diagnostics::~Diagnostics()
+calls=1 0 
+0 17
+0 7
+
+fn=(230)
+0 28
+
+fn=(246) dyld::updateAllImages(dyld_image_states, unsigned int, dyld_image_info const*)
+0 287
+cfn=(248) addImagesToAllImages(unsigned int, dyld_image_info const*)
+calls=41 0 
+0 3168
+0 123
+
+fn=(250) std::__1::vector<dyld_image_info, std::__1::allocator<dyld_image_info> >::reserve(unsigned long)
+0 23
+cfn=(252)
+calls=1 0 
+0 73
+0 35
+
+fn=(318) dyld::my_open(char const*, int, int)
+0 560
+cfn=(64)
+calls=40 0 
+0 200
+0 320
+
+fn=(328)
+0 280
+
+fn=(360) ImageLoaderMachO::segReadable(unsigned int) const
+0 952
+cfn=(218)
+calls=119 0 
+0 714
+0 1071
+
+fn=(364) xmmap
+0 1264
+cfn=(366)
+calls=158 0 
+0 5647
+
+fn=(42)
+0 1380
+
+fn=(110)
+0 1866
+
+fn=(142)
+0 10
+
+fn=(160) dyld3::launch_cache::MemoryRange::intersects(dyld3::launch_cache::MemoryRange const&) const
+0 52
+
+fn=(220)
+0 2888
+cfn=(218)
+calls=361 0 
+0 2166
+0 2888
+
+fn=(228) ImageLoader::hasHiddenExports() const
+0 574
+
+fn=(388) ImageLoaderMachO::isBundle() const
+0 294
+
+fn=(390) dyld::FileOpener::~FileOpener()
+0 240
+cfn=(72)
+calls=40 0 
+0 200
+0 80
+
+fn=(394) ImageLoader::isLinked() const
+0 16
+
+fn=(396) ImageLoader::link(ImageLoader::LinkContext const&, bool, bool, bool, ImageLoader::RPathChain const&, char const*)
+0 38
+cfn=(398)
+calls=2 0 
+0 22
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 18
+cfn=(400) ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*)
+calls=2 0 
+0 1078191
+0 6
+cfn=(432) dyld::notifyBatch(dyld_image_states, bool)
+calls=2 0 
+0 16635
+0 6
+cfn=(254)
+calls=2 0 
+0 46
+0 4
+cfn=(458) dyld::clearAllDepths()
+calls=2 0 
+0 426
+0 6
+cfn=(460)
+calls=2 0 
+0 56
+0 6
+cfn=(462) ImageLoader::recursiveUpdateDepth(unsigned int)
+calls=2 0 
+0 48988
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 10
+cfn=(466) ImageLoader::recursiveRebase(ImageLoader::LinkContext const&)
+calls=2 0 
+0 457139
+0 6
+cfn=(432)
+calls=2 0 
+0 12069
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 14
+cfn=(476) ImageLoader::recursiveBind(ImageLoader::LinkContext const&, bool, bool)
+calls=2 0 
+0 1940173
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 8
+cfn=(254)
+calls=2 0 
+0 46
+0 8
+cfn=(432)
+calls=2 0 
+0 22019
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 18
+cfn=(516) ImageLoader::recursiveGetDOFSections(ImageLoader::LinkContext const&, std::__1::vector<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo> >&)
+calls=2 0 
+0 22459
+0 4
+cfn=(526) dyld::registerDOFs(std::__1::vector<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo> > const&)
+calls=2 0 
+0 985
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 16
+cfn=(398)
+calls=2 0 
+0 22
+0 45
+cfn=(260)
+calls=1 0 
+0 14
+0 16
+
+fn=(420) ImageLoaderMachOCompressed::isSubframeworkOf(ImageLoader::LinkContext const&, ImageLoader const*) const
+0 1665
+
+fn=(442) _qsort
+0 954
+cfn=(444)
+calls=3 0 
+0 48
+0 18
+cfn=(444)
+calls=3 0 
+0 48
+0 129
+cfn=(444)
+calls=3 0 
+0 48
+0 15
+cfn=(444)
+calls=3 0 
+0 48
+0 33
+cfn=(444)
+calls=3 0 
+0 48
+0 30
+cfn=(444)
+calls=3 0 
+0 48
+0 15
+cfn=(444)
+calls=3 0 
+0 48
+0 27
+cfn=(444)
+calls=3 0 
+0 48
+0 108
+cfn=(444)
+calls=27 0 
+0 460
+0 120
+cfn=(444)
+calls=30 0 
+0 512
+0 200
+cfn=(444)
+calls=10 0 
+0 168
+0 6
+cfn=(444)
+calls=6 0 
+0 96
+0 1890
+cfn=(444)
+calls=270 0 
+0 4452
+0 6564
+cfn=(444)
+calls=461 0 
+0 7568
+0 3641
+cfn=(448)
+calls=1 0 
+0 1717
+0 184
+cfn=(443) _qsort'2
+calls=10 0 
+0 10894
+0 338
+cfn=(443)
+calls=17 0 
+0 11164
+0 552
+cfn=(536) heapsort
+calls=2 0 
+0 38
+0 54
+cfn=(448)
+calls=6 0 
+0 1651
+0 56
+
+fn=(443)
+0 2771
+cfn=(444)
+calls=14 0 
+0 236
+0 56
+cfn=(444)
+calls=14 0 
+0 224
+0 101
+cfn=(444)
+calls=7 0 
+0 116
+0 2
+cfn=(444)
+calls=2 0 
+0 32
+0 653
+cfn=(444)
+calls=81 0 
+0 1308
+0 1215
+cfn=(444)
+calls=76 0 
+0 1288
+0 1234
+cfn=(443)
+calls=5 0 
+0 2708
+0 173
+cfn=(443)
+calls=9 0 
+0 2414
+0 621
+cfn=(448)
+calls=41 0 
+0 11700
+0 328
+
+fn=(454) gdb_image_notifier(dyld_image_mode, unsigned int, dyld_image_info const*)
+0 292
+cfn=(456) _dyld_debugger_notification
+calls=2 0 
+0 8
+0 14
+
+fn=(456)
+0 8
+
+fn=(496)
+0 58627
+cfn=(498)
+calls=2549 0 
+0 2150344
+0 10343
+cfn=(474)
+calls=674 0 
+0 16176
+0 28827
+cfn=(474)
+calls=33 0 
+0 792
+0 528
+cfn=(426)
+calls=33 0 
+0 363
+0 165
+cfn=(510)
+calls=33 0 
+0 5720
+0 231
+cfn=(494)
+calls=8 0 
+0 8685
+cfn=(495)
+calls=25 0 
+0 25200
+0 66
+
+fn=(497)
+0 759
+cfn=(498)
+calls=33 0 
+0 30783
+0 231
+cfn=(474)
+calls=33 0 
+0 792
+0 495
+
+fn=(506)
+0 44804
+
+fn=(516)
+0 44
+cfn=(426)
+calls=2 0 
+0 22
+0 4
+cfn=(426)
+calls=1 0 
+0 11
+0 21
+cfn=(517) ImageLoader::recursiveGetDOFSections(ImageLoader::LinkContext const&, std::__1::vector<ImageLoader::DOFInfo, std::__1::allocator<ImageLoader::DOFInfo> >&)'2
+calls=3 0 
+0 22275
+0 40
+cfn=(518)
+calls=2 0 
+0 42
+
+fn=(517)
+0 4789
+cfn=(426)
+calls=38 0 
+0 418
+0 1304
+cfn=(426)
+calls=326 0 
+0 3586
+0 2548
+cfn=(517)
+calls=364 0 
+0 213329
+0 2613
+cfn=(518)
+calls=39 0 
+0 5049
+0 1968
+
+fn=(528) ioctl
+0 26
+cfn=(530) __ioctl
+calls=1 0 
+0 5
+0 3
+
+fn=(546) ImageLoader::weakSymbolsBound(unsigned int)
+0 168
+
+fn=(552) ImageLoaderMachOCompressed::getAddressCoalIterator(ImageLoader::CoalIterator&, ImageLoader::LinkContext const&)
+0 156
+cfn=(496)
+calls=13 0 
+0 29026
+0 90
+cfn=(500)
+calls=8 0 
+0 1228
+0 78
+
+fn=(556) dyld::addDynamicReference(ImageLoader*, ImageLoader*)
+0 160
+cfn=(256)
+calls=16 0 
+0 112
+0 80
+cfn=(558) ImageLoader::dependsOn(ImageLoader*)
+calls=16 0 
+0 632
+0 48
+cfn=(266)
+calls=8 0 
+0 40
+0 67
+cfn=(560) void std::__1::vector<ImageLoader::DynamicReference, std::__1::allocator<ImageLoader::DynamicReference> >::__push_back_slow_path<ImageLoader::DynamicReference const&>(ImageLoader::DynamicReference const&)
+calls=1 0 
+0 158
+0 2
+cfn=(270)
+calls=1 0 
+0 6
+0 87
+cfn=(270)
+calls=7 0 
+0 42
+
+fn=(582) ImageLoaderMachO::needsTermination()
+0 246
+
+fn=(586)
+0 861
+
+fn=(610)
+0 23718
+
+fn=(1500)
+0 10
+
+fn=(14) _init_cpu_capabilities
+0 4
+
+fn=(44)
+0 90
+cfn=(46)
+calls=6 0 
+0 181
+0 72
+cfn=(46)
+calls=6 0 
+0 220
+0 148
+cfn=(46)
+calls=37 0 
+0 1890
+0 273
+cfn=(54) bcmp
+calls=36 0 
+0 634
+0 303
+
+fn=(64)
+0 210
+
+fn=(138)
+0 5
+
+fn=(152)
+0 8
+cfn=(153) Diagnostics::~Diagnostics()'2
+calls=2 0 
+0 26
+
+fn=(153)
+0 26
+
+fn=(198)
+0 22747
+cfn=(4)
+calls=123 0 
+0 6849
+0 5279
+cfn=(76)
+calls=407 0 
+0 12407
+0 24497
+cfn=(4)
+calls=119 0 
+0 6729
+0 34482
+cfn=(200) ImageLoaderMachO::needsAddedLibSystemDepency(unsigned int, macho_header const*)
+calls=41 0 
+0 1972
+0 410
+
+fn=(240)
+0 4140
+
+fn=(276)
+0 2880
+cfn=(224)
+calls=288 0 
+0 6624
+0 1440
+cfn=(278) ImageLoaderMachO::segSize(unsigned int) const
+calls=288 0 
+0 6336
+0 2016
+
+fn=(294) dyld::loadPhase0(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*)
+0 9384
+cfn=(296) dyld::loadPhase1(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*)
+calls=408 0 
+0 945484
+0 4896
+
+fn=(296)
+0 9782
+cfn=(298) dyld::loadPhase3(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*)
+calls=408 0 
+0 932038
+0 3664
+
+fn=(304) ImageLoader::hash(char const*)
+0 94078
+
+fn=(48)
+0 134
+cfn=(50)
+calls=2 0 
+0 220
+
+fn=(120)
+0 36
+cfn=(24)
+calls=2 0 
+0 110
+0 20
+cfn=(24)
+calls=5 0 
+0 70
+0 18
+cfn=(76)
+calls=2 0 
+0 50
+0 6
+cfn=(76)
+calls=2 0 
+0 50
+0 4
+cfn=(78)
+calls=2 0 
+0 86
+0 8
+cfn=(84)
+calls=2 0 
+0 186
+0 8
+cfn=(86)
+calls=2 0 
+0 215
+0 46
+
+fn=(192) std::__1::__split_buffer<dyld_uuid_info, std::__1::allocator<dyld_uuid_info>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<dyld_uuid_info>&)
+0 140
+cfn=(80)
+calls=7 0 
+0 273
+0 98
+
+fn=(200)
+0 2532
+cfn=(24)
+calls=8 0 
+0 682
+0 24
+cfn=(24)
+calls=2 0 
+0 136
+0 570
+
+fn=(204)
+0 42
+cfn=(206)
+calls=42 0 
+0 2186
+
+fn=(212)
+0 205
+
+fn=(218)
+0 20964
+
+fn=(266)
+0 315
+
+fn=(268)
+0 31
+cfn=(172)
+calls=1 0 
+0 70
+0 7
+cfn=(174)
+calls=1 0 
+0 31
+0 13
+
+fn=(372)
+0 10664
+
+fn=(374)
+0 14
+cfn=(76)
+calls=1 0 
+0 18
+0 478
+cfn=(24)
+calls=3 0 
+0 42
+0 14
+
+fn=(400)
+0 74
+cfn=(402) ImageLoaderMachO::doGetDependentLibraries(ImageLoader::DependentLibraryInfo*)
+calls=2 0 
+0 743
+0 18
+cfn=(404) ImageLoaderMachO::getRPaths(ImageLoader::LinkContext const&, std::__1::vector<char const*, std::__1::allocator<char const*> >&) const
+calls=2 0 
+0 273
+0 61
+cfn=(406)
+calls=3 0 
+0 28395
+0 42
+cfn=(418) ImageLoaderMachO::doGetLibraryInfo(ImageLoader::LibraryInfo const&)
+calls=3 0 
+0 42
+0 33
+cfn=(420)
+calls=3 0 
+0 15
+0 30
+cfn=(422) ImageLoaderMachOCompressed::hasSubLibrary(ImageLoader::LinkContext const&, ImageLoader const*) const
+calls=3 0 
+0 15
+0 42
+cfn=(256)
+calls=3 0 
+0 21
+0 33
+cfn=(424) ImageLoaderMachOCompressed::setLibImage(unsigned int, ImageLoader*, bool, bool)
+calls=3 0 
+0 48
+0 60
+cfn=(426)
+calls=2 0 
+0 22
+0 4
+cfn=(426)
+calls=1 0 
+0 11
+0 36
+cfn=(401) ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*)'2
+calls=3 0 
+0 1048110
+0 63
+
+fn=(401)
+0 8003
+cfn=(402)
+calls=39 0 
+0 18641
+0 351
+cfn=(404)
+calls=39 0 
+0 7980
+0 5159
+cfn=(406)
+calls=364 0 
+0 949460
+0 4892
+cfn=(418)
+calls=330 0 
+0 4620
+0 170
+cfn=(418)
+calls=34 0 
+0 476
+0 3766
+cfn=(420)
+calls=330 0 
+0 1650
+0 3300
+cfn=(422)
+calls=330 0 
+0 1650
+0 5028
+cfn=(256)
+calls=364 0 
+0 2548
+0 4004
+cfn=(424)
+calls=364 0 
+0 5824
+0 3607
+cfn=(426)
+calls=38 0 
+0 418
+0 1304
+cfn=(426)
+calls=326 0 
+0 3586
+0 4368
+cfn=(401)
+calls=364 0 
+0 6212051
+0 7305
+
+fn=(404)
+0 8253
+
+fn=(410) munmap
+0 624
+cfn=(412)
+calls=39 0 
+0 195
+
+fn=(414)
+0 10410
+
+fn=(422)
+0 1665
+
+fn=(504)
+0 8905
+
+fn=(512) dyld::setNewProgramVars(ProgramVars const&)
+0 26
+
+fn=(542)
+0 15
+cfn=(254)
+calls=1 0 
+0 23
+0 18
+cfn=(544)
+calls=1 0 
+0 1229
+0 13
+cfn=(546)
+calls=1 0 
+0 6
+0 12
+cfn=(546)
+calls=3 0 
+0 18
+0 24
+cfn=(256)
+calls=4 0 
+0 28
+0 62
+cfn=(548)
+calls=1 0 
+0 18
+0 18
+cfn=(548)
+calls=3 0 
+0 54
+0 148
+cfn=(4)
+calls=8 0 
+0 557
+0 72
+cfn=(4)
+calls=24 0 
+0 1985
+0 297
+cfn=(552)
+calls=13 0 
+0 30578
+0 324
+cfn=(4)
+calls=8 0 
+0 557
+0 72
+cfn=(4)
+calls=24 0 
+0 1985
+0 232
+cfn=(546)
+calls=24 0 
+0 144
+0 240
+cfn=(554) ImageLoaderMachOCompressed::updateUsesCoalIterator(ImageLoader::CoalIterator&, unsigned long, ImageLoader*, unsigned int, ImageLoader::LinkContext const&)
+calls=24 0 
+0 8748
+0 490
+cfn=(550) ImageLoaderMachOCompressed::incrementCoalIterator(ImageLoader::CoalIterator&)
+calls=66 0 
+0 18807
+0 594
+cfn=(4)
+calls=66 0 
+0 3730
+0 252
+cfn=(4)
+calls=63 0 
+0 3855
+0 1563
+cfn=(566) ImageLoader::setWeakSymbolsBound(unsigned int)
+calls=4 0 
+0 20
+0 18
+cfn=(254)
+calls=1 0 
+0 23
+0 17
+
+fn=(588)
+0 1106
+cfn=(590) ImageLoader::containsAddress(void const*) const
+calls=3 0 
+0 489
+0 6
+cfn=(590)
+calls=1 0 
+0 163
+0 27
+cfn=(372)
+calls=1 0 
+0 12
+0 5
+cfn=(4)
+calls=1 0 
+0 42
+0 86
+cfn=(592) dyld3::kdebug_trace_dyld_duration(unsigned int, unsigned long long, unsigned long long, void ( block_pointer)())
+calls=4 0 
+0 2862079
+0 1062
+
+fn=(594) ___ZN16ImageLoaderMachO18doModInitFunctionsERKN11ImageLoader11LinkContextE_block_invoke
+0 44
+cob=(20)
+cfi=(20)
+cfn=(1552)
+calls=1 0 
+0 421394
+cob=(19)
+cfi=(19)
+cfn=(1548)
+calls=1 0 
+0 244
+cob=(19)
+cfi=(19)
+cfn=(1546)
+calls=1 0 
+0 60180
+cob=(2)
+cfi=(2)
+cfn=(596)
+calls=1 0 
+0 2380053
+
+fn=(808)
+0 26
+cfn=(810) ImageLoaderMachO::computeSlide(mach_header const*)
+calls=2 0 
+0 220
+
+fn=(816)
+0 6
+
+fn=(1420)
+0 164
+cfn=(610)
+calls=41 0 
+0 10236
+
+fn=(78)
+0 24
+cfn=(80)
+calls=6 0 
+0 234
+
+fn=(98)
+0 12
+cfn=(100)
+calls=2 0 
+0 16
+
+fn=(136)
+0 12
+
+fn=(174)
+0 57
+cfn=(88)
+calls=1 0 
+0 29
+0 69
+
+fn=(182)
+0 19
+cfn=(184) std::__1::__split_buffer<dyld::RegisteredDOF, std::__1::allocator<dyld::RegisteredDOF>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<dyld::RegisteredDOF>&)
+calls=1 0 
+0 73
+0 3
+cfn=(186) std::__1::vector<dyld::RegisteredDOF, std::__1::allocator<dyld::RegisteredDOF> >::__swap_out_circular_buffer(std::__1::__split_buffer<dyld::RegisteredDOF, std::__1::allocator<dyld::RegisteredDOF>&>&)
+calls=1 0 
+0 31
+0 12
+
+fn=(184)
+0 20
+cfn=(80)
+calls=1 0 
+0 39
+0 14
+
+fn=(352)
+0 440
+cfn=(354) mach_vm_allocate
+calls=40 0 
+0 1280
+0 280
+
+fn=(356) _kernelrpc_mach_vm_allocate_trap
+0 160
+
+fn=(8)
+0 3
+cfn=(10) task_self_trap
+calls=1 0 
+0 4
+0 2
+cfn=(12)
+calls=1 0 
+0 4
+0 19
+cfn=(14)
+calls=1 0 
+0 4
+0 3
+cfn=(16) _pthread_set_self
+calls=1 0 
+0 28
+
+fn=(102)
+0 5
+
+fn=(370)
+0 480
+cfn=(220)
+calls=40 0 
+0 880
+0 240
+cfn=(222)
+calls=40 0 
+0 880
+0 400
+cfn=(224)
+calls=40 0 
+0 920
+0 80
+
+fn=(384) dyld::checkandAddImage(ImageLoader*, dyld::LoadContext const&)
+0 480
+cfn=(372)
+calls=40 0 
+0 480
+0 160
+cfn=(340) ImageLoaderMachO::isDylib() const
+calls=40 0 
+0 280
+0 3600
+cfn=(372)
+calls=820 0 
+0 9680
+0 3980
+cfn=(4)
+calls=780 0 
+0 26434
+0 4380
+cfn=(340)
+calls=40 0 
+0 280
+0 200
+cfn=(386)
+calls=40 0 
+0 280
+0 200
+cfn=(388)
+calls=40 0 
+0 280
+0 160
+cfn=(264)
+calls=40 0 
+0 25024
+0 400
+
+fn=(402)
+0 492
+cfn=(200)
+calls=41 0 
+0 1972
+0 16920
+
+fn=(408) dyld::fatFindBest(fat_header const*, unsigned long long*, unsigned long long*)
+0 8213
+
+fn=(440) flsl
+0 45
+
+fn=(464) ImageLoaderMachOCompressed::libIsUpward(unsigned int) const
+0 13020
+
+fn=(486)
+0 41253
+cfn=(426)
+calls=641 0 
+0 7051
+0 14477
+cfn=(488)
+calls=666 0 
+0 3557445
+0 18096
+
+fn=(490)
+0 11988
+cfn=(492)
+calls=666 0 
+0 3397099
+0 6660
+cfn=(500)
+calls=666 0 
+0 105068
+0 7992
+
+fn=(502)
+0 17524
+cfn=(474)
+calls=674 0 
+0 16176
+0 7414
+cfn=(474)
+calls=674 0 
+0 33276
+0 2784
+cfn=(504)
+calls=11 0 
+0 143
+0 66
+cfn=(474)
+calls=11 0 
+0 429
+0 33
+cob=(6)
+cfi=(6)
+cfn=(1476)
+calls=1 0 
+0 8
+cob=(6)
+cfi=(6)
+cfn=(966)
+calls=5 0 
+0 50
+cob=(6)
+cfi=(6)
+cfn=(654)
+calls=1 0 
+0 8
+cob=(6)
+cfi=(6)
+cfn=(930)
+calls=1 0 
+0 11
+cob=(6)
+cfi=(6)
+cfn=(714)
+calls=3 0 
+0 33
+0 6099
+
+fn=(514) ImageLoader::read_sleb128(unsigned char const*&, unsigned char const*)
+0 50
+
+fn=(522)
+0 140
+cfn=(524)
+calls=4 0 
+0 292
+0 117
+cfn=(88)
+calls=3 0 
+0 237
+0 93
+cfn=(260)
+calls=3 0 
+0 42
+0 32
+
+fn=(526)
+0 37
+cfn=(64)
+calls=1 0 
+0 5
+0 32
+cfn=(290) strlcpy
+calls=1 0 
+0 93
+0 40
+cfn=(290)
+calls=5 0 
+0 511
+0 56
+cfn=(528)
+calls=1 0 
+0 34
+0 147
+cfn=(72)
+calls=1 0 
+0 5
+0 25
+
+fn=(532)
+0 24
+
+fn=(560)
+0 31
+cfn=(562) std::__1::__split_buffer<ImageLoader::DynamicReference, std::__1::allocator<ImageLoader::DynamicReference>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<ImageLoader::DynamicReference>&)
+calls=1 0 
+0 73
+0 10
+cfn=(564) std::__1::vector<ImageLoader::DynamicReference, std::__1::allocator<ImageLoader::DynamicReference> >::__swap_out_circular_buffer(std::__1::__split_buffer<ImageLoader::DynamicReference, std::__1::allocator<ImageLoader::DynamicReference>&>&)
+calls=1 0 
+0 31
+0 13
+
+fn=(566)
+0 20
+
+fn=(568)
+0 12
+cfn=(436)
+calls=1 0 
+0 9
+0 19
+cfn=(570) ImageLoader::runInitializers(ImageLoader::LinkContext const&, ImageLoader::InitializerTimingList&)
+calls=1 0 
+0 3010851
+0 6
+cfn=(570)
+calls=1 0 
+0 11381
+0 7
+cob=(7)
+cfi=(7)
+cfn=(1638)
+calls=1 0 
+0 122
+0 15
+
+fn=(578)
+0 612
+cfn=(580) ImageLoader::recursiveSpinLock(ImageLoader::recursive_lock&)
+calls=36 0 
+0 360
+0 232
+cfn=(426)
+calls=4 0 
+0 44
+0 16
+cfn=(426)
+calls=4 0 
+0 44
+0 56
+cfn=(464)
+calls=8 0 
+0 96
+0 88
+cfn=(510)
+calls=8 0 
+0 1281
+0 56
+cfn=(579) ImageLoader::recursiveInitialization(ImageLoader::LinkContext const&, unsigned int, char const*, ImageLoader::InitializerTimingList&, ImageLoader::UninitedUpwards&)'2
+calls=8 0 
+0 2927446
+0 60
+cfn=(582)
+calls=4 0 
+0 24
+0 20
+cfn=(254)
+calls=4 0 
+0 92
+0 28
+cfn=(238)
+calls=4 0 
+0 7163
+0 20
+cfn=(584)
+calls=4 0 
+0 61485
+0 28
+cfn=(238)
+calls=4 0 
+0 280
+0 9
+cfn=(254)
+calls=1 0 
+0 23
+0 7
+cfn=(90)
+calls=1 0 
+0 474
+0 9
+cfn=(1544)
+calls=1 0 
+0 58
+0 432
+
+fn=(579)
+0 5661
+cfn=(580)
+calls=333 0 
+0 3330
+0 2141
+cfn=(426)
+calls=36 0 
+0 396
+0 1292
+cfn=(426)
+calls=323 0 
+0 3553
+0 2513
+cfn=(464)
+calls=359 0 
+0 4308
+0 3779
+cfn=(510)
+calls=325 0 
+0 78503
+0 2275
+cfn=(579)
+calls=325 0 
+0 290912
+0 2265
+cfn=(582)
+calls=37 0 
+0 222
+0 185
+cfn=(254)
+calls=37 0 
+0 851
+0 259
+cfn=(238)
+calls=37 0 
+0 2832
+0 185
+cfn=(584)
+calls=37 0 
+0 2805437
+0 259
+cfn=(238)
+calls=37 0 
+0 2590
+0 76
+cfn=(254)
+calls=2 0 
+0 46
+0 14
+cfn=(90)
+calls=2 0 
+0 318
+0 18
+cfn=(1544)
+calls=2 0 
+0 142
+0 3996
+
+fn=(612)
+0 2805
+cfn=(614) ImageLoaderMachO::usesTwoLevelNameSpace() const
+calls=187 0 
+0 1309
+0 4217
+cfn=(616) ImageLoaderMachO::getLazyBindingInfo(unsigned int&, unsigned char const*, unsigned char const*, unsigned char*, unsigned long*, int*, char const**, bool*)
+calls=187 0 
+0 43267
+0 2057
+cfn=(278)
+calls=187 0 
+0 4114
+0 1122
+cfn=(224)
+calls=187 0 
+0 4301
+0 2244
+cfn=(486)
+calls=187 0 
+0 2012956
+0 3553
+cfn=(506)
+calls=187 0 
+0 6732
+0 1496
+cfn=(614)
+calls=187 0 
+0 1309
+0 2534
+
+fn=(884) dyld::registerObjCNotifiers(void (*)(unsigned int, char const* const*, mach_header const* const*), void (*)(char const*, mach_header const*), void (*)(char const*, mach_header const*))
+0 15
+cfn=(434)
+calls=1 0 
+0 1114171
+0 227
+cfn=(886)
+calls=34 0 
+0 238
+0 80
+cfn=(242)
+calls=4 0 
+0 32
+0 16
+cfn=(240)
+calls=4 0 
+0 20
+0 12
+cob=(11)
+cfi=(11)
+cfn=(1182)
+calls=4 0 
+0 155431
+0 131
+
+fn=(10)
+0 4
+
+fn=(30) arc4_stir
+0 7
+cfn=(32) arc4_fetch
+calls=1 0 
+0 22
+0 16406
+
+fn=(32)
+0 18
+cfn=(34)
+calls=2 0 
+0 10
+0 16
+
+fn=(60)
+0 25
+cfn=(62)
+calls=1 0 
+0 132
+0 11
+
+fn=(84)
+0 106
+cfn=(88)
+calls=2 0 
+0 130
+0 101
+
+fn=(118)
+0 125
+
+fn=(130)
+0 20
+cfn=(132) mach_msg_trap
+calls=1 0 
+0 4
+0 12
+
+fn=(154)
+0 12
+cfn=(142)
+calls=1 0 
+0 5
+0 13
+cfn=(144)
+calls=1 0 
+0 705
+0 2
+cfn=(148)
+calls=1 0 
+0 4
+0 2
+cfn=(152)
+calls=1 0 
+0 17
+0 6
+
+fn=(156)
+0 176
+cfn=(158) ___ZN4dyldL24checkSharedRegionDisableEPK11mach_header_block_invoke
+calls=4 0 
+0 120
+0 36
+
+fn=(180)
+0 62
+
+fn=(190) void std::__1::vector<dyld_uuid_info, std::__1::allocator<dyld_uuid_info> >::__push_back_slow_path<dyld_uuid_info const&>(dyld_uuid_info const&)
+0 245
+cfn=(192)
+calls=7 0 
+0 511
+0 207
+cfn=(88)
+calls=6 0 
+0 819
+0 171
+cfn=(260)
+calls=6 0 
+0 84
+0 56
+
+fn=(208)
+0 533
+cfn=(210) ImageLoader::ImageLoader(char const*, unsigned int)
+calls=41 0 
+0 11838
+0 8017
+
+fn=(216)
+0 1296
+cfn=(218)
+calls=162 0 
+0 972
+0 1296
+
+fn=(270)
+0 378
+
+fn=(290)
+0 77
+cfn=(76)
+calls=7 0 
+0 161
+0 56
+cfn=(88)
+calls=7 0 
+0 353
+0 56
+
+fn=(292)
+0 9932
+cfn=(294)
+calls=368 0 
+0 410075
+0 2080
+cfn=(294)
+calls=40 0 
+0 549689
+0 560
+cfn=(256)
+calls=40 0 
+0 280
+0 200
+cfn=(340)
+calls=40 0 
+0 280
+0 240
+cfn=(24)
+calls=40 0 
+0 3617
+0 84
+cfn=(24)
+calls=1 0 
+0 23
+0 119
+cfn=(416)
+calls=39 0 
+0 195
+0 4982
+
+fn=(302) dyld::loadPhase5(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*)
+0 7504
+cfn=(308) dyld3::findInSharedCacheImage(dyld3::SharedCacheLoadInfo const&, char const*, dyld3::SharedCacheFindDylibResults*)
+calls=40 0 
+0 1240
+0 1184
+cfn=(304)
+calls=368 0 
+0 94078
+0 60859
+cfn=(4)
+calls=328 0 
+0 26594
+0 2296
+cfn=(340)
+calls=328 0 
+0 2296
+0 33092
+cfn=(306) ImageLoader::matchInstallPath() const
+calls=8109 0 
+0 56763
+0 48774
+cfn=(310) dyld::my_stat(char const*, stat*)
+calls=40 0 
+0 800
+0 120
+cfn=(312) __error
+calls=40 0 
+0 200
+0 200
+cfn=(314) dyld::findLoadedImage(stat const&)
+calls=40 0 
+0 17860
+0 400
+cfn=(318)
+calls=40 0 
+0 1080
+0 320
+cfn=(320) dyld::loadPhase6(int, stat const&, char const*, dyld::LoadContext const&)
+calls=40 0 
+0 517234
+0 3872
+cfn=(390)
+calls=40 0 
+0 520
+0 80
+
+fn=(306)
+0 56763
+
+fn=(308)
+0 1240
+
+fn=(324) ImageLoaderMachO::instantiateFromFile(char const*, int, unsigned char const*, unsigned long, unsigned long long, unsigned long long, stat const&, ImageLoader::LinkContext const&)
+0 1200
+cfn=(198)
+calls=40 0 
+0 114403
+0 800
+cfn=(326)
+calls=40 0 
+0 309513
+0 400
+
+fn=(354)
+0 520
+cfn=(356)
+calls=40 0 
+0 160
+0 600
+
+fn=(368)
+0 790
+
+fn=(2)
+0 103
+cfn=(4)
+calls=3 0 
+0 171
+0 10906
+cfn=(6)
+calls=1 0 
+0 77
+0 102
+cfn=(22)
+calls=1 0 
+0 16694
+0 30
+cfn=(38)
+calls=1 0 
+0 6773778
+0 11
+
+fn=(4)
+0 170229
+
+fn=(68)
+0 2418
+cfn=(70) __fcntl
+calls=78 0 
+0 530
+0 234
+
+fn=(70)
+0 320
+cfn=(428) cerror
+calls=4 0 
+0 136
+0 74
+
+fn=(72)
+0 210
+
+fn=(74)
+0 205
+
+fn=(82)
+0 1610
+
+fn=(116) dyld::parseColonList(char const*, char const*)
+0 490
+cfn=(78)
+calls=1 0 
+0 43
+0 550
+cfn=(76)
+calls=1 0 
+0 43
+0 6
+cfn=(78)
+calls=1 0 
+0 43
+0 4
+cfn=(84)
+calls=1 0 
+0 53
+0 16
+
+fn=(132)
+0 4
+
+fn=(166)
+0 38
+cfn=(80)
+calls=2 0 
+0 78
+0 24
+
+fn=(234)
+0 164
+
+fn=(256)
+0 4130
+
+fn=(278)
+0 5112
+cfn=(218)
+calls=639 0 
+0 3834
+0 5112
+
+fn=(378)
+0 1304
+
+fn=(458)
+0 426
+
+fn=(478) ImageLoaderMachOCompressed::doBind(ImageLoader::LinkContext const&, bool)
+0 533
+cfn=(470)
+calls=41 0 
+0 1066
+0 123
+cfn=(254)
+calls=41 0 
+0 943
+0 246
+cfn=(480) ImageLoaderMachOCompressed::eachBind(ImageLoader::LinkContext const&, unsigned long (ImageLoaderMachOCompressed::*)(ImageLoader::LinkContext const&, unsigned long, unsigned char, char const*, unsigned char, long, long, char const*, ImageLoaderMachOCompressed::LastLookup*, bool))
+calls=41 0 
+0 1873231
+0 656
+cfn=(382)
+calls=41 0 
+0 1668
+0 41
+cfn=(254)
+calls=41 0 
+0 943
+0 246
+cfn=(482) ImageLoaderMachO::setupLazyPointerHandler(ImageLoader::LinkContext const&)
+calls=41 0 
+0 35733
+0 287
+
+fn=(480)
+0 656
+cfn=(224)
+calls=41 0 
+0 943
+0 205
+cfn=(224)
+calls=41 0 
+0 943
+0 205
+cfn=(276)
+calls=41 0 
+0 2747
+0 30413
+cfn=(484)
+calls=117 0 
+0 121827
+0 776
+cfn=(474)
+calls=42 0 
+0 1008
+0 252
+cfn=(474)
+calls=42 0 
+0 1083
+0 6116
+cfn=(484)
+calls=289 0 
+0 53420
+0 16397
+cfn=(484)
+calls=497 0 
+0 1469693
+0 1006
+cfn=(474)
+calls=4 0 
+0 96
+0 751
+cfn=(362)
+calls=39 0 
+0 936
+0 195
+cfn=(474)
+calls=39 0 
+0 1071
+0 195
+cfn=(278)
+calls=39 0 
+0 858
+0 234
+cfn=(224)
+calls=39 0 
+0 897
+0 195
+cfn=(276)
+calls=39 0 
+0 2613
+0 42053
+cfn=(514)
+calls=2 0 
+0 50
+0 3694
+cfn=(484)
+calls=123 0 
+0 66590
+0 369
+cfn=(474)
+calls=123 0 
+0 5967
+0 1080
+cfn=(474)
+calls=278 0 
+0 28047
+0 9650
+
+fn=(554)
+0 1822
+cfn=(362)
+calls=2 0 
+0 48
+0 10
+cfn=(474)
+calls=2 0 
+0 48
+0 10
+cfn=(278)
+calls=2 0 
+0 44
+0 14
+cfn=(224)
+calls=2 0 
+0 46
+0 56
+cfn=(474)
+calls=10 0 
+0 840
+0 642
+cfn=(506)
+calls=24 0 
+0 816
+0 256
+cfn=(506)
+calls=10 0 
+0 340
+0 50
+cfn=(474)
+calls=10 0 
+0 1590
+0 490
+cfn=(556)
+calls=16 0 
+0 1434
+0 192
+
+fn=(558)
+0 240
+cfn=(426)
+calls=16 0 
+0 176
+0 216
+
+fn=(570)
+0 24
+cfn=(254)
+calls=2 0 
+0 46
+0 4
+cfn=(572)
+calls=2 0 
+0 10
+0 18
+cfn=(576)
+calls=2 0 
+0 3001174
+0 6
+cfn=(432)
+calls=2 0 
+0 20840
+0 8
+cfn=(134)
+calls=2 0 
+0 34
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 20
+
+fn=(580)
+0 3690
+
+fn=(770)
+0 615
+
+fn=(882)
+0 4
+cfn=(884)
+calls=1 0 
+0 1270373
+
+fn=(1418)
+0 400
+cfn=(1420)
+calls=40 0 
+0 9980
+0 280
+cfn=(242)
+calls=40 0 
+0 320
+
+fn=(16)
+0 8
+cfn=(18)
+calls=1 0 
+0 5
+0 11
+cfn=(20) _thread_set_tsd_base
+calls=1 0 
+0 4
+
+fn=(24)
+0 55852
+
+fn=(114)
+0 22
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 62
+0 10
+cfn=(4)
+calls=2 0 
+0 73
+0 7
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 26
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 31
+0 5
+cfn=(4)
+calls=1 0 
+0 26
+0 5
+cfn=(4)
+calls=1 0 
+0 42
+0 8
+cfn=(4)
+calls=1 0 
+0 14
+0 5
+cfn=(4)
+calls=1 0 
+0 66
+0 5
+cfn=(116)
+calls=1 0 
+0 1248
+0 16
+
+fn=(158)
+0 44
+cfn=(160)
+calls=4 0 
+0 52
+0 24
+
+fn=(194)
+0 1739
+
+fn=(242)
+0 4280
+
+fn=(284)
+0 13
+
+fn=(312)
+0 200
+
+fn=(334)
+0 600
+cfn=(336) ImageLoaderMachO::assignSegmentAddresses(ImageLoader::LinkContext const&)
+calls=40 0 
+0 16608
+0 320
+cfn=(272)
+calls=40 0 
+0 200
+0 360
+cfn=(220)
+calls=40 0 
+0 880
+0 316
+cfn=(220)
+calls=79 0 
+0 1738
+0 595
+cfn=(222)
+calls=119 0 
+0 2618
+0 595
+cfn=(346) ImageLoaderMachO::segPreferredLoadAddress(unsigned int) const
+calls=119 0 
+0 2618
+0 595
+cfn=(274)
+calls=119 0 
+0 2737
+0 952
+cfn=(358)
+calls=119 0 
+0 2856
+0 714
+cfn=(360)
+calls=119 0 
+0 2737
+0 833
+cfn=(362)
+calls=119 0 
+0 2856
+0 433
+cfn=(216)
+calls=39 0 
+0 858
+0 117
+cfn=(4)
+calls=39 0 
+0 1014
+0 2497
+cfn=(364)
+calls=119 0 
+0 5117
+0 2265
+cfn=(212)
+calls=40 0 
+0 200
+
+fn=(338) ImageLoaderMachO::segmentsCanSlide() const
+0 280
+cfn=(340)
+calls=40 0 
+0 280
+0 280
+
+fn=(340)
+0 3416
+
+fn=(344) ImageLoaderMachO::segHasPreferredLoadAddress(unsigned int) const
+0 320
+cfn=(218)
+calls=40 0 
+0 240
+0 360
+
+fn=(346)
+0 1904
+cfn=(218)
+calls=238 0 
+0 1428
+0 1904
+
+fn=(26)
+0 12
+cfn=(28) os_unfair_lock_lock
+calls=2 0 
+0 10
+0 12
+cfn=(30)
+calls=1 0 
+0 16435
+0 124
+cfn=(36) os_unfair_lock_unlock
+calls=1 0 
+0 6
+0 2
+cfn=(36)
+calls=1 0 
+0 6
+0 5
+cfn=(32)
+calls=1 0 
+0 22
+0 12
+
+fn=(36)
+0 12
+
+fn=(56)
+0 105
+
+fn=(80)
+0 280
+cfn=(82)
+calls=28 0 
+0 644
+0 168
+
+fn=(88)
+0 1994
+
+fn=(168)
+0 62
+
+fn=(244)
+0 2450
+
+fn=(280)
+0 5735
+cfn=(82)
+calls=1 0 
+0 23
+0 4
+cfn=(204)
+calls=1 0 
+0 1066
+0 455
+
+fn=(376)
+0 10
+cfn=(76)
+calls=1 0 
+0 43
+0 2
+cfn=(78)
+calls=1 0 
+0 43
+0 4
+cfn=(84)
+calls=1 0 
+0 53
+0 553
+
+fn=(392)
+0 26
+cfn=(388)
+calls=2 0 
+0 14
+0 8
+cfn=(394)
+calls=2 0 
+0 16
+0 38
+cfn=(396)
+calls=2 0 
+0 3599807
+0 14
+
+fn=(424)
+0 5872
+
+fn=(428)
+0 24
+cfn=(430) _pthread_exit_if_canceled
+calls=4 0 
+0 48
+0 8
+cfn=(100)
+calls=4 0 
+0 32
+0 24
+
+fn=(430)
+0 48
+
+fn=(432)
+0 64
+cfn=(434)
+calls=8 0 
+0 71499
+
+fn=(436)
+0 171
+
+fn=(438)
+0 108
+cfn=(440)
+calls=9 0 
+0 45
+0 99
+cfn=(442)
+calls=9 0 
+0 54038
+
+fn=(444)
+0 7920
+cfn=(446) ImageLoader::compare(ImageLoader const*) const
+calls=1320 0 
+0 14192
+
+fn=(462)
+0 44
+cfn=(426)
+calls=2 0 
+0 22
+0 4
+cfn=(426)
+calls=1 0 
+0 11
+0 21
+cfn=(464)
+calls=3 0 
+0 36
+0 18
+cfn=(463) ImageLoader::recursiveUpdateDepth(unsigned int)'2
+calls=3 0 
+0 48784
+0 48
+
+fn=(463)
+0 9086
+cfn=(426)
+calls=70 0 
+0 770
+0 2580
+cfn=(426)
+calls=645 0 
+0 7095
+0 5005
+cfn=(464)
+calls=715 0 
+0 8580
+0 4018
+cfn=(463)
+calls=647 0 
+0 177508
+0 11650
+
+fn=(466)
+0 48
+cfn=(426)
+calls=2 0 
+0 22
+0 4
+cfn=(426)
+calls=1 0 
+0 11
+0 18
+cfn=(467) ImageLoader::recursiveRebase(ImageLoader::LinkContext const&)'2
+calls=3 0 
+0 455753
+0 26
+cfn=(468)
+calls=2 0 
+0 1091
+0 8
+cfn=(238)
+calls=2 0 
+0 146
+0 12
+
+fn=(467)
+0 5195
+cfn=(426)
+calls=38 0 
+0 418
+0 1304
+cfn=(426)
+calls=326 0 
+0 3586
+0 2184
+cfn=(467)
+calls=364 0 
+0 4446157
+0 2340
+cfn=(468)
+calls=39 0 
+0 435521
+0 156
+cfn=(238)
+calls=39 0 
+0 2847
+0 2202
+
+fn=(476)
+0 60
+cfn=(426)
+calls=2 0 
+0 22
+0 4
+cfn=(426)
+calls=1 0 
+0 11
+0 24
+cfn=(477) ImageLoader::recursiveBind(ImageLoader::LinkContext const&, bool, bool)'2
+calls=3 0 
+0 1855521
+0 30
+cfn=(478)
+calls=2 0 
+0 84259
+0 14
+cfn=(470)
+calls=2 0 
+0 52
+0 18
+cfn=(238)
+calls=2 0 
+0 142
+0 16
+
+fn=(477)
+0 6083
+cfn=(426)
+calls=38 0 
+0 418
+0 1304
+cfn=(426)
+calls=326 0 
+0 3586
+0 2912
+cfn=(477)
+calls=364 0 
+0 15108289
+0 2418
+cfn=(478)
+calls=39 0 
+0 1831457
+0 273
+cfn=(470)
+calls=39 0 
+0 1014
+0 351
+cfn=(238)
+calls=39 0 
+0 2769
+0 2936
+
+fn=(520)
+0 60
+cfn=(90)
+calls=6 0 
+0 1188
+0 54
+
+fn=(530)
+0 5
+
+fn=(536)
+0 38
+
+fn=(540)
+0 14
+
+fn=(550)
+0 1826
+cfn=(362)
+calls=4 0 
+0 96
+0 20
+cfn=(474)
+calls=4 0 
+0 111
+0 20
+cfn=(278)
+calls=4 0 
+0 88
+0 24
+cfn=(224)
+calls=4 0 
+0 92
+0 70
+cfn=(474)
+calls=18 0 
+0 1182
+0 208
+cfn=(474)
+calls=10 0 
+0 1590
+0 13480
+
+fn=(590)
+0 60
+cfn=(272)
+calls=5 0 
+0 25
+0 44
+cfn=(224)
+calls=6 0 
+0 138
+0 30
+cfn=(276)
+calls=6 0 
+0 402
+0 44
+cfn=(274)
+calls=5 0 
+0 115
+0 63
+
+fn=(592)
+0 60
+cfn=(42)
+calls=4 0 
+0 60
+0 44
+cfn=(594)
+calls=4 0 
+0 2861915
+
+fn=(614)
+0 2618
+
+fn=(616)
+0 30245
+cfn=(474)
+calls=187 0 
+0 7023
+0 5999
+
+fn=(766)
+0 39
+cfn=(768)
+calls=3 0 
+0 30785
+
+fn=(810)
+0 52
+cfn=(4)
+calls=4 0 
+0 130
+0 38
+
+fn=(20)
+0 4
+
+fn=(224)
+0 7776
+cfn=(218)
+calls=972 0 
+0 5832
+0 8748
+
+fn=(226)
+0 492
+cfn=(228)
+calls=82 0 
+0 574
+0 656
+
+fn=(258) ImageLoaderMachO::getUUID(unsigned char*) const
+0 5248
+
+fn=(310)
+0 360
+cfn=(74)
+calls=40 0 
+0 200
+0 240
+
+fn=(320)
+0 1200
+cfn=(322) pread
+calls=40 0 
+0 200
+0 512
+cfn=(408)
+calls=39 0 
+0 8213
+0 546
+cfn=(322)
+calls=39 0 
+0 195
+0 319
+cfn=(194)
+calls=40 0 
+0 1702
+0 686
+cfn=(322)
+calls=1 0 
+0 5
+0 442
+cfn=(324)
+calls=40 0 
+0 426316
+0 120
+cfn=(384)
+calls=40 0 
+0 76298
+0 480
+
+fn=(322)
+0 400
+
+fn=(330)
+0 837
+cfn=(282)
+calls=39 0 
+0 4512
+0 468
+cfn=(68)
+calls=39 0 
+0 1521
+0 796
+
+fn=(332)
+0 720
+cfn=(282)
+calls=40 0 
+0 4628
+0 431
+cfn=(364)
+calls=39 0 
+0 1794
+0 273
+cfn=(54)
+calls=39 0 
+0 51513
+0 468
+cfn=(410)
+calls=39 0 
+0 819
+0 8
+
+fn=(336)
+0 560
+cfn=(338)
+calls=40 0 
+0 840
+0 200
+cfn=(342) ImageLoaderMachO::segmentsMustSlideTogether() const
+calls=40 0 
+0 200
+0 280
+cfn=(344)
+calls=40 0 
+0 920
+0 160
+cfn=(272)
+calls=40 0 
+0 200
+0 520
+cfn=(346)
+calls=40 0 
+0 880
+0 316
+cfn=(346)
+calls=79 0 
+0 1738
+0 595
+cfn=(278)
+calls=119 0 
+0 2618
+0 2821
+cfn=(348)
+calls=40 0 
+0 3640
+0 120
+
+fn=(54)
+0 52147
+
+fn=(90)
+0 2328
+
+fn=(112)
+0 137
+
+fn=(128)
+0 6
+cfn=(12)
+calls=1 0 
+0 4
+0 4
+
+fn=(210)
+0 11838
+
+fn=(254)
+0 4554
+
+fn=(418)
+0 5138
+
+fn=(446)
+0 14192
+
+fn=(450)
+0 615
+cfn=(256)
+calls=41 0 
+0 287
+0 492
+cfn=(258)
+calls=41 0 
+0 2624
+0 164
+cfn=(240)
+calls=41 0 
+0 205
+0 246
+cfn=(50)
+calls=41 0 
+0 4510
+0 492
+
+fn=(452)
+0 18
+cfn=(254)
+calls=2 0 
+0 46
+0 12
+cfn=(454)
+calls=2 0 
+0 314
+0 2
+cfn=(254)
+calls=2 0 
+0 46
+0 28
+
+fn=(470)
+0 984
+cfn=(378)
+calls=123 0 
+0 984
+0 1230
+
+fn=(482)
+0 3219
+cfn=(24)
+calls=123 0 
+0 5216
+0 1341
+cfn=(4)
+calls=285 0 
+0 8844
+0 1422
+cfn=(4)
+calls=284 0 
+0 8813
+0 592
+cfn=(372)
+calls=1 0 
+0 12
+0 6
+cfn=(24)
+calls=1 0 
+0 91
+0 8
+cfn=(240)
+calls=1 0 
+0 5
+0 5
+cfn=(512)
+calls=1 0 
+0 26
+0 6133
+
+fn=(534)
+0 7
+
+fn=(562)
+0 20
+cfn=(80)
+calls=1 0 
+0 39
+0 14
+
+fn=(564)
+0 31
+
+fn=(886)
+0 567
+
+fn=(1642)
+0 93
+cfn=(590)
+calls=1 0 
+0 269
+0 7
+
+fn=(28)
+0 10
+
+fn=(40)
+0 26
+cfn=(42)
+calls=2 0 
+0 30
+0 18
+
+fn=(94)
+0 58
+cfn=(4)
+calls=4 0 
+0 130
+0 99
+
+fn=(186)
+0 31
+
+fn=(188)
+0 637
+cfn=(190)
+calls=7 0 
+0 2093
+0 357
+
+fn=(222)
+0 2216
+cfn=(218)
+calls=277 0 
+0 1662
+0 2216
+
+fn=(232)
+0 205
+
+fn=(238)
+0 4674
+cfn=(240)
+calls=41 0 
+0 205
+0 492
+cfn=(240)
+calls=164 0 
+0 820
+0 615
+cfn=(242)
+calls=205 0 
+0 1640
+0 615
+cfn=(244)
+calls=205 0 
+0 1025
+0 1025
+cfn=(246)
+calls=41 0 
+0 3578
+0 820
+cfn=(256)
+calls=41 0 
+0 287
+0 246
+cfn=(258)
+calls=41 0 
+0 2624
+0 205
+cfn=(240)
+calls=41 0 
+0 205
+0 123
+cfn=(188)
+calls=41 0 
+0 2907
+0 510
+cfn=(886)
+calls=6 0 
+0 42
+0 13
+cfn=(254)
+calls=1 0 
+0 23
+0 4
+cfn=(242)
+calls=1 0 
+0 8
+0 4
+cfn=(240)
+calls=1 0 
+0 5
+0 3
+cob=(11)
+cfi=(11)
+cfn=(1182)
+calls=1 0 
+0 6715
+0 1
+cfn=(254)
+calls=1 0 
+0 23
+0 2
+cfn=(254)
+calls=1 0 
+0 23
+0 2783
+
+fn=(248)
+0 454
+cfn=(250)
+calls=1 0 
+0 131
+0 1230
+cfn=(254)
+calls=41 0 
+0 943
+0 410
+
+fn=(262)
+0 88
+
+fn=(286)
+0 15
+cfn=(288)
+calls=1 0 
+0 5
+0 4
+cfn=(290)
+calls=1 0 
+0 99
+0 4
+
+fn=(298)
+0 7344
+cfn=(24)
+calls=408 0 
+0 5712
+0 2856
+cfn=(24)
+calls=408 0 
+0 5712
+0 3264
+cfn=(24)
+calls=408 0 
+0 5712
+0 4080
+cfn=(300) dyld::loadPhase4(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*)
+calls=408 0 
+0 891646
+0 5712
+
+fn=(300)
+0 9384
+cfn=(302)
+calls=408 0 
+0 877366
+0 4896
+
+fn=(314)
+0 640
+cfn=(316) ImageLoader::statMatch(stat const&) const
+calls=40 0 
+0 320
+0 5660
+cfn=(316)
+calls=780 0 
+0 8580
+0 2660
+
+fn=(316)
+0 8900
+
+fn=(342)
+0 200
+
+ob=(12)
+fl=(12)
+fn=(910)
+0 434
+cfn=(860) slot_name
+calls=15 0 
+0 720
+0 60
+cfn=(860)
+calls=5 0 
+0 165
+0 40
+cfn=(860)
+calls=10 0 
+0 330
+0 790
+
+fn=(858)
+0 7570
+cfn=(860)
+calls=284 0 
+0 17826
+0 1331
+cfn=(860)
+calls=109 0 
+0 7053
+0 700
+cfn=(860)
+calls=175 0 
+0 9829
+0 1153
+cfn=(860)
+calls=65 0 
+0 2145
+0 2468
+cfn=(860)
+calls=617 0 
+0 39371
+0 1536
+cfn=(860)
+calls=43 0 
+0 3053
+0 13780
+
+fn=(1356)
+0 21
+cfn=(860)
+calls=3 0 
+0 2786
+0 21
+cfn=(1358) getsectbynamefromheader_64
+calls=3 0 
+0 2073
+
+fn=(1358)
+0 195
+cfn=(860)
+calls=12 0 
+0 510
+0 78
+cfn=(860)
+calls=3 0 
+0 99
+0 84
+cfn=(860)
+calls=21 0 
+0 693
+0 414
+
+fn=(860)
+0 3
+cob=(7)
+cfi=(7)
+cfn=(750)
+calls=2 0 
+0 10
+0 299
+cob=(6)
+cfi=(6)
+cfn=(862)
+calls=298 0 
+0 14536
+0 1060
+cob=(6)
+cfi=(6)
+cfn=(790)
+calls=1059 0 
+0 58700
+0 9
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=3 0 
+0 9957
+0 6
+
+ob=(13)
+fl=(13)
+fn=(1698)
+0 600
+cfn=(1568) __cxxabiv1::__class_type_info::search_above_dst(__cxxabiv1::__dynamic_cast_info*, void const*, void const*, int, bool) const
+calls=60 0 
+0 44332
+0 360
+
+fn=(878) std::set_terminate(void (*)())
+0 5
+
+fn=(1568)
+0 60
+cob=(8)
+cfi=(8)
+cfn=(1002)
+calls=59 0 
+0 14404
+0 2
+cob=(5)
+cfi=(5)
+cfn=(1590)
+calls=1 0 
+0 61
+0 2
+cob=(5)
+cfi=(5)
+cfn=(1572)
+calls=1 0 
+0 19
+0 4
+cob=(5)
+cfi=(5)
+cfn=(760)
+calls=3 0 
+0 99
+0 4
+cob=(5)
+cfi=(5)
+cfn=(776)
+calls=3 0 
+0 105
+0 2
+cob=(5)
+cfi=(5)
+cfn=(1570)
+calls=1 0 
+0 2
+0 18
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=1 0 
+0 29863
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=5 0 
+0 224533
+0 12
+
+ob=(14)
+fl=(14)
+fn=(1260)
+0 1
+
+fn=(1492) _libtrace_init
+0 8
+cfn=(1494) os_activity_messages_for_thread
+calls=1 0 
+0 5776
+0 5
+cfn=(1494)
+calls=1 0 
+0 3002
+0 5
+cfn=(1494)
+calls=1 0 
+0 3188
+0 6
+cfn=(1494)
+calls=1 0 
+0 3230
+0 3
+cfn=(1494)
+calls=1 0 
+0 10470
+0 2
+cfn=(1520) _os_trace_create_debug_control_port
+calls=1 0 
+0 7057
+0 3
+cfn=(1494)
+calls=1 0 
+0 3163
+0 6
+
+fn=(1494)
+0 32
+cob=(3)
+cfi=(3)
+cfn=(601)
+calls=8 0 
+0 35809
+0 10
+
+ob=(13)
+fl=(13)
+fn=(1696)
+0 10
+cfn=(1698)
+calls=5 0 
+0 31020
+
+fn=(1736)
+0 176
+cob=(8)
+cfi=(8)
+cfn=(1018)
+calls=43 0 
+0 15102
+0 3
+cob=(3)
+cfi=(3)
+cfn=(600)
+calls=1 0 
+0 29193
+0 2
+
+fn=(1602)
+0 14
+cfn=(1568)
+calls=2 0 
+0 68
+0 12
+cfn=(1568)
+calls=2 0 
+0 72
+0 8
+cfn=(1568)
+calls=2 0 
+0 45204
+0 12
+
+fn=(1566)
+0 18
+cfn=(1568)
+calls=2 0 
+0 44990
+0 14
+cfn=(1568)
+calls=2 0 
+0 44814
+0 4
+cfn=(1568)
+calls=2 0 
+0 44810
+0 16
+cfn=(1568)
+calls=2 0 
+0 44900
+0 4
+
+ob=(14)
+fl=(14)
+fn=(1494)
+0 6
+
+fn=(1520)
+0 16
+cfn=(1494)
+calls=1 0 
+0 3901
+0 2
+
+ob=(13)
+fl=(13)
+fn=(1566)
+0 14
+
+ob=(14)
+fl=(14)
+fn=(1520)
+0 4
+cfn=(1494)
+calls=1 0 
+0 3127
+0 7
+
+fn=(1262)
+0 1
+
+totals: 7085575
