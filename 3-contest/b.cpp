@@ -1,93 +1,41 @@
-/*
-Кубики
-Имя входного файла: стандартный ввод
-Имя выходного файла: стандартный вывод
-Ограничение по времени: 1.5 секунд
-Ограничение по памяти: 256 мегабайт
-Привидение Петя любит играть со своими кубиками. 
-Он любит выкладывать их в ряд и разглядывать свое творение. 
-Однако недавно друзья решили подшутить над Петей и поставили в его игровой комнате зеркало. 
-Ведь всем известно, что привидения не отражаются в зеркале
-А кубики отражаются. Теперь Петя видит перед собой N цветных кубиков, но не знает, какие из этих кубиков настоящие, а какие — всего лишь отражение в зеркале. 
-Помогите Пете! Выясните, сколько кубиков может быть у Пети. 
-Петя видит отражение всех кубиков в зеркале и часть кубиков, которая находится перед ним. 
-Часть кубиков может быть позади Пети, их он не видит.
-
-Формат входных данных
-Первая строка входного файла содержит число N (1 6 N 6 106) и количество различных цветов,
-в которые могут быть раскрашены кубики — M (1 6 M 6 106). 
-Следующая строка содержит Nцелых чисел от 1 до M — цвета кубиков.
-
-Формат выходных данных
-Выведите в выходной файл все такие K, что у Пети может быть K кубиков в подрядке возрастания
-
-
-Пример
-стандартный ввод
-6 2
-1 1 2 2 1 1
-
-стандартный вывод
-3 5 6
-
-*/
-
-// https://algorithmica.org/ru/hashing
-
-#include <cstdio>
-#include <climits>
-#include <vector>
-#include <omp.h>
-#include <queue>
-#include <ostream>
 #include <iostream>
-#include <cstring>
+#include <queue>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
-#pragma GCC optimize("Ofast")
-#pragma GCC 
+class DNAfromGens {
+   public:
+    DNAfromGens() : root(new Node) {}
 
-// for DEBUG mode give -DDEBUG option to g++
-#ifdef DEBUG
-    #define ON_DEBUG(...) __VA_ARGS__
-    #define LOGS(...)\
-        printf(__VA_ARGS__);\
-        printf("\t\tin file %s, line %d, function %s\n\n", __FILE__, __LINE__, __func__);
-#else
-    #define LOGS(data, ...) ;
-    #define ON_DEBUG(...) ;
-#endif
+    void NewDNA(std::string&& inputString);
 
-/*
-// Class that represents suffix tree on arrays of type T
-template<typename T>
-class SuffixTree {
-public:
-    SuffixTree(int nLetters);
+    void NewGene(const std::string& inputString);
 
-    ~SuffixTree();
+    ~DNAfromGens();
 
-    bool NewElem(T* firstLetter, T* lastLetter);
+   private:
+    struct Node {
+        std::unordered_map<char, Node*> children;
+        std::unordered_set<long long> pending;
 
-    bool HasElem(T* firstLetter, T* lastLetter);
-
-    bool Visualise(std::string filename);
-
-    class Node {
-    public:
-
-
-    private:
-        bool isTerminal;
-        Node children[];
-        Node* suffixLink;
+        bool isTerminal() const;
     };
 
-private:
-    int nLetters;
+    struct DNA {
+        const std::string inputString;
+        long long pos;
+        Node* node;
 
+        DNA(Node* node, std::string&& inputString);
+    };
 
+    std::vector<DNA> DNAsToProcess;
+    Node* root;
+
+    bool pushDNA(long long id);
 };
-*/
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -95,67 +43,109 @@ private:
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-struct Direction {
-    int startingIndex;
-    int endingIndex;
-    inline int by(int index) const;
-    inline int length() const;
-};
-
-bool equalStrings(int* array, const Direction& first, const Direction& second);
-
 int main() {
-    LOGS("Starting with DEBUG mode\n")
+    long long n = 0;
+    std::cin >> n;
 
-    int nElems = 0, nColors = 0;
-    scanf("%d %d\n", &nElems, &nColors);
-    int* elems = new int[nElems];
-    for (int i = 0; i < nElems; ++i) {
-        scanf("%d", elems + i);
-    }
+    DNAfromGens ProblemSolver;
 
-    LOGS("All input data was read\n")
+    long long k = 0;
+    for (int i = 0; i < n; ++i) {
+        char op = 0;
+        std::cin >> op;
 
-    //#pragma omp for schedule (static, 10)
-    for (int i = nElems / 2 - 1; i >= 0; --i) {
-        if (equalStrings(elems, {i, 0}, {i + 1, 2 * i + 1})) {
-            printf("%d ", nElems - i - 1);
+        std::string inputString;
+        std::cin >> inputString;
+
+        k %= inputString.length();
+        if (k > 0) {
+            inputString = inputString.substr(k, inputString.length() - k) +
+                          inputString.substr(0, k);
+        }
+
+        if (op == '+') {
+            ProblemSolver.NewGene(inputString);
+        } else {
+            ProblemSolver.NewDNA(std::move(inputString));
         }
     }
-
-    printf("%d ", nElems);
-
-    delete [] elems;
 }
 
-inline int Direction::length() const {
-    return abs(startingIndex - endingIndex) + 1;
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//-------------------------------------IMPL-------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+void DNAfromGens::NewDNA(std::string&& inputString) {
+    const long long id = DNAsToProcess.size();
+    root->pending.insert(id);
+    DNAsToProcess.emplace_back(root, std::move(inputString));
+    if (pushDNA(id)) 
+        std::cout << 1 << ' ' << id + 1 << '\n';
+    else 
+        std::cout << 0 << '\n';
 }
 
-inline int Direction::by(int index) const {
-    if (startingIndex < endingIndex) {
-        return startingIndex + index;
-    }
-    else if (startingIndex == endingIndex) {
-        return startingIndex;
-    }
-    else {
-        return startingIndex - index;
-    }
-}
+void DNAfromGens::NewGene(const std::string& inputString) {
+    std::vector<long long> toUpdate;
 
-bool equalStrings(int* array, const Direction& first, const Direction& second) {
-    if (first.length() != second.length()) {
-        return false;
-    }
+    Node* curNode = root;
+    for (const auto& c : inputString) {
+        if (!curNode->children.count(c)) {
+            curNode->children.insert({c, new Node});
 
-    int commonLength = first.length();
-
-    for (int i = 0; i < commonLength; ++i) {
-        if (array[first.by(i)] != array[second.by(i)]) {
-            return false;
+            for (const int& id : curNode->pending) {
+                const DNA& dna = DNAsToProcess[id];
+                if (dna.inputString[dna.pos] == c) toUpdate.push_back(id);
+            }
         }
+
+        curNode = curNode->children.at(c);
     }
 
-    return true;
+    std::vector<long long> ans;
+    for (auto& id : toUpdate)
+        if (pushDNA(id)) ans.push_back(id);
+
+    std::cout << ans.size() << ' ';
+    for (auto elem : ans)
+        std::cout << elem  + 1 << ' ';
+    std::cout << '\n';
+}
+
+DNAfromGens::~DNAfromGens() { delete root; }
+
+bool DNAfromGens::Node::isTerminal() const { return children.empty(); }
+
+DNAfromGens::DNA::DNA(DNAfromGens::Node* node, std::string&& inputString)
+    : node(node), inputString(inputString), pos(0) {}
+
+bool DNAfromGens::pushDNA(long long id) {
+    DNA& dna = DNAsToProcess[id];
+    Node* curNode = dna.node;
+    curNode->pending.erase(id);
+
+    while (dna.pos < dna.inputString.length()) {
+        const char& c = dna.inputString[dna.pos];
+
+        if (curNode->children.count(c)) {
+            curNode = curNode->children[c];
+            ++dna.pos;
+        } else if (curNode->isTerminal() and curNode != root)
+            curNode = root;
+        else
+            break;
+    }
+
+    if (dna.pos == dna.inputString.length() and curNode->isTerminal())
+        return true;
+
+    if (dna.pos < dna.inputString.length()) {
+        curNode->pending.insert(id);
+        dna.node = curNode;
+    } else
+        dna.node = nullptr;
+
+    return false;
 }

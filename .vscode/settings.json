@@ -50,7 +50,9 @@
         "system_error": "cpp",
         "initializer_list": "cpp",
         "ranges": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_set": "cpp",
+        "map": "cpp"
     },
     "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
 }
