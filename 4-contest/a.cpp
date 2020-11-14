@@ -148,7 +148,6 @@ void SuffixArray::phaze(int phazeID)
         int secondHalfStarter = 
     }
 
-    // change arrays
     delete [] sortedSuffIndexes;
     delete [] classIndexes;
 
