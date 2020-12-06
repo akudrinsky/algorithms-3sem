@@ -1,11 +1,15 @@
 /*
-Постройте суффиксный массив для заданной строки 𝑠.
+Сегодня на уроке преподаватель Массивов Автомат Укконевич рассказывал своим ученикам про строки, суффиксные структуры и всё такое. Например, он рассказал им, как сравнить две строки 𝐴 и 𝐵 лексикографически. Если одна из них является префиксом другой, то более короткая будет лексикографически меньше, иначе необходимо сравнить символы стоящие на первой позиции, в которой они отличаются. Строка с меньшим по номеру в алфавите символом на данной позиции и будет лексикографически меньше.
+
+Чтобы проверить понимание учениками нового материала, Автомат Укконевич дал им следующее задание: найти 𝑘-ю лексикографически непустую уникальную подстроку строки 𝑆.
+
+Так как учитель знает, что Александр Г. и Илья С. очень любят списывать у известного в узких кругах Демида Г., каждый школьник получил своё число 𝑘 и вынужден был обратиться к вам за помощью.
 
 Входные данные
-Первая строка входного файла содержит строку 𝑠 (1≤|𝑠|≤400000). Строка состоит из строчных латинских букв.
+В первой строке входного файла находится строка 𝑆 (|𝑆|≤105). Вторая строка содержит число 𝑘 (1≤𝑘≤1018) — порядковый номер запрашиваемой подстроки.
 
 Выходные данные
-Выведите |𝑠| различных чисел — номера первых символов суффиксов строки 𝑠 так, чтобы соответствующие суффиксы были упорядочены в лексикографически возрастающем порядке.
+Если ответ существует, выведите искомую подстроку строки 𝑆. В противном случае выведите её лексикографически максимальную подстроку.
 */
 
 #include <cstdio>
@@ -66,87 +70,37 @@ private:
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-namespace
-{
-    struct Substring
-    {
-        int start;
-        int nOccurences;
-        int len;
-    };
-}
-
-
 int main()
 {
-    int nLetters = 0, nCharacters = 0;
-    char* input = new char[400000];
-    scanf("%d %d", &nLetters, &nCharacters);
+    unsigned long long needed = 0;
+    char* input = new char[100000];
     scanf("%s", input);
+    scanf("%llu", &needed);
 
     SuffixArray solver(input);
 
     auto lcp = solver.GetLCP();
     auto suffArray = solver.GetSuffixArray();
 
-    std::stack<Substring> Stack;
-
-    Substring best = {
-        .len = lcp.len,
-        .nOccurences = 1,
-        .start = 0
-    };
-
-    for (int i = 0; i < nLetters; ++i) {
-        int currentOccurencesNum = 1;
-        while (!Stack.empty() and lcp.data[i] <= Stack.top().len) {
-            Substring topSubstring = Stack.top();
-            Stack.pop();
-            LOGS(
-                "Substring{\n"
-                "    .len = %d, \n"
-                "    .start = %d, \n"
-                "    .nOccurences = %d\n"
-                "} was popped from stack at iter %d",
-                topSubstring.len,
-                topSubstring.start, 
-                topSubstring.nOccurences,
-                i
-            )
-            currentOccurencesNum += topSubstring.nOccurences;
-            if (currentOccurencesNum * topSubstring.len > best.nOccurences * best.len) {
-                best.nOccurences = currentOccurencesNum;
-                best.len = topSubstring.len;
-                best.start = suffArray.data[topSubstring.start];
-            }		
-        }
-        if (Stack.empty() or lcp.data[i] > Stack.top().len) {
-            Stack.push(
-                Substring{
-                    .len = lcp.data[i], 
-                    .start = i, 
-                    .nOccurences = currentOccurencesNum
-                }
-            );
-            LOGS(
-                "Substring{\n"
-                "    .len = %d, \n"
-                "    .start = %d, \n"
-                "    .nOccurences = %d\n"
-                "} was pushed to stack",
-                lcp.data[i],
-                i, 
-                currentOccurencesNum
-            )
+    unsigned long long currentStr = 0;
+    int initialStringLen = suffArray.len - 1;
+    for (int i = 1; i < suffArray.len; ++i)
+    {
+        LOGS("%d %d %d\n", suffArray.len, suffArray.data[i], lcp.data[i - 1])
+        currentStr += (initialStringLen - suffArray.data[i]) - lcp.data[i - 1];
+        LOGS("currentStr = %llu\nneeded = %llu", currentStr, needed)
+        if (currentStr >= needed)
+        {
+            *((input + suffArray.len - 1) - (currentStr - needed)) = '\0';
+            printf("%s", input + suffArray.data[i]);
+            break;
         }
     }
 
-    printf(
-        "ANSWER:\n%d\n%d\n%d\n", 
-        best.len * best.nOccurences,
-        best.len, 
-        best.start
-    );
+    if (currentStr < needed)
+    {
+        printf("%s", input + suffArray.data[suffArray.len - 1]);
+    }
         
     delete [] input;
 }
@@ -276,7 +230,7 @@ void SuffixArray::phaze(int phazeID)
 
 SuffixArray::LightArray SuffixArray::GetSuffixArray()
 {
-    return {sortedSuffIndexes + 1, len - 1};
+    return {sortedSuffIndexes, len};
 }
 
 SuffixArray::~SuffixArray()

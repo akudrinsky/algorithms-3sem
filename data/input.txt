@@ -1,6 +1,7 @@
-5
-? abcabd
-+ abc
-? abcabc
-? dabdab
-+ abd
+6
+matter
+animate
+pattern
+thermal
+domain
+teammate

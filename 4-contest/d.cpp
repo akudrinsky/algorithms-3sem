@@ -1,17 +1,21 @@
 /*
-Постройте суффиксный массив для заданной строки 𝑠.
+Сейчас Эркюль Пуаро занят разоблачением международного преступного синдиката, занимающегося контрабандой предметов искусства. Полиция, сотрудничающая с Пуаро, перехватила зашифрованное письмо, содержащее информацию о месте и времени предстоящей сделки, на которой будет присутствовать и глава синдиката. Чтобы сорвать сделку и задержать главу синдиката, необходимо расшифровать перехваченное письмо.
+
+Эркюль знает, что ключ к шифру вычисляется из строки 𝑠. Обозначим за 𝑓(𝑤) длину максимального суффикса 𝑤, не равного 𝑤, который является и префиксом 𝑤. Например, 𝑓(𝚊𝚋𝚌)=0, 𝑓(𝚊𝚋𝚊𝚋)=2, 𝑓(𝚊𝚊𝚊)=2. Тогда ключом является максимум по всем 𝑡, являющимся подстроками 𝑠, величины (|𝑡|+𝑓(𝑡)2). Помогите Эркюлю вычислить ключ.
 
 Входные данные
-Первая строка входного файла содержит строку 𝑠 (1≤|𝑠|≤400000). Строка состоит из строчных латинских букв.
+В единственной строке дана строка 𝑠, состоящая из строчный латинских букв (1≤|𝑠|≤500000).
 
 Выходные данные
-Выведите |𝑠| различных чисел — номера первых символов суффиксов строки 𝑠 так, чтобы соответствующие суффиксы были упорядочены в лексикографически возрастающем порядке.
+Выведите единственное целое число — искомый ключ к шифру.
 */
 
 #include <cstdio>
 #include <cstring>
 #include <vector>
 #include <stack>
+#include <algorithm>
+#include <math.h>
 
 #ifdef DEBUG
     #define LOGS(...)\
@@ -60,28 +64,125 @@ private:
     void phaze(int phazeID);
 };
 
+template<typename compare>
+class sparse_table {
+private:
+    std::vector<int> initial_values;
+    int* *table;
+    int* two_powers;
+    compare cmp;
+    
+    inline int max_of (int el1, int pow1, int el2, int pow2) const {
+        return 
+            (cmp(initial_values[table[pow1][el1]], initial_values[table[pow2][el2]]))   
+            ?
+            table[pow1][el1] 
+            :
+            table[pow2][el2];
+    }
+    
+    int height () const {
+        if (initial_values.size () > 1)
+            return two_powers[initial_values.size () - 1];
+        else
+            return 1;
+    }
+    
+public:
+    sparse_table () = delete;
+    
+    sparse_table (std::vector<int>& on_which) :  initial_values(on_which) {
+        long long n = on_which.size ();
+        two_powers = new int[n];
+        two_powers[0] = 0;
+        two_powers[1] = 1;
+        
+        for (int i = 2; i < n; ++i) {
+            two_powers[i] = two_powers[i / 2] + 1;
+            //std::cout << "power " << two_powers[i] << '\n';
+        }
+        
+        int logn = height ();
+        
+        table = new int*[logn];
+        
+        for (int i = 0; i < logn; ++i) {
+            table[i] = new int[n];
+        }
+        
+        for (int i = 0; i < n; ++i) {
+            table[0][i] = i;
+        }
+        
+        for (int i = 1; i < logn; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (j + pow (2, i) <= n)
+                    table[i][j] = max_of (j, i - 1, j + pow (2, i - 1), i - 1);
+                else {
+                    table[i][j] = -1;
+                }
+            }
+        }
+    }
+    
+    ~sparse_table () {
+        long long n = initial_values.size ();
+        
+        for (int i = 0; i < two_powers[n - 1]; ++i) {
+            delete [] table[i];
+        }
+        
+        delete [] table;
+        
+        delete [] two_powers;
+    }
+    
+    int get_max (int left, int right) const {
+        if (left == right)
+            return left;
+
+        --left;
+        --right;
+        
+        int power = two_powers[right - left] - 1;
+        //std::cout << "left: " << left << " right: " << right << " 2^: " << power << '\n';
+        
+        return max_of (left, power, right - pow (2, power) + 1, power) + 1;
+    }
+};
+
+struct mincmp
+{
+    bool operator()(int a, int b) const
+    {
+        return a < b;
+    }
+};
+
+struct maxcmp
+{
+    bool operator()(int a, int b) const
+    {
+        return a > b;
+    }
+};
+
+struct suffixPair
+{
+    int firstSufInSorted;
+    int lcpWithNext;
+};
+
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 //-------------------------------------MAIN-------------------------------------
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-namespace
-{
-    struct Substring
-    {
-        int start;
-        int nOccurences;
-        int len;
-    };
-}
-
-
 int main()
 {
-    int nLetters = 0, nCharacters = 0;
-    char* input = new char[400000];
-    scanf("%d %d", &nLetters, &nCharacters);
+    unsigned long long needed = 0;
+    char* input = new char[100000];
     scanf("%s", input);
 
     SuffixArray solver(input);
@@ -89,65 +190,37 @@ int main()
     auto lcp = solver.GetLCP();
     auto suffArray = solver.GetSuffixArray();
 
-    std::stack<Substring> Stack;
-
-    Substring best = {
-        .len = lcp.len,
-        .nOccurences = 1,
-        .start = 0
-    };
-
-    for (int i = 0; i < nLetters; ++i) {
-        int currentOccurencesNum = 1;
-        while (!Stack.empty() and lcp.data[i] <= Stack.top().len) {
-            Substring topSubstring = Stack.top();
-            Stack.pop();
-            LOGS(
-                "Substring{\n"
-                "    .len = %d, \n"
-                "    .start = %d, \n"
-                "    .nOccurences = %d\n"
-                "} was popped from stack at iter %d",
-                topSubstring.len,
-                topSubstring.start, 
-                topSubstring.nOccurences,
-                i
-            )
-            currentOccurencesNum += topSubstring.nOccurences;
-            if (currentOccurencesNum * topSubstring.len > best.nOccurences * best.len) {
-                best.nOccurences = currentOccurencesNum;
-                best.len = topSubstring.len;
-                best.start = suffArray.data[topSubstring.start];
-            }		
-        }
-        if (Stack.empty() or lcp.data[i] > Stack.top().len) {
-            Stack.push(
-                Substring{
-                    .len = lcp.data[i], 
-                    .start = i, 
-                    .nOccurences = currentOccurencesNum
-                }
-            );
-            LOGS(
-                "Substring{\n"
-                "    .len = %d, \n"
-                "    .start = %d, \n"
-                "    .nOccurences = %d\n"
-                "} was pushed to stack",
-                lcp.data[i],
-                i, 
-                currentOccurencesNum
-            )
-        }
+    std::vector<suffixPair> suffixes;
+    for (int i = 0; i < suffArray.len; ++i)
+    {
+        suffixes.push_back(suffixPair{.firstSufInSorted = i, .lcpWithNext = lcp.data[i]});
     }
+    std::sort(
+        suffixes.begin(), 
+        suffixes.end(), 
+        [](const suffixPair &first, const suffixPair &second) -> bool
+        {
+            return first.lcpWithNext < second.lcpWithNext;
+        });
 
-    printf(
-        "ANSWER:\n%d\n%d\n%d\n", 
-        best.len * best.nOccurences,
-        best.len, 
-        best.start
-    );
-        
+    ON_DEBUG(
+        printf("sorted by lcp\n");
+        for (int i = 0; i < suffixes.size(); ++i)
+        {
+            printf("%d) lcpWithNext = %3d, firstSufInSorted = %3d\n", i, suffixes[i].lcpWithNext, suffixes[i].firstSufInSorted);
+        }
+        printf("\n");
+    )
+
+    std::vector<int> _lcpVec(lcp.len);
+    for (int i = 0; i < lcp.len; ++i)
+        _lcpVec[i] = lcp.data[i];
+
+    sparse_table<maxcmp> tableMAX(_lcpVec);
+    sparse_table<mincmp> tableMIN(_lcpVec);
+
+    printf("max: %d, min: %d\n", tableMAX.get_max(0, 2), tableMIN.get_max(0, 2));
+
     delete [] input;
 }
 
@@ -276,7 +349,7 @@ void SuffixArray::phaze(int phazeID)
 
 SuffixArray::LightArray SuffixArray::GetSuffixArray()
 {
-    return {sortedSuffIndexes + 1, len - 1};
+    return {sortedSuffIndexes, len};
 }
 
 SuffixArray::~SuffixArray()
@@ -331,7 +404,7 @@ SuffixArray::LightArray SuffixArray::GetLCP()
     delete [] reverseSuff;
 
     ON_DEBUG(
-        printf("sortedSuffIndexes\n");
+        printf("sortedSuffIndexes of string \"%s$\"\n", data);
         for (int i = 0; i < len; ++i)
         {
             printf("%3d) [id %3d, %3d common] %s$\n", i, sortedSuffIndexes[i], lcp[i], data + sortedSuffIndexes[i]);
